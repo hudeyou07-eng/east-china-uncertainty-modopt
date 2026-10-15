@@ -1,0 +1,40 @@
+﻿global_env_record_id,entity,reference_year,eutrophication_g_po4e_per_kg,freshwater_l_per_kg,ghg_kg_co2e_per_kg,land_m2_per_kg,quality_flag,unit_note,source_file,source_sheet
+G01,Apples,2010,1.45,180.1,0.43,0.63,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G02,Bananas,2010,3.29,114.5,0.86,1.93,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G03,Barley,2010,2.33,17.1,1.18,1.11,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G04,Beef (beef herd),2010,301.41,1451.2,99.48,326.21,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G05,Beef (dairy herd),2010,365.29,2714.3,33.3,43.24,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G06,Beet Sugar,2010,5.41,217.7,1.81,1.83,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G07,Berries & Grapes,2010,6.12,419.6,1.53,2.41,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G08,Brassicas,2010,5.01,119.4,0.51,0.55,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G09,Cane Sugar,2010,16.92,620.1,3.2,2.04,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G10,Cassava,2010,0.69,0.0,1.32,1.81,zero_freshwater_check_source,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G11,Cheese,2010,98.37,5605.2,23.88,87.79,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G12,Citrus Fruit,2010,2.24,82.7,0.39,0.86,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G13,Coffee,2010,110.52,25.9,28.53,21.62,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G14,Dark Chocolate,2010,87.08,540.6,46.65,68.96,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G15,Eggs,2010,21.76,577.7,4.67,6.27,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G16,Fish (farmed),2010,235.12,3691.3,13.63,8.41,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G17,Groundnuts,2010,14.14,1852.3,3.23,9.11,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G18,Lamb & Mutton,2010,97.13,1802.8,39.72,369.81,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G19,Maize,2010,4.03,215.7,1.7,2.94,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G20,Milk,2010,10.65,628.2,3.15,8.95,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G21,Nuts,2010,19.15,4133.8,0.43,12.96,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G22,Oatmeal,2010,11.23,482.4,2.48,7.6,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G23,Onions & Leeks,2010,3.24,14.3,0.5,0.39,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G24,Other Fruit,2010,2.43,153.5,1.05,0.89,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G25,Other Pulses,2010,17.08,435.7,1.79,15.57,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G26,Other Vegetables,2010,2.27,102.5,0.53,0.38,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G27,Peas,2010,7.52,396.6,0.98,7.46,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G28,Pig Meat,2010,76.38,1795.8,12.31,17.36,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G29,Potatoes,2010,3.48,59.1,0.46,0.88,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G30,Poultry Meat,2010,48.7,660.0,9.87,12.22,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G31,Prawns (farmed),2010,227.22,3515.4,26.87,2.97,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G32,Rice,2010,35.07,2248.4,4.45,2.8,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G33,Root Vegetables,2010,1.61,28.4,0.43,0.33,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G34,Soy milk,2010,1.06,27.8,0.98,0.66,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G35,Tofu,2010,6.16,148.6,3.16,3.52,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G36,Tomatoes,2010,7.51,369.8,2.09,0.8,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G37,Wheat & Rye,2010,7.16,647.5,1.57,3.85,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G38,Wine,2010,4.57,78.9,1.79,1.78,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog
+G39,soybean oil,2010,2.7,22.29,4.61,2.64,ok,单位按项目内Poore/Nemecek衍生表解释：g PO4e、L、kg CO2e、m2，均为每kg食物,环境足迹汇总.xlsx,eutrophying-emissions-per-kilog

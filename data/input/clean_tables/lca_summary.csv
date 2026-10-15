@@ -1,0 +1,4 @@
+﻿source_sheet,metric,raw_rows,clean_unique_rows,normalized_duplicates_collapsed,missing_direct_url_rows,group_average_proxy_rows
+Greenhouse Gas Emission,ghg,2002,1985,17,1021,57
+Water Use,freshwater,1980,1953,27,1036,122
+Land Use,land,883,882,1,786,48

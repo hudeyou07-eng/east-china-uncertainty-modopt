@@ -1,0 +1,14 @@
+{
+  "synthetic_fixture_only": true,
+  "scenarios": 20,
+  "q": [
+    23.596958028307842,
+    44.787777202779395,
+    0.0
+  ],
+  "z_sum": 1,
+  "z_allowed": 1,
+  "objective": 0.13346155102327165,
+  "mip_gap": 0.0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+}

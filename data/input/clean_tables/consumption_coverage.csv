@@ -1,0 +1,11 @@
+﻿year,expected_regions,regions_with_any_value,observed_cells,expected_cells,cell_completeness_rate,analysis_status
+2016,7,7,70,70,1.0,usable
+2017,7,7,70,70,1.0,usable
+2018,7,7,70,70,1.0,usable
+2019,7,7,70,70,1.0,usable
+2020,7,7,70,70,1.0,usable
+2021,7,7,70,70,1.0,usable
+2022,7,7,70,70,1.0,usable
+2023,7,7,70,70,1.0,usable
+2024,7,7,70,70,1.0,usable
+2025,7,0,0,70,0.0,exclude_cross_region_incomplete

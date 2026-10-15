@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-15T19:39:16.933878+11:00",
+  "python": "3.10.16 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:19:12) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "D:\\miniconda3\\envs\\torch_gpu\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "cwd": "F:\\Uni\\researchsupport\\appliedStats\\east-china-uncertainty-modopt",
+  "git_hash": "2fcda2995b2b9ce1c0b174566d502c77d80baf9a",
+  "packages": {
+    "numpy": "2.2.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.2",
+    "sklearn": "1.6.1",
+    "yaml": "6.0.2",
+    "openpyxl": "3.1.5"
+  }
+}

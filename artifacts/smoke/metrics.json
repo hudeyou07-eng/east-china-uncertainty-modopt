@@ -1,0 +1,240 @@
+{
+  "command": "all-smoke",
+  "audit": {
+    "rows": 882,
+    "observed": 313,
+    "missing": 569,
+    "coverage": 0.35487528344671204,
+    "provinces": 7,
+    "groups": 14,
+    "years": [
+      2016,
+      2024
+    ],
+    "groups_passing_price_gate": 9,
+    "truth_eligible_observations": 294,
+    "data_nature_counts": {
+      "missing": 567,
+      "实测": 294,
+      "原表推算": 12,
+      "含区间中值": 7,
+      "伪填充": 2
+    },
+    "by_province": [
+      {
+        "province": "上海",
+        "total": 126,
+        "observed": 23,
+        "missing": 103,
+        "coverage": 0.18253968253968253
+      },
+      {
+        "province": "安徽",
+        "total": 126,
+        "observed": 45,
+        "missing": 81,
+        "coverage": 0.35714285714285715
+      },
+      {
+        "province": "山东",
+        "total": 126,
+        "observed": 34,
+        "missing": 92,
+        "coverage": 0.2698412698412698
+      },
+      {
+        "province": "江苏",
+        "total": 126,
+        "observed": 56,
+        "missing": 70,
+        "coverage": 0.4444444444444444
+      },
+      {
+        "province": "江西",
+        "total": 126,
+        "observed": 87,
+        "missing": 39,
+        "coverage": 0.6904761904761905
+      },
+      {
+        "province": "浙江",
+        "total": 126,
+        "observed": 17,
+        "missing": 109,
+        "coverage": 0.1349206349206349
+      },
+      {
+        "province": "福建",
+        "total": 126,
+        "observed": 51,
+        "missing": 75,
+        "coverage": 0.40476190476190477
+      }
+    ],
+    "source": "F:\\Uni\\researchsupport\\appliedStats\\east-china-uncertainty-modopt\\data\\input\\price\\price_panel_clean.xlsx",
+    "source_sha256": "087b8929ca53afa7b9cf9991702a40db335ca1e738bf8ab8b3dfd76f06ee48c9",
+    "source_tree_sha256": "569a1b4bec55a670345e84341acd6c1575ccfdc32418268432ae359be57d88bb"
+  },
+  "calibration": {
+    "profile": "smoke",
+    "folds": 2,
+    "repeats": 2,
+    "result_rows": 48,
+    "wall_seconds": 29.13712477684021,
+    "source": "F:\\Uni\\researchsupport\\appliedStats\\east-china-uncertainty-modopt\\data\\input\\price\\price_panel_clean.xlsx",
+    "source_sha256": "087b8929ca53afa7b9cf9991702a40db335ca1e738bf8ab8b3dfd76f06ee48c9",
+    "source_tree_sha256": "569a1b4bec55a670345e84341acd6c1575ccfdc32418268432ae359be57d88bb",
+    "training_data_natures": [
+      "实测"
+    ],
+    "training_observations": 294,
+    "summary": [
+      {
+        "mask_type": "consecutive_years",
+        "method": "group_mean",
+        "n_eval": 8,
+        "scaled_mae": 0.09676325653620832,
+        "log_rmse": 0.1062822021510137,
+        "coverage80": 1.0,
+        "coverage95": 1.0,
+        "width95": 37.07596616075461,
+        "runtime_seconds": 0.006016731262207031
+      },
+      {
+        "mask_type": "consecutive_years",
+        "method": "hierarchical_rw",
+        "n_eval": 8,
+        "scaled_mae": 0.12106213560138572,
+        "log_rmse": 0.12959913258270575,
+        "coverage80": 0.875,
+        "coverage95": 1.0,
+        "width95": 15.75725220740483,
+        "runtime_seconds": 0.028605937957763672
+      },
+      {
+        "mask_type": "consecutive_years",
+        "method": "interpolation",
+        "n_eval": 8,
+        "scaled_mae": 0.046107118696444176,
+        "log_rmse": 0.05307992254741094,
+        "coverage80": 1.0,
+        "coverage95": 1.0,
+        "width95": 25.689512662226193,
+        "runtime_seconds": 0.054635047912597656
+      },
+      {
+        "mask_type": "consecutive_years",
+        "method": "mice",
+        "n_eval": 8,
+        "scaled_mae": 0.16833931148214695,
+        "log_rmse": 0.1848412784403422,
+        "coverage80": 0.75,
+        "coverage95": 0.875,
+        "width95": 12.541336295483447,
+        "runtime_seconds": 9.571219682693481
+      },
+      {
+        "mask_type": "province_group",
+        "method": "group_mean",
+        "n_eval": 26,
+        "scaled_mae": 0.13364017545250484,
+        "log_rmse": 0.17669111172063046,
+        "coverage80": 0.9,
+        "coverage95": 0.95,
+        "width95": 37.226247531852465,
+        "runtime_seconds": 0.0050122737884521484
+      },
+      {
+        "mask_type": "province_group",
+        "method": "hierarchical_rw",
+        "n_eval": 26,
+        "scaled_mae": 0.09287750422284603,
+        "log_rmse": 0.13269430852397082,
+        "coverage80": 0.9330357142857143,
+        "coverage95": 1.0,
+        "width95": 30.161319500352192,
+        "runtime_seconds": 0.029474973678588867
+      },
+      {
+        "mask_type": "province_group",
+        "method": "interpolation",
+        "n_eval": 26,
+        "scaled_mae": 0.13364017545250484,
+        "log_rmse": 0.17669111172063046,
+        "coverage80": 0.8583333333333334,
+        "coverage95": 0.9,
+        "width95": 25.78144071173348,
+        "runtime_seconds": 0.0645897388458252
+      },
+      {
+        "mask_type": "province_group",
+        "method": "mice",
+        "n_eval": 26,
+        "scaled_mae": 1.3685951259141633,
+        "log_rmse": 0.9372563619464103,
+        "coverage80": 0.2857142857142857,
+        "coverage95": 0.3794642857142857,
+        "width95": 56.229986043523546,
+        "runtime_seconds": 9.546159982681274
+      },
+      {
+        "mask_type": "single_cell",
+        "method": "group_mean",
+        "n_eval": 60,
+        "scaled_mae": 0.17727522420887784,
+        "log_rmse": 0.26009737933998733,
+        "coverage80": 0.85,
+        "coverage95": 0.9166666666666666,
+        "width95": 36.82151660577759,
+        "runtime_seconds": 0.007043600082397461
+      },
+      {
+        "mask_type": "single_cell",
+        "method": "hierarchical_rw",
+        "n_eval": 60,
+        "scaled_mae": 0.17126261720224673,
+        "log_rmse": 0.26193764619607884,
+        "coverage80": 0.8333333333333334,
+        "coverage95": 0.9333333333333333,
+        "width95": 28.438374472400024,
+        "runtime_seconds": 0.03103041648864746
+      },
+      {
+        "mask_type": "single_cell",
+        "method": "interpolation",
+        "n_eval": 60,
+        "scaled_mae": 0.15520604701922708,
+        "log_rmse": 0.21483094741917944,
+        "coverage80": 0.8166666666666667,
+        "coverage95": 0.8833333333333333,
+        "width95": 26.3171066134339,
+        "runtime_seconds": 0.10482430458068848
+      },
+      {
+        "mask_type": "single_cell",
+        "method": "mice",
+        "n_eval": 60,
+        "scaled_mae": 0.13946709166345558,
+        "log_rmse": 0.2386981919683301,
+        "coverage80": 0.7833333333333333,
+        "coverage95": 0.8833333333333333,
+        "width95": 19.213848830375348,
+        "runtime_seconds": 9.565807104110718
+      }
+    ]
+  },
+  "optimization_smoke": {
+    "synthetic_fixture_only": true,
+    "scenarios": 20,
+    "q": [
+      23.596958028307842,
+      44.787777202779395,
+      0.0
+    ],
+    "z_sum": 1,
+    "z_allowed": 1,
+    "objective": 0.13346155102327165,
+    "mip_gap": 0.0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  }
+}

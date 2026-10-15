@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+.conda/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.key
+*.pem
+
+# Restricted and raw data
+data/raw/
+student_doc/
+
+# Generated experiment runs
+outputs/*
+!outputs/README.md
+
+# Document QA intermediates
+docs/_rendered/
+docs/assets/equation_*.png
+
+# Temporary files
+tmp/
+*.log
+~$*

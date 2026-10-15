@@ -1,0 +1,15 @@
+﻿category,category_code,standard_unit,provincial_values,provincial_mean,national_proxy,recommended_value,recommended_scope
+乳制品,dairy,CNY/kg,6,11.606666666666667,,11.606666666666667,mean_of_available_provinces
+坚果,nuts,CNY/kg,0,,30.0,30.0,national_proxy
+水产品(不含虾蟹),seafood,CNY/kg,7,31.59857142857143,,31.59857142857143,mean_of_available_provinces
+水果,fruits,CNY/kg,7,11.151428571428571,,11.151428571428571,mean_of_available_provinces
+牛肉(后腿),beef,CNY/kg,7,82.27857142857142,,82.27857142857142,mean_of_available_provinces
+猪肉,pork,CNY/kg,7,23.55857142857143,,23.55857142857143,mean_of_available_provinces
+禽类,poultry,CNY/kg,7,24.657142857142862,,24.657142857142862,mean_of_available_provinces
+"粮食平均价(大米,面粉)",grains,CNY/kg,7,5.925714285714285,,5.925714285714285,mean_of_available_provinces
+糖,sugar,CNY/kg,7,13.165714285714287,,13.165714285714287,mean_of_available_provinces
+羊肉(后腿),mutton,CNY/kg,7,77.55714285714285,,77.55714285714285,mean_of_available_provinces
+蔬菜,vegetables,CNY/kg,7,7.494285714285715,,7.494285714285715,mean_of_available_provinces
+薯类(马铃薯),tubers,CNY/kg,0,,4.24,4.24,national_proxy
+食用油(升),oils,CNY/L,7,18.171428571428574,,18.171428571428574,mean_of_available_provinces
+鸡蛋,eggs,CNY/kg,7,11.15,,11.15,mean_of_available_provinces

@@ -1,0 +1,68 @@
+{
+  "generated_at_utc": "2026-10-15T08:38:30.071974+00:00",
+  "scope": "minimum cleaned reproducibility bundle for the private team repository",
+  "file_count": 12,
+  "total_bytes": 2878164,
+  "files": [
+    {
+      "path": "data/input/clean_tables/china_lca.csv",
+      "bytes": 1701883,
+      "sha256": "a9d2fa80c134c7492fac74226d705038d06835a44d616c9cdd230ada2ee1a440"
+    },
+    {
+      "path": "data/input/clean_tables/consumption.csv",
+      "bytes": 116444,
+      "sha256": "7cf4cd4ac428bbb3cb1150c7f55c7829c7c6cfd32d597bad0fdffa9dab3211d8"
+    },
+    {
+      "path": "data/input/clean_tables/consumption_coverage.csv",
+      "bytes": 412,
+      "sha256": "10c95ae85093c2d3cdb2ebe51fa1c933acfc5c708e50aa1dc981e8f0c824c096"
+    },
+    {
+      "path": "data/input/clean_tables/food_crosswalk.csv",
+      "bytes": 4970,
+      "sha256": "3cd2af6d000809a815bd33b5cfbd20f2ce33e39db4f0aae788272e29b190661a"
+    },
+    {
+      "path": "data/input/clean_tables/global_environment.csv",
+      "bytes": 7860,
+      "sha256": "5d72915e58778053cbf495b44105f0743f7caa5119acfb1a39a0c4f6151dfd74"
+    },
+    {
+      "path": "data/input/clean_tables/lca_summary.csv",
+      "bytes": 258,
+      "sha256": "526470192a2f66a1fafe40c1d0de0ef183222ba51be31af5486c9675292a9019"
+    },
+    {
+      "path": "data/input/clean_tables/nutrition.csv",
+      "bytes": 184279,
+      "sha256": "f8ba135d8478e1ff4300f3715096e4c2f8dba829ab2b555875c8373d31ea0a93"
+    },
+    {
+      "path": "data/input/clean_tables/price_summary.csv",
+      "bytes": 1351,
+      "sha256": "355ea9d7c7587636867e46f77f0313246f9a18254ade029fc819df0b7a3338db"
+    },
+    {
+      "path": "data/input/clean_tables/prices.csv",
+      "bytes": 9671,
+      "sha256": "cca20f85b1eb2295f9d622726272e1800ff1a402767ebdad62358d238923f9cb"
+    },
+    {
+      "path": "data/input/price/price_category_catalog.xlsx",
+      "bytes": 23608,
+      "sha256": "102b1e86c438bef77e46ba8301d647545b271087a86934ab38025ef5a59624d3"
+    },
+    {
+      "path": "data/input/price/price_panel_clean.xlsx",
+      "bytes": 73340,
+      "sha256": "087b8929ca53afa7b9cf9991702a40db335ca1e738bf8ab8b3dfd76f06ee48c9"
+    },
+    {
+      "path": "data/input/workbook/diet_model_clean_data.xlsx",
+      "bytes": 754088,
+      "sha256": "d3ef3b283a42d84e75550c0657e8a96be1ef4365416acc29fb82a752fd099877"
+    }
+  ]
+}
