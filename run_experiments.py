@@ -54,7 +54,35 @@ def run_audit(config: dict, config_path: Path, run_dir: Path) -> dict:
     return summary
 
 
-def run_calibration(config: dict, config_path: Path, run_dir: Path, profile: str) -> dict:
+def _parse_subset(raw: str | None, total: int) -> list[int]:
+    """Parse "0,2,4" or "0-4" or "0-4,7" into a validated index list."""
+    if raw is None:
+        return list(range(total))
+    items: list[int] = []
+    for chunk in raw.split(","):
+        chunk = chunk.strip()
+        if not chunk:
+            continue
+        if "-" in chunk:
+            start, end = chunk.split("-", 1)
+            items.extend(range(int(start), int(end) + 1))
+        else:
+            items.append(int(chunk))
+    if not items:
+        raise ValueError(f"Empty subset specification: {raw!r}")
+    if any(i < 0 or i >= total for i in items):
+        raise ValueError(f"Subset {raw!r} is outside [0, {total})")
+    return sorted(set(items))
+
+
+def run_calibration(
+    config: dict,
+    config_path: Path,
+    run_dir: Path,
+    profile: str,
+    fold_subset: list[int] | None = None,
+    repeat_subset: list[int] | None = None,
+) -> dict:
     source = resolve_path(config_path, config["paths"]["clean_price_workbook"])
     raw_catalog = resolve_path(config_path, config["paths"]["price_workbook"])
     panel = load_clean_price_panel(
@@ -68,13 +96,15 @@ def run_calibration(config: dict, config_path: Path, run_dir: Path, profile: str
     panel["truth_eligible"] = panel["observed"]
     folds = int(section[f"{profile}_folds"])
     repeats = int(section[f"{profile}_repeats"])
+    fold_list = _parse_subset(None, folds) if fold_subset is None else fold_subset
+    repeat_list = _parse_subset(None, repeats) if repeat_subset is None else repeat_subset
     seed = int(config["project"]["seed"])
     rows = []
     prediction_rows = []
     mask_rows = []
     start_time = time.time()
-    for fold in range(folds):
-        for repeat in range(repeats):
+    for fold in fold_list:
+        for repeat in repeat_list:
             for mask_type in section["mask_types"]:
                 mask_seed = seed + fold * 10000 + repeat * 100 + section["mask_types"].index(mask_type)
                 rng = np.random.default_rng(mask_seed)
@@ -167,6 +197,8 @@ def run_calibration(config: dict, config_path: Path, run_dir: Path, profile: str
         "profile": profile,
         "folds": folds,
         "repeats": repeats,
+        "evaluated_folds": fold_list,
+        "evaluated_repeats": repeat_list,
         "result_rows": int(len(results)),
         "wall_seconds": time.time() - start_time,
         "source": str(source),
@@ -212,6 +244,16 @@ def main() -> int:
     parser.add_argument("--config", default=str(ROOT / "configs" / "default.yaml"))
     parser.add_argument("--profile", choices=["smoke", "formal"], default="smoke")
     parser.add_argument("--run-id", default=None)
+    parser.add_argument(
+        "--folds",
+        default=None,
+        help='Optional fold subset for sharded runs, e.g. "0,2" or "0-1". Default: all folds.',
+    )
+    parser.add_argument(
+        "--repeats",
+        default=None,
+        help='Optional repeat subset for sharded runs, e.g. "0-9". Default: all repeats.',
+    )
     args = parser.parse_args()
     config_path = Path(args.config).resolve()
     config = load_config(config_path)
@@ -219,12 +261,25 @@ def main() -> int:
     output_root.mkdir(parents=True, exist_ok=True)
     run_id = args.run_id or args.command.replace("-", "_")
     run_dir = create_run_dir(output_root, run_id)
+    section = config["calibration"]
+    fold_subset = (
+        _parse_subset(args.folds, int(section[f"{args.profile}_folds"]))
+        if args.folds
+        else None
+    )
+    repeat_subset = (
+        _parse_subset(args.repeats, int(section[f"{args.profile}_repeats"]))
+        if args.repeats
+        else None
+    )
     try:
         metrics: dict[str, object] = {"command": args.command}
         if args.command in {"audit", "all-smoke"}:
             metrics["audit"] = run_audit(config, config_path, run_dir)
         if args.command in {"calibration", "all-smoke"}:
-            metrics["calibration"] = run_calibration(config, config_path, run_dir, args.profile)
+            metrics["calibration"] = run_calibration(
+                config, config_path, run_dir, args.profile, fold_subset, repeat_subset
+            )
         if args.command in {"optimization-smoke", "all-smoke"}:
             metrics["optimization_smoke"] = run_optimization_smoke(config, run_dir)
         finalize_run(run_dir, metrics, {"args": vars(args), "config": config})
