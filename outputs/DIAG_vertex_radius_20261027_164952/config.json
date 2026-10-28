@@ -1,0 +1,4 @@
+{
+  "command": "diagnose-vertex-radius",
+  "scope": "k6_price"
+}

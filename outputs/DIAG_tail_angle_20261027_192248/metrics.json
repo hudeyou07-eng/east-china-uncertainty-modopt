@@ -1,0 +1,58 @@
+{
+  "command": "diagnose-tail-angle",
+  "evidence_status": "structural",
+  "scope": "k6_price",
+  "bounds_basis": "ear",
+  "scenarios": [
+    "CDG",
+    "EAT"
+  ],
+  "n_scen": 200,
+  "alpha": 0.9,
+  "seeds": [
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031,
+    20261032,
+    20261033,
+    20261034,
+    20261035,
+    20261036,
+    20261037,
+    20261038,
+    20261039,
+    20261040,
+    20261041,
+    20261042,
+    20261043,
+    20261044,
+    20261045,
+    20261046
+  ],
+  "b1_run": "B1_formal_withmice_20261023_124906",
+  "b1_method": "hierarchical_rw",
+  "b1_mask_type": "single_cell",
+  "theta_star_source": "outputs/DIAG_vertex_radius_20261027_164952",
+  "evidence_note": "执行 CHANGELOG §24.8 的预注册判定。θ_tail 用 B1 经验残差后验计算，θ* 取自 diagnose_vertex_radius（与后验无关）。verdict_flip_rate 是 20 个种子里给出相反判定的比例，0/1 表示稳定。evidence_status=structural：这是诊断，不是预注册的重复实验协议；EAT 下山东/江苏/浙江结构性不可行，20 个种子全部求解失败，不计入 n_cells。",
+  "summary": {
+    "theta_star_source": "outputs/DIAG_vertex_radius_20261027_164952",
+    "n_scen": 200,
+    "alpha": 0.9,
+    "n_seeds": 20,
+    "n_cells": 9,
+    "n_rows": 240,
+    "n_solver_failed": 60,
+    "cells_all_failed": [
+      "EAT/山东",
+      "EAT/江苏",
+      "EAT/浙江"
+    ],
+    "cells_cvar_ineffective": 1,
+    "cells_must_report_lambda": 5,
+    "cells_boundary_unstable": 3,
+    "theta_tail_max_deg": 9.297137478491203,
+    "ratio_max": 6.83523203994274
+  }
+}

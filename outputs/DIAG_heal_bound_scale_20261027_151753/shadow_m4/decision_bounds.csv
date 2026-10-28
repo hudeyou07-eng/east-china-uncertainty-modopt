@@ -1,0 +1,260 @@
+﻿province,scenario,group_id,bound_type,lower_g_day,upper_g_day,source,note
+上海,CDG,G05+G06,joint,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",畜禽肉 40-75 g；指南不区分畜肉与禽肉，故设为联合约束，组间分配由模型决定
+上海,CDG,G01,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",奶及奶制品 300-500 g
+上海,CDG,G02,single,40.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",蛋类 40-50 g
+上海,CDG,G03,single,200.0,350.0,"China Dietary Guidelines 2022, balanced diet pagoda",水果 200-350 g
+上海,CDG,G04,single,200.0,300.0,"China Dietary Guidelines 2022, balanced diet pagoda",谷类 200-300 g（含全谷物和杂豆 50-150）；G04 还含豆类，此区间对 G04 偏紧
+上海,CDG,G05,single,0.0,71.84170471841705,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 35.9 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+上海,CDG,G06,single,0.0,173.02891933028917,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 86.5 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+上海,CDG,G07,single,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",水产品 40-75 g
+上海,CDG,G08,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",蔬菜 300-500 g
+上海,CDG,G09,single,0.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",添加糖每日不超过 50 g（最好 25 g 以下）
+上海,CDG,G10,single,50.0,100.0,"China Dietary Guidelines 2022, balanced diet pagoda",薯类 50-100 g
+上海,CDG,G11,single,25.0,30.0,"China Dietary Guidelines 2022, balanced diet pagoda",烹调油 25-30 g
+上海,CDG,G12,single,25.0,35.0,"China Dietary Guidelines 2022, balanced diet pagoda",大豆及坚果 25-35 g
+安徽,CDG,G05+G06,joint,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",畜禽肉 40-75 g；指南不区分畜肉与禽肉，故设为联合约束，组间分配由模型决定
+安徽,CDG,G01,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",奶及奶制品 300-500 g
+安徽,CDG,G02,single,40.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",蛋类 40-50 g
+安徽,CDG,G03,single,200.0,350.0,"China Dietary Guidelines 2022, balanced diet pagoda",水果 200-350 g
+安徽,CDG,G04,single,200.0,300.0,"China Dietary Guidelines 2022, balanced diet pagoda",谷类 200-300 g（含全谷物和杂豆 50-150）；G04 还含豆类，此区间对 G04 偏紧
+安徽,CDG,G05,single,0.0,79.08675799086758,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 39.5 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+安徽,CDG,G06,single,0.0,165.84474885844747,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 82.9 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+安徽,CDG,G07,single,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",水产品 40-75 g
+安徽,CDG,G08,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",蔬菜 300-500 g
+安徽,CDG,G09,single,0.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",添加糖每日不超过 50 g（最好 25 g 以下）
+安徽,CDG,G10,single,50.0,100.0,"China Dietary Guidelines 2022, balanced diet pagoda",薯类 50-100 g
+安徽,CDG,G11,single,25.0,30.0,"China Dietary Guidelines 2022, balanced diet pagoda",烹调油 25-30 g
+安徽,CDG,G12,single,25.0,35.0,"China Dietary Guidelines 2022, balanced diet pagoda",大豆及坚果 25-35 g
+山东,CDG,G05+G06,joint,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",畜禽肉 40-75 g；指南不区分畜肉与禽肉，故设为联合约束，组间分配由模型决定
+山东,CDG,G01,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",奶及奶制品 300-500 g
+山东,CDG,G02,single,40.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",蛋类 40-50 g
+山东,CDG,G03,single,200.0,350.0,"China Dietary Guidelines 2022, balanced diet pagoda",水果 200-350 g
+山东,CDG,G04,single,200.0,300.0,"China Dietary Guidelines 2022, balanced diet pagoda",谷类 200-300 g（含全谷物和杂豆 50-150）；G04 还含豆类，此区间对 G04 偏紧
+山东,CDG,G05,single,0.0,42.435312024353124,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 21.2 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+山东,CDG,G06,single,0.0,141.18721461187215,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 70.6 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+山东,CDG,G07,single,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",水产品 40-75 g
+山东,CDG,G08,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",蔬菜 300-500 g
+山东,CDG,G09,single,0.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",添加糖每日不超过 50 g（最好 25 g 以下）
+山东,CDG,G10,single,50.0,100.0,"China Dietary Guidelines 2022, balanced diet pagoda",薯类 50-100 g
+山东,CDG,G11,single,25.0,30.0,"China Dietary Guidelines 2022, balanced diet pagoda",烹调油 25-30 g
+山东,CDG,G12,single,25.0,35.0,"China Dietary Guidelines 2022, balanced diet pagoda",大豆及坚果 25-35 g
+江苏,CDG,G05+G06,joint,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",畜禽肉 40-75 g；指南不区分畜肉与禽肉，故设为联合约束，组间分配由模型决定
+江苏,CDG,G01,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",奶及奶制品 300-500 g
+江苏,CDG,G02,single,40.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",蛋类 40-50 g
+江苏,CDG,G03,single,200.0,350.0,"China Dietary Guidelines 2022, balanced diet pagoda",水果 200-350 g
+江苏,CDG,G04,single,200.0,300.0,"China Dietary Guidelines 2022, balanced diet pagoda",谷类 200-300 g（含全谷物和杂豆 50-150）；G04 还含豆类，此区间对 G04 偏紧
+江苏,CDG,G05,single,0.0,72.08523592085236,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 36.0 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+江苏,CDG,G06,single,0.0,174.06392694063928,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 87.0 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+江苏,CDG,G07,single,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",水产品 40-75 g
+江苏,CDG,G08,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",蔬菜 300-500 g
+江苏,CDG,G09,single,0.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",添加糖每日不超过 50 g（最好 25 g 以下）
+江苏,CDG,G10,single,50.0,100.0,"China Dietary Guidelines 2022, balanced diet pagoda",薯类 50-100 g
+江苏,CDG,G11,single,25.0,30.0,"China Dietary Guidelines 2022, balanced diet pagoda",烹调油 25-30 g
+江苏,CDG,G12,single,25.0,35.0,"China Dietary Guidelines 2022, balanced diet pagoda",大豆及坚果 25-35 g
+江西,CDG,G05+G06,joint,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",畜禽肉 40-75 g；指南不区分畜肉与禽肉，故设为联合约束，组间分配由模型决定
+江西,CDG,G01,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",奶及奶制品 300-500 g
+江西,CDG,G02,single,40.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",蛋类 40-50 g
+江西,CDG,G03,single,200.0,350.0,"China Dietary Guidelines 2022, balanced diet pagoda",水果 200-350 g
+江西,CDG,G04,single,200.0,300.0,"China Dietary Guidelines 2022, balanced diet pagoda",谷类 200-300 g（含全谷物和杂豆 50-150）；G04 还含豆类，此区间对 G04 偏紧
+江西,CDG,G05,single,0.0,64.71841704718418,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 32.4 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+江西,CDG,G06,single,0.0,188.79756468797567,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 94.4 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+江西,CDG,G07,single,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",水产品 40-75 g
+江西,CDG,G08,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",蔬菜 300-500 g
+江西,CDG,G09,single,0.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",添加糖每日不超过 50 g（最好 25 g 以下）
+江西,CDG,G10,single,50.0,100.0,"China Dietary Guidelines 2022, balanced diet pagoda",薯类 50-100 g
+江西,CDG,G11,single,25.0,30.0,"China Dietary Guidelines 2022, balanced diet pagoda",烹调油 25-30 g
+江西,CDG,G12,single,25.0,35.0,"China Dietary Guidelines 2022, balanced diet pagoda",大豆及坚果 25-35 g
+浙江,CDG,G05+G06,joint,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",畜禽肉 40-75 g；指南不区分畜肉与禽肉，故设为联合约束，组间分配由模型决定
+浙江,CDG,G01,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",奶及奶制品 300-500 g
+浙江,CDG,G02,single,40.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",蛋类 40-50 g
+浙江,CDG,G03,single,200.0,350.0,"China Dietary Guidelines 2022, balanced diet pagoda",水果 200-350 g
+浙江,CDG,G04,single,200.0,300.0,"China Dietary Guidelines 2022, balanced diet pagoda",谷类 200-300 g（含全谷物和杂豆 50-150）；G04 还含豆类，此区间对 G04 偏紧
+浙江,CDG,G05,single,0.0,68.31050228310502,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 34.2 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+浙江,CDG,G06,single,0.0,181.7351598173516,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 90.9 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+浙江,CDG,G07,single,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",水产品 40-75 g
+浙江,CDG,G08,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",蔬菜 300-500 g
+浙江,CDG,G09,single,0.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",添加糖每日不超过 50 g（最好 25 g 以下）
+浙江,CDG,G10,single,50.0,100.0,"China Dietary Guidelines 2022, balanced diet pagoda",薯类 50-100 g
+浙江,CDG,G11,single,25.0,30.0,"China Dietary Guidelines 2022, balanced diet pagoda",烹调油 25-30 g
+浙江,CDG,G12,single,25.0,35.0,"China Dietary Guidelines 2022, balanced diet pagoda",大豆及坚果 25-35 g
+福建,CDG,G05+G06,joint,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",畜禽肉 40-75 g；指南不区分畜肉与禽肉，故设为联合约束，组间分配由模型决定
+福建,CDG,G01,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",奶及奶制品 300-500 g
+福建,CDG,G02,single,40.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",蛋类 40-50 g
+福建,CDG,G03,single,200.0,350.0,"China Dietary Guidelines 2022, balanced diet pagoda",水果 200-350 g
+福建,CDG,G04,single,200.0,300.0,"China Dietary Guidelines 2022, balanced diet pagoda",谷类 200-300 g（含全谷物和杂豆 50-150）；G04 还含豆类，此区间对 G04 偏紧
+福建,CDG,G05,single,0.0,74.21613394216133,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 37.1 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+福建,CDG,G06,single,0.0,186.9710806697108,technical bound: 0 to 2x provincial baseline; CDG does not separate red meat from poultry,技术边界，基线 93.5 g/day 的 2 倍；实际受限的合计区间见 G05+G06 行
+福建,CDG,G07,single,40.0,75.0,"China Dietary Guidelines 2022, balanced diet pagoda",水产品 40-75 g
+福建,CDG,G08,single,300.0,500.0,"China Dietary Guidelines 2022, balanced diet pagoda",蔬菜 300-500 g
+福建,CDG,G09,single,0.0,50.0,"China Dietary Guidelines 2022, balanced diet pagoda",添加糖每日不超过 50 g（最好 25 g 以下）
+福建,CDG,G10,single,50.0,100.0,"China Dietary Guidelines 2022, balanced diet pagoda",薯类 50-100 g
+福建,CDG,G11,single,25.0,30.0,"China Dietary Guidelines 2022, balanced diet pagoda",烹调油 25-30 g
+福建,CDG,G12,single,25.0,35.0,"China Dietary Guidelines 2022, balanced diet pagoda",大豆及坚果 25-35 g
+上海,EAT,G01,single,0.0,500.0,"Willett et al. 2019, EAT-Lancet reference diet",dairy 250 g 目标，范围 0-500 g
+上海,EAT,G02,single,0.0,25.0,"Willett et al. 2019, EAT-Lancet reference diet",eggs 13 g 目标，范围 0-25 g
+上海,EAT,G03,single,100.0,300.0,"Willett et al. 2019, EAT-Lancet reference diet",fruits 200 g 目标，范围 100-300 g
+上海,EAT,G04,single,0.0,400.0,"Willett et al. 2019, EAT-Lancet reference diet",whole grains 232 g 目标，上限按 60% 能量折算约 400 g；G04 含豆类，偏紧
+上海,EAT,G05,single,0.0,58.0,"Willett et al. 2019, EAT-Lancet reference diet",poultry 29 g 目标，范围 0-58 g
+上海,EAT,G06,single,0.0,28.0,"Willett et al. 2019, EAT-Lancet reference diet",red meat 14 g 目标，范围 0-28 g
+上海,EAT,G07,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",fish 28 g 目标，范围 0-100 g
+上海,EAT,G08,single,200.0,600.0,"Willett et al. 2019, EAT-Lancet reference diet",vegetables 300 g 目标，范围 200-600 g
+上海,EAT,G09,single,0.0,31.0,"Willett et al. 2019, EAT-Lancet reference diet",added sugar 31 g 上限，范围 0-31 g
+上海,EAT,G10,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",tubers 50 g 目标，范围 0-100 g
+上海,EAT,G11,single,39.0,78.0,"Willett et al. 2019, EAT-Lancet reference diet",added fats 51 g 目标，范围 39-78 g
+上海,EAT,G12,single,0.0,175.0,"Willett et al. 2019, EAT-Lancet reference diet",legumes 50 + nuts 50 合计 100 g 目标，范围 0-175 g
+安徽,EAT,G01,single,0.0,500.0,"Willett et al. 2019, EAT-Lancet reference diet",dairy 250 g 目标，范围 0-500 g
+安徽,EAT,G02,single,0.0,25.0,"Willett et al. 2019, EAT-Lancet reference diet",eggs 13 g 目标，范围 0-25 g
+安徽,EAT,G03,single,100.0,300.0,"Willett et al. 2019, EAT-Lancet reference diet",fruits 200 g 目标，范围 100-300 g
+安徽,EAT,G04,single,0.0,400.0,"Willett et al. 2019, EAT-Lancet reference diet",whole grains 232 g 目标，上限按 60% 能量折算约 400 g；G04 含豆类，偏紧
+安徽,EAT,G05,single,0.0,58.0,"Willett et al. 2019, EAT-Lancet reference diet",poultry 29 g 目标，范围 0-58 g
+安徽,EAT,G06,single,0.0,28.0,"Willett et al. 2019, EAT-Lancet reference diet",red meat 14 g 目标，范围 0-28 g
+安徽,EAT,G07,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",fish 28 g 目标，范围 0-100 g
+安徽,EAT,G08,single,200.0,600.0,"Willett et al. 2019, EAT-Lancet reference diet",vegetables 300 g 目标，范围 200-600 g
+安徽,EAT,G09,single,0.0,31.0,"Willett et al. 2019, EAT-Lancet reference diet",added sugar 31 g 上限，范围 0-31 g
+安徽,EAT,G10,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",tubers 50 g 目标，范围 0-100 g
+安徽,EAT,G11,single,39.0,78.0,"Willett et al. 2019, EAT-Lancet reference diet",added fats 51 g 目标，范围 39-78 g
+安徽,EAT,G12,single,0.0,175.0,"Willett et al. 2019, EAT-Lancet reference diet",legumes 50 + nuts 50 合计 100 g 目标，范围 0-175 g
+山东,EAT,G01,single,0.0,500.0,"Willett et al. 2019, EAT-Lancet reference diet",dairy 250 g 目标，范围 0-500 g
+山东,EAT,G02,single,0.0,25.0,"Willett et al. 2019, EAT-Lancet reference diet",eggs 13 g 目标，范围 0-25 g
+山东,EAT,G03,single,100.0,300.0,"Willett et al. 2019, EAT-Lancet reference diet",fruits 200 g 目标，范围 100-300 g
+山东,EAT,G04,single,0.0,400.0,"Willett et al. 2019, EAT-Lancet reference diet",whole grains 232 g 目标，上限按 60% 能量折算约 400 g；G04 含豆类，偏紧
+山东,EAT,G05,single,0.0,58.0,"Willett et al. 2019, EAT-Lancet reference diet",poultry 29 g 目标，范围 0-58 g
+山东,EAT,G06,single,0.0,28.0,"Willett et al. 2019, EAT-Lancet reference diet",red meat 14 g 目标，范围 0-28 g
+山东,EAT,G07,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",fish 28 g 目标，范围 0-100 g
+山东,EAT,G08,single,200.0,600.0,"Willett et al. 2019, EAT-Lancet reference diet",vegetables 300 g 目标，范围 200-600 g
+山东,EAT,G09,single,0.0,31.0,"Willett et al. 2019, EAT-Lancet reference diet",added sugar 31 g 上限，范围 0-31 g
+山东,EAT,G10,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",tubers 50 g 目标，范围 0-100 g
+山东,EAT,G11,single,39.0,78.0,"Willett et al. 2019, EAT-Lancet reference diet",added fats 51 g 目标，范围 39-78 g
+山东,EAT,G12,single,0.0,175.0,"Willett et al. 2019, EAT-Lancet reference diet",legumes 50 + nuts 50 合计 100 g 目标，范围 0-175 g
+江苏,EAT,G01,single,0.0,500.0,"Willett et al. 2019, EAT-Lancet reference diet",dairy 250 g 目标，范围 0-500 g
+江苏,EAT,G02,single,0.0,25.0,"Willett et al. 2019, EAT-Lancet reference diet",eggs 13 g 目标，范围 0-25 g
+江苏,EAT,G03,single,100.0,300.0,"Willett et al. 2019, EAT-Lancet reference diet",fruits 200 g 目标，范围 100-300 g
+江苏,EAT,G04,single,0.0,400.0,"Willett et al. 2019, EAT-Lancet reference diet",whole grains 232 g 目标，上限按 60% 能量折算约 400 g；G04 含豆类，偏紧
+江苏,EAT,G05,single,0.0,58.0,"Willett et al. 2019, EAT-Lancet reference diet",poultry 29 g 目标，范围 0-58 g
+江苏,EAT,G06,single,0.0,28.0,"Willett et al. 2019, EAT-Lancet reference diet",red meat 14 g 目标，范围 0-28 g
+江苏,EAT,G07,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",fish 28 g 目标，范围 0-100 g
+江苏,EAT,G08,single,200.0,600.0,"Willett et al. 2019, EAT-Lancet reference diet",vegetables 300 g 目标，范围 200-600 g
+江苏,EAT,G09,single,0.0,31.0,"Willett et al. 2019, EAT-Lancet reference diet",added sugar 31 g 上限，范围 0-31 g
+江苏,EAT,G10,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",tubers 50 g 目标，范围 0-100 g
+江苏,EAT,G11,single,39.0,78.0,"Willett et al. 2019, EAT-Lancet reference diet",added fats 51 g 目标，范围 39-78 g
+江苏,EAT,G12,single,0.0,175.0,"Willett et al. 2019, EAT-Lancet reference diet",legumes 50 + nuts 50 合计 100 g 目标，范围 0-175 g
+江西,EAT,G01,single,0.0,500.0,"Willett et al. 2019, EAT-Lancet reference diet",dairy 250 g 目标，范围 0-500 g
+江西,EAT,G02,single,0.0,25.0,"Willett et al. 2019, EAT-Lancet reference diet",eggs 13 g 目标，范围 0-25 g
+江西,EAT,G03,single,100.0,300.0,"Willett et al. 2019, EAT-Lancet reference diet",fruits 200 g 目标，范围 100-300 g
+江西,EAT,G04,single,0.0,400.0,"Willett et al. 2019, EAT-Lancet reference diet",whole grains 232 g 目标，上限按 60% 能量折算约 400 g；G04 含豆类，偏紧
+江西,EAT,G05,single,0.0,58.0,"Willett et al. 2019, EAT-Lancet reference diet",poultry 29 g 目标，范围 0-58 g
+江西,EAT,G06,single,0.0,28.0,"Willett et al. 2019, EAT-Lancet reference diet",red meat 14 g 目标，范围 0-28 g
+江西,EAT,G07,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",fish 28 g 目标，范围 0-100 g
+江西,EAT,G08,single,200.0,600.0,"Willett et al. 2019, EAT-Lancet reference diet",vegetables 300 g 目标，范围 200-600 g
+江西,EAT,G09,single,0.0,31.0,"Willett et al. 2019, EAT-Lancet reference diet",added sugar 31 g 上限，范围 0-31 g
+江西,EAT,G10,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",tubers 50 g 目标，范围 0-100 g
+江西,EAT,G11,single,39.0,78.0,"Willett et al. 2019, EAT-Lancet reference diet",added fats 51 g 目标，范围 39-78 g
+江西,EAT,G12,single,0.0,175.0,"Willett et al. 2019, EAT-Lancet reference diet",legumes 50 + nuts 50 合计 100 g 目标，范围 0-175 g
+浙江,EAT,G01,single,0.0,500.0,"Willett et al. 2019, EAT-Lancet reference diet",dairy 250 g 目标，范围 0-500 g
+浙江,EAT,G02,single,0.0,25.0,"Willett et al. 2019, EAT-Lancet reference diet",eggs 13 g 目标，范围 0-25 g
+浙江,EAT,G03,single,100.0,300.0,"Willett et al. 2019, EAT-Lancet reference diet",fruits 200 g 目标，范围 100-300 g
+浙江,EAT,G04,single,0.0,400.0,"Willett et al. 2019, EAT-Lancet reference diet",whole grains 232 g 目标，上限按 60% 能量折算约 400 g；G04 含豆类，偏紧
+浙江,EAT,G05,single,0.0,58.0,"Willett et al. 2019, EAT-Lancet reference diet",poultry 29 g 目标，范围 0-58 g
+浙江,EAT,G06,single,0.0,28.0,"Willett et al. 2019, EAT-Lancet reference diet",red meat 14 g 目标，范围 0-28 g
+浙江,EAT,G07,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",fish 28 g 目标，范围 0-100 g
+浙江,EAT,G08,single,200.0,600.0,"Willett et al. 2019, EAT-Lancet reference diet",vegetables 300 g 目标，范围 200-600 g
+浙江,EAT,G09,single,0.0,31.0,"Willett et al. 2019, EAT-Lancet reference diet",added sugar 31 g 上限，范围 0-31 g
+浙江,EAT,G10,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",tubers 50 g 目标，范围 0-100 g
+浙江,EAT,G11,single,39.0,78.0,"Willett et al. 2019, EAT-Lancet reference diet",added fats 51 g 目标，范围 39-78 g
+浙江,EAT,G12,single,0.0,175.0,"Willett et al. 2019, EAT-Lancet reference diet",legumes 50 + nuts 50 合计 100 g 目标，范围 0-175 g
+福建,EAT,G01,single,0.0,500.0,"Willett et al. 2019, EAT-Lancet reference diet",dairy 250 g 目标，范围 0-500 g
+福建,EAT,G02,single,0.0,25.0,"Willett et al. 2019, EAT-Lancet reference diet",eggs 13 g 目标，范围 0-25 g
+福建,EAT,G03,single,100.0,300.0,"Willett et al. 2019, EAT-Lancet reference diet",fruits 200 g 目标，范围 100-300 g
+福建,EAT,G04,single,0.0,400.0,"Willett et al. 2019, EAT-Lancet reference diet",whole grains 232 g 目标，上限按 60% 能量折算约 400 g；G04 含豆类，偏紧
+福建,EAT,G05,single,0.0,58.0,"Willett et al. 2019, EAT-Lancet reference diet",poultry 29 g 目标，范围 0-58 g
+福建,EAT,G06,single,0.0,28.0,"Willett et al. 2019, EAT-Lancet reference diet",red meat 14 g 目标，范围 0-28 g
+福建,EAT,G07,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",fish 28 g 目标，范围 0-100 g
+福建,EAT,G08,single,200.0,600.0,"Willett et al. 2019, EAT-Lancet reference diet",vegetables 300 g 目标，范围 200-600 g
+福建,EAT,G09,single,0.0,31.0,"Willett et al. 2019, EAT-Lancet reference diet",added sugar 31 g 上限，范围 0-31 g
+福建,EAT,G10,single,0.0,100.0,"Willett et al. 2019, EAT-Lancet reference diet",tubers 50 g 目标，范围 0-100 g
+福建,EAT,G11,single,39.0,78.0,"Willett et al. 2019, EAT-Lancet reference diet",added fats 51 g 目标，范围 39-78 g
+福建,EAT,G12,single,0.0,175.0,"Willett et al. 2019, EAT-Lancet reference diet",legumes 50 + nuts 50 合计 100 g 目标，范围 0-175 g
+上海,HEAL_base,G01,single,0.0,235.6164383561644,derived in this work: 0 to 2x provincial baseline,基线 58.9 g/day，上界取 2 倍
+上海,HEAL_base,G02,single,0.0,143.43987823439878,derived in this work: 0 to 2x provincial baseline,基线 35.9 g/day，上界取 2 倍
+上海,HEAL_base,G03,single,0.0,598.96499238965,derived in this work: 0 to 2x provincial baseline,基线 149.7 g/day，上界取 2 倍
+上海,HEAL_base,G04,single,0.0,1147.7625570776256,derived in this work: 0 to 2x provincial baseline,基线 286.9 g/day，上界取 2 倍
+上海,HEAL_base,G05,single,0.0,143.6834094368341,derived in this work: 0 to 2x provincial baseline,基线 35.9 g/day，上界取 2 倍
+上海,HEAL_base,G06,single,0.0,346.05783866057834,derived in this work: 0 to 2x provincial baseline,基线 86.5 g/day，上界取 2 倍
+上海,HEAL_base,G07,single,0.0,280.66971080669714,derived in this work: 0 to 2x provincial baseline,基线 70.2 g/day，上界取 2 倍
+上海,HEAL_base,G08,single,0.0,1131.9330289193304,derived in this work: 0 to 2x provincial baseline,基线 283.0 g/day，上界取 2 倍
+上海,HEAL_base,G09,single,0.0,14.97716894977169,derived in this work: 0 to 2x provincial baseline,基线 3.7 g/day，上界取 2 倍
+上海,HEAL_base,G10,single,0.0,400.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（200 g）
+上海,HEAL_base,G11,single,0.0,95.70776255707761,derived in this work: 0 to 2x provincial baseline,基线 23.9 g/day，上界取 2 倍
+上海,HEAL_base,G12,single,0.0,140.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（70 g）
+安徽,HEAL_base,G01,single,0.0,131.2633181126332,derived in this work: 0 to 2x provincial baseline,基线 32.8 g/day，上界取 2 倍
+安徽,HEAL_base,G02,single,0.0,147.5799086757991,derived in this work: 0 to 2x provincial baseline,基线 36.9 g/day，上界取 2 倍
+安徽,HEAL_base,G03,single,0.0,593.7290715372907,derived in this work: 0 to 2x provincial baseline,基线 148.4 g/day，上界取 2 倍
+安徽,HEAL_base,G04,single,0.0,1565.6621004566211,derived in this work: 0 to 2x provincial baseline,基线 391.4 g/day，上界取 2 倍
+安徽,HEAL_base,G05,single,0.0,158.17351598173516,derived in this work: 0 to 2x provincial baseline,基线 39.5 g/day，上界取 2 倍
+安徽,HEAL_base,G06,single,0.0,331.68949771689495,derived in this work: 0 to 2x provincial baseline,基线 82.9 g/day，上界取 2 倍
+安徽,HEAL_base,G07,single,0.0,153.66818873668188,derived in this work: 0 to 2x provincial baseline,基线 38.4 g/day，上界取 2 倍
+安徽,HEAL_base,G08,single,0.0,1190.13698630137,derived in this work: 0 to 2x provincial baseline,基线 297.5 g/day，上界取 2 倍
+安徽,HEAL_base,G09,single,0.0,10.350076103500761,derived in this work: 0 to 2x provincial baseline,基线 2.6 g/day，上界取 2 倍
+安徽,HEAL_base,G10,single,0.0,400.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（200 g）
+安徽,HEAL_base,G11,single,0.0,102.64840182648402,derived in this work: 0 to 2x provincial baseline,基线 25.7 g/day，上界取 2 倍
+安徽,HEAL_base,G12,single,0.0,140.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（70 g）
+山东,HEAL_base,G01,single,0.0,179.96955859969557,derived in this work: 0 to 2x provincial baseline,基线 45.0 g/day，上界取 2 倍
+山东,HEAL_base,G02,single,0.0,220.3957382039574,derived in this work: 0 to 2x provincial baseline,基线 55.1 g/day，上界取 2 倍
+山东,HEAL_base,G03,single,0.0,793.0593607305937,derived in this work: 0 to 2x provincial baseline,基线 198.3 g/day，上界取 2 倍
+山东,HEAL_base,G04,single,0.0,1338.5692541856924,derived in this work: 0 to 2x provincial baseline,基线 334.6 g/day，上界取 2 倍
+山东,HEAL_base,G05,single,0.0,84.87062404870625,derived in this work: 0 to 2x provincial baseline,基线 21.2 g/day，上界取 2 倍
+山东,HEAL_base,G06,single,0.0,282.3744292237443,derived in this work: 0 to 2x provincial baseline,基线 70.6 g/day，上界取 2 倍
+山东,HEAL_base,G07,single,0.0,143.56164383561642,derived in this work: 0 to 2x provincial baseline,基线 35.9 g/day，上界取 2 倍
+山东,HEAL_base,G08,single,0.0,1073.4855403348554,derived in this work: 0 to 2x provincial baseline,基线 268.4 g/day，上界取 2 倍
+山东,HEAL_base,G09,single,0.0,9.010654490106544,derived in this work: 0 to 2x provincial baseline,基线 2.3 g/day，上界取 2 倍
+山东,HEAL_base,G10,single,0.0,400.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（200 g）
+山东,HEAL_base,G11,single,0.0,86.9406392694064,derived in this work: 0 to 2x provincial baseline,基线 21.7 g/day，上界取 2 倍
+山东,HEAL_base,G12,single,0.0,140.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（70 g）
+江苏,HEAL_base,G01,single,0.0,168.76712328767124,derived in this work: 0 to 2x provincial baseline,基线 42.2 g/day，上界取 2 倍
+江苏,HEAL_base,G02,single,0.0,146.2404870624049,derived in this work: 0 to 2x provincial baseline,基线 36.6 g/day，上界取 2 倍
+江苏,HEAL_base,G03,single,0.0,519.2085235920853,derived in this work: 0 to 2x provincial baseline,基线 129.8 g/day，上界取 2 倍
+江苏,HEAL_base,G04,single,0.0,1375.8295281582953,derived in this work: 0 to 2x provincial baseline,基线 344.0 g/day，上界取 2 倍
+江苏,HEAL_base,G05,single,0.0,144.1704718417047,derived in this work: 0 to 2x provincial baseline,基线 36.0 g/day，上界取 2 倍
+江苏,HEAL_base,G06,single,0.0,348.12785388127855,derived in this work: 0 to 2x provincial baseline,基线 87.0 g/day，上界取 2 倍
+江苏,HEAL_base,G07,single,0.0,231.71993911719937,derived in this work: 0 to 2x provincial baseline,基线 57.9 g/day，上界取 2 倍
+江苏,HEAL_base,G08,single,0.0,1255.0380517503806,derived in this work: 0 to 2x provincial baseline,基线 313.8 g/day，上界取 2 倍
+江苏,HEAL_base,G09,single,0.0,12.54185692541857,derived in this work: 0 to 2x provincial baseline,基线 3.1 g/day，上界取 2 倍
+江苏,HEAL_base,G10,single,0.0,400.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（200 g）
+江苏,HEAL_base,G11,single,0.0,108.85844748858447,derived in this work: 0 to 2x provincial baseline,基线 27.2 g/day，上界取 2 倍
+江苏,HEAL_base,G12,single,0.0,140.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（70 g）
+江西,HEAL_base,G01,single,0.0,120.79147640791477,derived in this work: 0 to 2x provincial baseline,基线 30.2 g/day，上界取 2 倍
+江西,HEAL_base,G02,single,0.0,102.64840182648402,derived in this work: 0 to 2x provincial baseline,基线 25.7 g/day，上界取 2 倍
+江西,HEAL_base,G03,single,0.0,510.56316590563165,derived in this work: 0 to 2x provincial baseline,基线 127.6 g/day，上界取 2 倍
+江西,HEAL_base,G04,single,0.0,1638.8432267884323,derived in this work: 0 to 2x provincial baseline,基线 409.7 g/day，上界取 2 倍
+江西,HEAL_base,G05,single,0.0,129.43683409436835,derived in this work: 0 to 2x provincial baseline,基线 32.4 g/day，上界取 2 倍
+江西,HEAL_base,G06,single,0.0,377.59512937595133,derived in this work: 0 to 2x provincial baseline,基线 94.4 g/day，上界取 2 倍
+江西,HEAL_base,G07,single,0.0,175.58599695585997,derived in this work: 0 to 2x provincial baseline,基线 43.9 g/day，上界取 2 倍
+江西,HEAL_base,G08,single,0.0,1253.3333333333333,derived in this work: 0 to 2x provincial baseline,基线 313.3 g/day，上界取 2 倍
+江西,HEAL_base,G09,single,0.0,11.689497716894977,derived in this work: 0 to 2x provincial baseline,基线 2.9 g/day，上界取 2 倍
+江西,HEAL_base,G10,single,0.0,400.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（200 g）
+江西,HEAL_base,G11,single,0.0,150.98934550989347,derived in this work: 0 to 2x provincial baseline,基线 37.7 g/day，上界取 2 倍
+江西,HEAL_base,G12,single,0.0,140.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（70 g）
+浙江,HEAL_base,G01,single,0.0,151.3546423135464,derived in this work: 0 to 2x provincial baseline,基线 37.8 g/day，上界取 2 倍
+浙江,HEAL_base,G02,single,0.0,117.13850837138509,derived in this work: 0 to 2x provincial baseline,基线 29.3 g/day，上界取 2 倍
+浙江,HEAL_base,G03,single,0.0,614.7945205479451,derived in this work: 0 to 2x provincial baseline,基线 153.7 g/day，上界取 2 倍
+浙江,HEAL_base,G04,single,0.0,1502.2222222222222,derived in this work: 0 to 2x provincial baseline,基线 375.6 g/day，上界取 2 倍
+浙江,HEAL_base,G05,single,0.0,136.62100456621005,derived in this work: 0 to 2x provincial baseline,基线 34.2 g/day，上界取 2 倍
+浙江,HEAL_base,G06,single,0.0,363.4703196347032,derived in this work: 0 to 2x provincial baseline,基线 90.9 g/day，上界取 2 倍
+浙江,HEAL_base,G07,single,0.0,297.59512937595133,derived in this work: 0 to 2x provincial baseline,基线 74.4 g/day，上界取 2 倍
+浙江,HEAL_base,G08,single,0.0,1105.144596651446,derived in this work: 0 to 2x provincial baseline,基线 276.3 g/day，上界取 2 倍
+浙江,HEAL_base,G09,single,0.0,16.925418569254184,derived in this work: 0 to 2x provincial baseline,基线 4.2 g/day，上界取 2 倍
+浙江,HEAL_base,G10,single,0.0,400.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（200 g）
+浙江,HEAL_base,G11,single,0.0,122.86149162861491,derived in this work: 0 to 2x provincial baseline,基线 30.7 g/day，上界取 2 倍
+浙江,HEAL_base,G12,single,0.0,140.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（70 g）
+福建,HEAL_base,G01,single,0.0,128.82800608828006,derived in this work: 0 to 2x provincial baseline,基线 32.2 g/day，上界取 2 倍
+福建,HEAL_base,G02,single,0.0,116.28614916286149,derived in this work: 0 to 2x provincial baseline,基线 29.1 g/day，上界取 2 倍
+福建,HEAL_base,G03,single,0.0,477.92998477929984,derived in this work: 0 to 2x provincial baseline,基线 119.5 g/day，上界取 2 倍
+福建,HEAL_base,G04,single,0.0,1359.1476407914763,derived in this work: 0 to 2x provincial baseline,基线 339.8 g/day，上界取 2 倍
+福建,HEAL_base,G05,single,0.0,148.43226788432267,derived in this work: 0 to 2x provincial baseline,基线 37.1 g/day，上界取 2 倍
+福建,HEAL_base,G06,single,0.0,373.9421613394216,derived in this work: 0 to 2x provincial baseline,基线 93.5 g/day，上界取 2 倍
+福建,HEAL_base,G07,single,0.0,295.5251141552511,derived in this work: 0 to 2x provincial baseline,基线 73.9 g/day，上界取 2 倍
+福建,HEAL_base,G08,single,0.0,1015.8904109589041,derived in this work: 0 to 2x provincial baseline,基线 254.0 g/day，上界取 2 倍
+福建,HEAL_base,G09,single,0.0,17.41248097412481,derived in this work: 0 to 2x provincial baseline,基线 4.4 g/day，上界取 2 倍
+福建,HEAL_base,G10,single,0.0,400.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（200 g）
+福建,HEAL_base,G11,single,0.0,108.61491628614915,derived in this work: 0 to 2x provincial baseline,基线 27.2 g/day，上界取 2 倍
+福建,HEAL_base,G12,single,0.0,140.0,derived in this work: 0 to 2x provincial baseline,无消费基线，退化为 2 倍 CDG 上限（70 g）

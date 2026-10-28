@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="490" font-family="sans-serif" font-size="12">
+<rect width="760" height="490" fill="white"/>
+<text x="380.0" y="26" text-anchor="middle" font-size="15">Figure 1. Direction-label distribution across 6 provinces x 6 food groups (90 group-cells)</text>
+<rect x="100" y="243.3" width="110" height="116.7" fill="#2b8a3e" stroke="white" stroke-width="0.5"/>
+<text x="155.0" y="305.7" text-anchor="middle" fill="white">14</text>
+<rect x="100" y="60.0" width="110" height="183.3" fill="#c92a2a" stroke="white" stroke-width="0.5"/>
+<text x="155.0" y="155.7" text-anchor="middle" fill="white">22</text>
+<text x="155.0" y="380" text-anchor="middle">CDG</text>
+<text x="155.0" y="396" text-anchor="middle" fill="#666">n=36</text>
+<rect x="300" y="326.7" width="110" height="33.3" fill="#2b8a3e" stroke="white" stroke-width="0.5"/>
+<text x="355.0" y="347.3" text-anchor="middle" fill="white">4</text>
+<rect x="300" y="251.7" width="110" height="75.0" fill="#c92a2a" stroke="white" stroke-width="0.5"/>
+<text x="355.0" y="293.2" text-anchor="middle" fill="white">9</text>
+<rect x="300" y="243.3" width="110" height="8.3" fill="#adb5bd" stroke="white" stroke-width="0.5"/>
+<rect x="300" y="210.0" width="110" height="33.3" fill="#f08c00" stroke="white" stroke-width="0.5"/>
+<text x="355.0" y="230.7" text-anchor="middle" fill="white">4</text>
+<text x="355.0" y="380" text-anchor="middle">EAT</text>
+<text x="355.0" y="396" text-anchor="middle" fill="#666">n=18</text>
+<rect x="500" y="210.0" width="110" height="150.0" fill="#2b8a3e" stroke="white" stroke-width="0.5"/>
+<text x="555.0" y="289.0" text-anchor="middle" fill="white">18</text>
+<rect x="500" y="60.0" width="110" height="150.0" fill="#c92a2a" stroke="white" stroke-width="0.5"/>
+<text x="555.0" y="139.0" text-anchor="middle" fill="white">18</text>
+<text x="555.0" y="380" text-anchor="middle">HEAL_base</text>
+<text x="555.0" y="396" text-anchor="middle" fill="#666">n=36</text>
+<rect x="100" y="430" width="12" height="12" fill="#2b8a3e"/>
+<text x="118" y="440">Stable up</text>
+<rect x="250" y="430" width="12" height="12" fill="#c92a2a"/>
+<text x="268" y="440">Stable down</text>
+<rect x="400" y="430" width="12" height="12" fill="#adb5bd"/>
+<text x="418" y="440">Neutral</text>
+<rect x="550" y="430" width="12" height="12" fill="#f08c00"/>
+<text x="568" y="440">Data-sensitive</text>
+</svg>

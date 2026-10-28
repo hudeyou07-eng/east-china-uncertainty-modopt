@@ -1,0 +1,4 @@
+{
+  "command": "diagnose-feasible-width",
+  "scope": "k6_price"
+}

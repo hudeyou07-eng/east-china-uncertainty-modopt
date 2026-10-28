@@ -1,0 +1,11 @@
+﻿{
+    "appendix_only":  true,
+    "purpose":  "方案 B 第 2 条：k4_official 下的上海单点对照，用于说明「口径决定样本」",
+    "must_not":  "不得与 k6_price 的 6 省结果并列比较，不并入 46 个预注册 run 的计数",
+    "scope":  "k4_official",
+    "provinces":  [
+                      "上海"
+                  ],
+    "scenario":  "CDG",
+    "profile":  "smoke"
+}

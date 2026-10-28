@@ -1,0 +1,4 @@
+{
+  "command": "diagnose-price-coverage",
+  "scope": "k6_price"
+}

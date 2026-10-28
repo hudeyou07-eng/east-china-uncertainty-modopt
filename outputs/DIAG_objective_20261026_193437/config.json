@@ -1,0 +1,8 @@
+{
+  "command": "diagnose-objective-degeneracy",
+  "scenario": "CDG",
+  "epsilon": 0.05,
+  "n_random": 500,
+  "seed": 20261026,
+  "tol": 1e-06
+}

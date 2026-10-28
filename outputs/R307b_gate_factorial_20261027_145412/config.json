@@ -1,0 +1,5 @@
+{
+  "command": "r307b-gate-factorial",
+  "scenario": "CDG",
+  "epsilon": 0.05
+}

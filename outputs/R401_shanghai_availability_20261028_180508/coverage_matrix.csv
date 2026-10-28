@@ -1,0 +1,13 @@
+﻿group_id,group_zh,2016,2017,2018,2019,2020,2021,2022,2023,2024
+G01,乳及乳制品,missing,missing,missing,missing,missing,missing,missing,missing,missing
+G02,蛋类,missing,missing,missing,missing,missing,observed,observed,observed,missing
+G03,水果,missing,missing,missing,missing,missing,missing,missing,missing,missing
+G04,谷物及豆类,missing,missing,missing,missing,missing,observed,missing,missing,missing
+G05,禽肉,missing,missing,missing,missing,missing,missing,observed,missing,missing
+G06,红肉（猪牛羊）,missing,observed,observed,missing,observed,observed,observed,observed,observed
+G07,水产品,missing,missing,missing,missing,missing,missing,missing,missing,missing
+G08,蔬菜,missing,observed,missing,missing,missing,missing,observed,missing,observed
+G09,糖,missing,observed,missing,missing,missing,missing,missing,missing,missing
+G10,薯类,missing,missing,missing,missing,missing,observed,missing,missing,missing
+G11,食用油,missing,missing,missing,missing,missing,observed,observed,missing,missing
+G12,大豆及坚果,missing,missing,missing,missing,missing,missing,missing,missing,missing

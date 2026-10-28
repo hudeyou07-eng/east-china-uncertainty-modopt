@@ -1,0 +1,18 @@
+{
+  "command": "verify-reproducibility",
+  "must_dirs": [
+    "B1_formal_withmice_20261023_124906",
+    "R103_105_consumption_formal_20261026_174725",
+    "R108_109_price_formal_20261026_175443",
+    "R200_203_b2_formal_20261027_222841",
+    "R200_203_b2_formal_20261027_224315",
+    "R002_group_freeze_20261027_232440",
+    "M3_all_smoke_20261026_181618",
+    "R400_406_provinces_20261028_183104",
+    "R407_looro_20261028_183054",
+    "R408_delta_20261028_183131",
+    "R409_bounds_20261028_183421",
+    "R401_shanghai_availability_20261028_180508",
+    "R500_504_paper_artifacts*"
+  ]
+}

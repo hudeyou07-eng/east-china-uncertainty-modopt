@@ -1,0 +1,4 @@
+{
+  "command": "diagnose-tail-angle",
+  "scope": "k6_price"
+}

@@ -1,0 +1,13 @@
+﻿province,epsilon,mode,solve_success,objective,marginal_viol_max,joint_viol_rate,joint_viol_over_eps,z_sum,z_budget,n_nutrients,seconds,message,timed_out
+上海,0.2,marginal,True,0.36792813266666136,0.195,0.345,1.7249999999999999,80.0,40.0,9,74.07681131362915,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+上海,0.3,marginal,False,,,,,,60.0,9,240.113605260849,Time limit reached. (HiGHS Status 13: Time limit reached),True
+安徽,0.2,marginal,True,0.40920047736168047,0.18,0.32,1.5999999999999999,116.0,40.0,8,11.958320140838623,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+安徽,0.3,marginal,True,0.40079236732852513,0.3,0.52,1.7333333333333334,149.0,60.0,8,183.46112775802612,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+江苏,0.2,marginal,True,0.4005688125581933,0.2,0.42,2.0999999999999996,190.0,40.0,9,21.8596510887146,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+江苏,0.3,marginal,True,0.3911445896193219,0.3,0.605,2.0166666666666666,326.0,60.0,9,127.99553775787354,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+江西,0.2,marginal,True,0.38036222248803087,0.19,0.325,1.625,154.0,40.0,8,9.283884525299072,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+江西,0.3,marginal,True,0.37348402277166687,0.3,0.52,1.7333333333333334,152.0,60.0,8,147.45810461044312,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+浙江,0.2,marginal,True,0.36549593647834866,0.2,0.2,1.0,76.0,40.0,8,0.7015106678009033,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+浙江,0.3,marginal,True,0.36198850595833904,0.26,0.26,0.8666666666666667,78.0,60.0,8,1.8621270656585693,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+福建,0.2,marginal,True,0.3790669347685069,0.2,0.345,1.7249999999999999,114.0,40.0,9,1.3794183731079102,Optimization terminated successfully. (HiGHS Status 7: Optim,False
+福建,0.3,marginal,True,0.3749346123072323,0.3,0.4,1.3333333333333335,123.0,60.0,9,3.904860734939575,Optimization terminated successfully. (HiGHS Status 7: Optim,False

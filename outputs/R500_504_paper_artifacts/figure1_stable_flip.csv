@@ -1,0 +1,4 @@
+﻿scenario,stable-up,stable-down,stable-neutral,data-sensitive
+CDG,14,22,0,0
+EAT,4,9,1,4
+HEAL_base,18,18,0,0

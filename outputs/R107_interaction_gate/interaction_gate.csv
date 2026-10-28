@@ -1,0 +1,3 @@
+﻿config,tuning_mean_ratio,heldout_mean_ratio,tuning_all_masks_improve,heldout_all_masks_improve,no_mask_degrades,both_improve_strict,gate_pass,worst_mask_tuning,worst_mask_heldout
+ir10_k1,0.9418293899346994,0.9336083322960986,False,False,True,False,False,province_group,province_group
+mice,1.8639955201829126,1.7729587102850193,False,False,False,False,False,province_group,province_group

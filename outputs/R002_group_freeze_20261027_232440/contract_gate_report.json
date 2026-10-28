@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-10-27T15:24:40.276366+00:00",
+  "passed": 7,
+  "total": 7,
+  "all_passed": true,
+  "gates": [
+    {
+      "gate": "G1",
+      "file": "group_audit.csv",
+      "ok": true,
+      "detail": "include=1 共 4 组 ['G02', 'G05', 'G06', 'G08']；四门未全通过 0 组",
+      "warnings": []
+    },
+    {
+      "gate": "G2",
+      "file": "baseline_consumption.csv",
+      "ok": true,
+      "detail": "630 行 / 观测 630 / 省 7 / 组 10；负值 0 行；主结论组无基线 []",
+      "warnings": []
+    },
+    {
+      "gate": "G3",
+      "file": "group_prices.csv",
+      "ok": true,
+      "detail": "主结论组 ['G02', 'G05', 'G06', 'G08']；非正值 0；observed=True 但缺价 0；组级低于门槛(obs>=18, 省>=3) []；省份异常 []；多品类组取单品类 0 行；完整结构行的「等于最低价」比例 0%（需 <50%，分母 48 行、已排除部分结构行）",
+      "warnings": [
+        "单元级覆盖率不足：7/28 个 (省,组) 单元有价年份 <5（共 9 年）。最薄的：上海/G05=1年, 山东/G05=1年, 浙江/G08=2年, 浙江/G02=2年, 上海/G08=3年, 上海/G02=3年。这些单元的组价是「若干年均值」，不是 9 年均价，论文数据节必须披露。",
+        "决策口径 k6_price（6 组 × 6 省 = 36 单元）覆盖率不足 13 个：山东/G05=1年, 山东/G07=1年, 浙江/G07=1年, 浙江/G02=2年, 浙江/G08=2年, 山东/G04=2年。这一组数字才是模型实际用到的；上面 K=4 的那条是合同口径。"
+      ]
+    },
+    {
+      "gate": "G4",
+      "file": "nutrients.csv",
+      "ok": true,
+      "detail": "主结论组 ['G02', 'G05', 'G06', 'G08'] × 硬营养素 11；缺营养素列 []；值缺失 0 格；coverage_complete=False 0 格",
+      "warnings": []
+    },
+    {
+      "gate": "G5",
+      "file": "environment.csv",
+      "ok": true,
+      "detail": "主口径 global_pn / 主结论组 ['G02', 'G05', 'G06', 'G08']；缺指标 []；缺格组 []；边界口径 ['farm-to-retail (Poore & Nemecek 2018, via Our World in Data)']（需唯一）；非正值 0",
+      "warnings": []
+    },
+    {
+      "gate": "G6",
+      "file": "decision_bounds.csv",
+      "ok": true,
+      "detail": "259 行；情景 ['CDG', 'EAT', 'HEAL_base']；单组 252 / 联合 7；非有限 0；lower>upper 0；负值 0；重复键 0；非法 bound_type 0；未覆盖组合 无",
+      "warnings": []
+    },
+    {
+      "gate": "G7",
+      "file": "model_manifest.json",
+      "ok": true,
+      "detail": "缺字段 []；contract_status.gate_ready=True；hash 漂移 无；记录 10 个产物",
+      "warnings": []
+    }
+  ]
+}

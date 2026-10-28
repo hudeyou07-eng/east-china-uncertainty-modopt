@@ -1,0 +1,35 @@
+{
+  "command": "build-paper-artifacts",
+  "run_id": "R500-504",
+  "evidence_status": "formal",
+  "covers": [
+    "R500",
+    "R501",
+    "R502",
+    "R503",
+    "R504"
+  ],
+  "n_artifacts": 11,
+  "artifacts": [
+    "table1_price.csv",
+    "table1_consumption.csv",
+    "table1.md",
+    "table2_decision.csv",
+    "table2.md",
+    "figure1_stable_flip.csv",
+    "figure1.svg",
+    "figure2_regional_heatmap.csv",
+    "figure2.svg",
+    "artifact_manifest.json",
+    "appendix_index.md"
+  ],
+  "checks": {
+    "table2_rows": 8,
+    "figure1_scenarios": 3,
+    "figure2_shape": [
+      6,
+      7
+    ]
+  },
+  "note": "本 run 只读既有产物、不重跑求解，因此不会改变任何结论；图形为纯 SVG（无 matplotlib 依赖），数据另存 CSV 供重绘。"
+}

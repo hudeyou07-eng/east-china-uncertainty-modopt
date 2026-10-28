@@ -1,0 +1,51 @@
+{
+  "run_id": "R401",
+  "command": "report-shanghai-availability",
+  "evidence_status": "structural",
+  "province": "上海",
+  "decision_scope_main": "k6_price",
+  "can_enter_k6_price": false,
+  "blocking_group": "G07",
+  "blocking_reason": "G07（水产品）在价格面板 9 年全部缺失；批发价桥接表不含水产品品类，仓库内不可修复",
+  "can_enter_k4_official": true,
+  "n_groups_with_any_price": 8,
+  "groups_without_any_price": [
+    "G01",
+    "G03",
+    "G07",
+    "G12"
+  ],
+  "bridge_categories": [
+    "牛肉(后腿)",
+    "猪肉",
+    "禽类",
+    "粮食(大米/面粉)",
+    "羊肉(后腿)",
+    "蔬菜",
+    "薯类(马铃薯)",
+    "食用油(升)",
+    "鸡蛋"
+  ],
+  "aquatic_categories_in_bridge": [],
+  "legacy_single_point_records": [
+    {
+      "price_record_id": "P023",
+      "category": "水产品(不含虾蟹)",
+      "price_value_cny_kg": 30.26,
+      "source_file": "零售价格表.xlsx",
+      "source_row": 5,
+      "has_year": false,
+      "usable_in_panel": false,
+      "why": "无年份字段的单时点记录，无法定位到 2016–2024 的某一年；强行使用等于给该组建一个年份不明的价"
+    }
+  ],
+  "missing_cells_p0": 36,
+  "conclusion": "上海在 k6_price 下不可装配（缺 G07 且不可桥接），故不进入决策层；在 k4_official 的四个组上齐备，可作为附录单点对照，但不得与 K=6 结果并列比较。",
+  "artifacts": [
+    "coverage_matrix.csv",
+    "group_summary.csv",
+    "scope_gap.csv",
+    "missing_classification.csv",
+    "report.md"
+  ]
+}

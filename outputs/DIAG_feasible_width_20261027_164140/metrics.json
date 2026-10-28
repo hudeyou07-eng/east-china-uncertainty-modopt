@@ -1,0 +1,27 @@
+{
+  "command": "diagnose-feasible-width",
+  "evidence_status": "structural",
+  "scope": "k6_price",
+  "scenarios": [
+    "CDG",
+    "EAT",
+    "HEAL_base"
+  ],
+  "bases": [
+    "rni",
+    "ear"
+  ],
+  "pin_tol": 1e-06,
+  "tilt": 1.3,
+  "evidence_note": "纯 LP 几何计算，无随机场景、无求解器启发式，结果可逐位复现。full 层 = box ∩ 联合约束 ∩ active_mask 营养约束，与求解器看到的域一致",
+  "summary": {
+    "pinned_ratio_full_ear": 0.0,
+    "pinned_ratio_full_rni": 0.0,
+    "tilt_max_dq_ear": 341.7147524912155,
+    "tilt_max_dq_rni": 182.47263958424747,
+    "d1d0_max_ear": 341.7147524912155,
+    "d1d0_max_rni": 182.47263958424747,
+    "d1d0_positive_provinces_rni": 5,
+    "d1d0_positive_provinces_ear": 3
+  }
+}

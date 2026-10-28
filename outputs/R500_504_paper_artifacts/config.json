@@ -1,0 +1,10 @@
+{
+  "command": "build-paper-artifacts",
+  "sources": [
+    "outputs\\B1_formal_withmice_20261023_124906",
+    "outputs\\R103_105_consumption_formal_20261026_174725",
+    "outputs\\R200_203_b2_formal_20261027_222841",
+    "outputs\\R200_203_b2_formal_20261027_224315",
+    "outputs\\R400_406_provinces_20261028_183104"
+  ]
+}

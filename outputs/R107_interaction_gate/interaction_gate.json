@@ -1,0 +1,39 @@
+{
+  "source_run": "outputs\\B1_interaction_sweep_20261023_141000",
+  "source_run_status": "INCOMPLETE (不得作为有效 run 引用)",
+  "metric": "scaled_mae",
+  "baseline": "default",
+  "degrade_tolerance": 1.05,
+  "configs_compared": [
+    "ir10_k1",
+    "mice"
+  ],
+  "gate_pass": [],
+  "gate_conclusion": "both improve 不成立（无配置通过严格门控）",
+  "detail": [
+    {
+      "config": "ir10_k1",
+      "tuning_mean_ratio": 0.9418293899346994,
+      "heldout_mean_ratio": 0.9336083322960986,
+      "tuning_all_masks_improve": false,
+      "heldout_all_masks_improve": false,
+      "no_mask_degrades": true,
+      "both_improve_strict": false,
+      "gate_pass": false,
+      "worst_mask_tuning": "province_group",
+      "worst_mask_heldout": "province_group"
+    },
+    {
+      "config": "mice",
+      "tuning_mean_ratio": 1.8639955201829126,
+      "heldout_mean_ratio": 1.7729587102850193,
+      "tuning_all_masks_improve": false,
+      "heldout_all_masks_improve": false,
+      "no_mask_degrades": false,
+      "both_improve_strict": false,
+      "gate_pass": false,
+      "worst_mask_tuning": "province_group",
+      "worst_mask_heldout": "province_group"
+    }
+  ]
+}

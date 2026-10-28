@@ -1,0 +1,49 @@
+{
+  "artifacts": [
+    {
+      "file": "table1_price.csv",
+      "bytes": 1793,
+      "sha256": "4f9bb37ea8be31a8d85668566f9d05e6dbd963f6cc7cd9ae64df4efb5f88d3e1"
+    },
+    {
+      "file": "table1_consumption.csv",
+      "bytes": 3436,
+      "sha256": "a997620c2745b97e2893593b0b6aa13bb6811cc609440bb1e1eab4acc1c5eec9"
+    },
+    {
+      "file": "table1.md",
+      "bytes": 2573,
+      "sha256": "144ea612698ed12c48474b98fd2d2310732981aaeca34a5b2494dee92215b328"
+    },
+    {
+      "file": "table2_decision.csv",
+      "bytes": 774,
+      "sha256": "cfa3ad3b251b19b4a3a69dc86b1c12d5ea24d677323a277db20c675c17e2cbfe"
+    },
+    {
+      "file": "table2.md",
+      "bytes": 1066,
+      "sha256": "2840da4517efb197d8c59f934e294a820fa67f3668f4a73952bbc5ea0cab0209"
+    },
+    {
+      "file": "figure1_stable_flip.csv",
+      "bytes": 114,
+      "sha256": "941866081762a70ca36d9b79a1e85f8aa36d63967f6320851e1dbcda2c5fda80"
+    },
+    {
+      "file": "figure1.svg",
+      "bytes": 2433,
+      "sha256": "892cdf3b98857aa1fedd168a0e36186ff222eee6366b2f536c26be6fbbe321f4"
+    },
+    {
+      "file": "figure2_regional_heatmap.csv",
+      "bytes": 489,
+      "sha256": "923be6e35c17a6db64ece5aafe41ddd564ec4f9262a62a2d3151513a92ebb8cb"
+    },
+    {
+      "file": "figure2.svg",
+      "bytes": 6882,
+      "sha256": "a87e544b44fb6269fa89a62ca6fb39558e97e0397b0e1aa5b414db8285a85fe9"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "command": "verify-reproducibility",
+  "run_id": "R505",
+  "evidence_status": "formal",
+  "manifest": {
+    "n_checked": 10,
+    "n_ok": 10,
+    "drift": [],
+    "missing": []
+  },
+  "must_dirs": {
+    "n_checked": 13,
+    "absent": [],
+    "missing_done": []
+  },
+  "tests": {
+    "returncode": 0,
+    "tail": [
+      "Ran 69 tests in 1.790s",
+      "",
+      "OK"
+    ]
+  },
+  "tracker_check": {
+    "returncode": 0,
+    "summary": "结论：15 项全部通过。",
+    "n_pass": 15,
+    "n_fail": 0
+  },
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "openpyxl": "3.1.5",
+    "PyYAML": "6.0.3"
+  },
+  "verified": [
+    "合同哈希零漂移（10/10）",
+    "关键 run 目录完整（13 个，均带 DONE）",
+    "unittest 全绿",
+    "tracker 校验全绿（15 项）"
+  ],
+  "not_verified": [
+    "干净环境重跑（git clone + 新建 venv + pip install -r requirements.txt）—— 本环境无网络/不新建环境，未执行；命令见 RUNBOOK.md",
+    "论文图表的人工视觉核对（R502/R503 的 SVG 需人眼确认可读性）"
+  ],
+  "verdict": "PASS（自动化部分）",
+  "note": "本报告只覆盖可自动化验证的部分。R505 的预注册要求是「干净环境复跑」，那一步必须在仓库外执行，见 RUNBOOK.md；本报告不声称已完成它。"
+}

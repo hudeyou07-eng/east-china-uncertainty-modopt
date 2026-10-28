@@ -1,0 +1,4 @@
+{
+  "command": "diagnose-price-panel",
+  "scope": "k6_price"
+}

@@ -1,0 +1,50 @@
+{
+  "generated_at_utc": "2026-10-26T09:08:29.667296+00:00",
+  "passed": 7,
+  "total": 7,
+  "all_passed": true,
+  "gates": [
+    {
+      "gate": "G1",
+      "file": "group_audit.csv",
+      "ok": true,
+      "detail": "include=1 共 4 组 ['G02', 'G05', 'G06', 'G08']；四门未全通过 0 组"
+    },
+    {
+      "gate": "G2",
+      "file": "baseline_consumption.csv",
+      "ok": true,
+      "detail": "630 行 / 观测 630 / 省 7 / 组 10；负值 0 行；主结论组无基线 []"
+    },
+    {
+      "gate": "G3",
+      "file": "group_prices.csv",
+      "ok": true,
+      "detail": "主结论组 ['G02', 'G05', 'G06', 'G08']；非正值 0；observed=True 但缺价 0；低于门槛(obs>=18, 省>=3) []；省份异常 []；多品类组取单品类 0 行；主口径等于最低价的比例 45%（需 <50%）"
+    },
+    {
+      "gate": "G4",
+      "file": "nutrients.csv",
+      "ok": true,
+      "detail": "主结论组 ['G02', 'G05', 'G06', 'G08'] × 硬营养素 11；缺营养素列 []；值缺失 0 格；coverage_complete=False 0 格"
+    },
+    {
+      "gate": "G5",
+      "file": "environment.csv",
+      "ok": true,
+      "detail": "主口径 global_pn / 主结论组 ['G02', 'G05', 'G06', 'G08']；缺指标 []；缺格组 []；边界口径 ['farm-to-retail (Poore & Nemecek 2018, via Our World in Data)']（需唯一）；非正值 0"
+    },
+    {
+      "gate": "G6",
+      "file": "decision_bounds.csv",
+      "ok": true,
+      "detail": "259 行；情景 ['CDG', 'EAT', 'HEAL_base']；单组 252 / 联合 7；非有限 0；lower>upper 0；负值 0；重复键 0；非法 bound_type 0；未覆盖组合 无"
+    },
+    {
+      "gate": "G7",
+      "file": "model_manifest.json",
+      "ok": true,
+      "detail": "缺字段 []；contract_status.gate_ready=True；hash 漂移 无；记录 9 个产物"
+    }
+  ]
+}

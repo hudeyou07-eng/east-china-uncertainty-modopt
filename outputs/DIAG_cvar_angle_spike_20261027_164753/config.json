@@ -1,0 +1,4 @@
+{
+  "command": "diagnose-cvar-angle",
+  "scope": "k6_price"
+}

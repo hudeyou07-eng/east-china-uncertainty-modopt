@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-27T14:29:06.958746+08:00",
+  "python": "3.13.14 (main, Jun 11 2026, 04:04:46) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\汇总\\SRT\\east-china-uncertainty-modopt\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cwd": "D:\\汇总\\SRT\\east-china-uncertainty-modopt",
+  "git_hash": "466900c2012073642b610f687fe2d2a89ec0ded2",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "yaml": "6.0.3",
+    "openpyxl": "3.1.5"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "command": "diagnose-lambda-curve",
+  "evidence_status": "structural",
+  "scope": "k6_price",
+  "bounds_basis": "ear",
+  "scenarios": [
+    "EAT"
+  ],
+  "n_scen": 200,
+  "alpha": 0.9,
+  "lambdas": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "seeds": [
+    20261027,
+    20261028,
+    20261029
+  ],
+  "b1_run": "B1_formal_withmice_20261023_124906",
+  "b1_method": "hierarchical_rw",
+  "b1_mask_type": "single_cell",
+  "evidence_note": "执行 §24.8 判定后半句：对『必须报告 λ 曲线』的格子真算曲线。场景集固定（单 seed 内扫 λ），否则曲线不可比。Δq 容差 1e-06 g/day，小于此视为决策未动。evidence_status=structural：单批场景、3 seed，非正式重复实验。",
+  "summary": {
+    "n_scen": 200,
+    "alpha": 0.9,
+    "lambdas": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "n_seeds": 3,
+    "n_cells": 3,
+    "cells_decision_moved": 3,
+    "cells_decision_flat": 0,
+    "dq_max_cdg": null,
+    "dq_max_eat": 251.9972804020233,
+    "dq_tol": 1e-06
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "command": "verify-binding-constraints",
+  "scenario": "CDG",
+  "epsilon": 0.05,
+  "tol": 1e-06
+}

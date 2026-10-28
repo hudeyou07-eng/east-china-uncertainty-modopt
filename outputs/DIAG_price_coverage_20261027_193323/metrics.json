@@ -1,0 +1,108 @@
+{
+  "command": "diagnose-price-coverage",
+  "evidence_status": "structural",
+  "scope": "k6_price",
+  "groups": [
+    "G02",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08"
+  ],
+  "provinces": [
+    "安徽",
+    "山东",
+    "江苏",
+    "江西",
+    "浙江",
+    "福建"
+  ],
+  "evidence_note": "纯数据审计，无求解。逐 (省,组) 单元统计年份覆盖，并拆解 check_contract_gates.py 的 G3 collapsed 指标构成。结论：G3 的 thin 是组级不是单元级；collapsed 完全由structure_weighted_partial(pork=1.000) 的行构成。",
+  "summary": {
+    "n_cells": 36,
+    "cells_all_observed": 2,
+    "cells_fully_bridged": 1,
+    "cells_le_2_years": 6,
+    "cells_le_4_years": 13,
+    "cells_exactly_1_year": 3,
+    "cells_exactly_1_year_list": [
+      "山东/G05",
+      "山东/G07",
+      "浙江/G07"
+    ],
+    "cells_fully_bridged_list": [
+      "浙江/G05"
+    ],
+    "median_price_years": 6.0,
+    "g3_collapsed_overall": 0.45098039215686275,
+    "g3_collapsed_excluding_partial": 0.0,
+    "n_rows_at_min": 23,
+    "n_rows_at_min_from_partial": 23,
+    "n_partial_rows": 24,
+    "weight_mass_lost": {
+      "structure_weighted_partial(pork=1.000)": 0.212,
+      "structure_weighted_partial(beef=0.147/pork=0.853)": 0.076
+    },
+    "g3_thin_is_group_level": {
+      "G02": {
+        "n_obs": 39,
+        "n_region": 6
+      },
+      "G04": {
+        "n_obs": 24,
+        "n_region": 6
+      },
+      "G05": {
+        "n_obs": 26,
+        "n_region": 5
+      },
+      "G06": {
+        "n_obs": 44,
+        "n_region": 6
+      },
+      "G07": {
+        "n_obs": 23,
+        "n_region": 6
+      },
+      "G08": {
+        "n_obs": 32,
+        "n_region": 6
+      }
+    },
+    "g3_thin_would_flag_cells_below_4y": [
+      "安徽/G07",
+      "山东/G04",
+      "山东/G05",
+      "山东/G07",
+      "浙江/G02",
+      "浙江/G04",
+      "浙江/G07",
+      "浙江/G08",
+      "福建/G04"
+    ],
+    "consistency_flags": [
+      {
+        "cell": "浙江/G07",
+        "residual_pct": 60.1,
+        "n_price_years": 1
+      },
+      {
+        "cell": "山东/G07",
+        "residual_pct": 47.9,
+        "n_price_years": 1
+      },
+      {
+        "cell": "江西/G05",
+        "residual_pct": 47.7,
+        "n_price_years": 8
+      },
+      {
+        "cell": "江苏/G08",
+        "residual_pct": 33.6,
+        "n_price_years": 4
+      }
+    ],
+    "consistency_n_flagged": 4
+  }
+}

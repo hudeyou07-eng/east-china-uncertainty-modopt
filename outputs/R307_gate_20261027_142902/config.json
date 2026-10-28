@@ -1,0 +1,6 @@
+{
+  "command": "r307-gate-sensitivity",
+  "scenario": "CDG",
+  "epsilon": 0.05,
+  "relaxed_audit": "data/processed/group_audit_sensitivity_c0.90.csv"
+}

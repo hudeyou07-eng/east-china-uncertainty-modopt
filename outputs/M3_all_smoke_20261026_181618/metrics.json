@@ -1,0 +1,190 @@
+{
+  "command": "m3-sensitivity",
+  "profile": "smoke",
+  "grids": [
+    "R300",
+    "R301",
+    "R302",
+    "R303"
+  ],
+  "scenario": "CDG",
+  "repeats": 3,
+  "provinces_used": [
+    "上海",
+    "安徽",
+    "山东",
+    "江苏",
+    "江西",
+    "浙江",
+    "福建"
+  ],
+  "provinces_excluded": {},
+  "provinces_skipped_hard_infeasible": {
+    "山东": "碳水化合物+硒"
+  },
+  "wall_seconds": 898.3,
+  "evidence_status": "plumbing_only",
+  "placeholder_components": [
+    "truth: 冻结点估计，非遮蔽前伪完整面板",
+    "scenarios: 对数正态占位噪声，非 B1 后验",
+    "repeats: 换种子重抽，非 5 折 × 20 遮蔽协议"
+  ],
+  "scenario_grid": [
+    25,
+    50,
+    100,
+    200,
+    400
+  ],
+  "epsilon_grid": [
+    0.0,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "weight_sets": [
+    "original",
+    "equal"
+  ],
+  "inputs": {
+    "group_audit.csv": "a62fa3b44f9c3e4d6e5e62d4565d3ab51c1c56748a9ce9852af2dc4cb54a111c",
+    "group_prices.csv": "54f7fee0ce3898ceb36bde09908269ff65fa0f31eb780e5c16f963fd60c99ff5",
+    "nutrients.csv": "9b302d6cb804ac5112f1584c8fef21ab20b1ab88efdfd98cee8ad3aef93f2c8c",
+    "environment.csv": "c6437a46aab3b920868951a68f5bdea4d97c48453b936f592145781b324cdeb2",
+    "baseline_consumption.csv": "d6936e7fdddf3eaab7cbfe329e6006fe0cec83afa0cf654af33eff34137faeec",
+    "decision_bounds.csv": "a4e401dc8fb85488446a427f13f2d595ab8e209f0b9f52b9bf2e96e37eb9a33c"
+  },
+  "nutrient_bounds_sha256": "d550690e8dc0e4700f9254fd0b477611fc6fba0e7f851389f4ec06966019cb80",
+  "summary": [
+    {
+      "grid": "R300",
+      "setting": "D2_none",
+      "n": 18,
+      "solve_rate": 1.0,
+      "feasible_active": 0.0,
+      "flips": 1.0,
+      "gap_mean": -0.7154542106462111,
+      "runtime_mean": 0.007808367411295573
+    },
+    {
+      "grid": "R300",
+      "setting": "D3_joint",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.4,
+      "gap_mean": 0.1232471484485101,
+      "runtime_mean": 4.225668893920051
+    },
+    {
+      "grid": "R301",
+      "setting": "S=100",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.3333333333333333,
+      "gap_mean": 0.1048406626777237,
+      "runtime_mean": 1.0338383913040161
+    },
+    {
+      "grid": "R301",
+      "setting": "S=200",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.4,
+      "gap_mean": 0.11924446146102256,
+      "runtime_mean": 3.9408152633243136
+    },
+    {
+      "grid": "R301",
+      "setting": "S=25",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.2,
+      "gap_mean": 0.10387509768729748,
+      "runtime_mean": 0.04157602787017822
+    },
+    {
+      "grid": "R301",
+      "setting": "S=400",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.3333333333333333,
+      "gap_mean": 0.11893128655798506,
+      "runtime_mean": 20.15228503280216
+    },
+    {
+      "grid": "R301",
+      "setting": "S=50",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.3333333333333333,
+      "gap_mean": 0.10715323916110758,
+      "runtime_mean": 0.3136107391781277
+    },
+    {
+      "grid": "R302",
+      "setting": "eps=0.0",
+      "n": 18,
+      "solve_rate": 0.5555555555555556,
+      "feasible_active": 1.0,
+      "flips": 0.6,
+      "gap_mean": 0.1904661272104251,
+      "runtime_mean": 0.1193668180041843
+    },
+    {
+      "grid": "R302",
+      "setting": "eps=0.02",
+      "n": 18,
+      "solve_rate": 0.7222222222222222,
+      "feasible_active": 1.0,
+      "flips": 0.46153846153846156,
+      "gap_mean": 0.1469271803728932,
+      "runtime_mean": 1.3832981586456299
+    },
+    {
+      "grid": "R302",
+      "setting": "eps=0.05",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.4,
+      "gap_mean": 0.1232471484485101,
+      "runtime_mean": 4.219613817003038
+    },
+    {
+      "grid": "R302",
+      "setting": "eps=0.1",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.2,
+      "gap_mean": 0.09886689112375889,
+      "runtime_mean": 6.958941578865051
+    },
+    {
+      "grid": "R303",
+      "setting": "equal",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.3333333333333333,
+      "gap_mean": 0.12776255177578622,
+      "runtime_mean": 3.160926487710741
+    },
+    {
+      "grid": "R303",
+      "setting": "original",
+      "n": 18,
+      "solve_rate": 0.8333333333333334,
+      "feasible_active": 1.0,
+      "flips": 0.4,
+      "gap_mean": 0.1232471484485101,
+      "runtime_mean": 4.22719497150845
+    }
+  ]
+}

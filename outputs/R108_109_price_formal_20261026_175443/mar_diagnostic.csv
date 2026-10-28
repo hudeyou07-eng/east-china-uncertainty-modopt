@@ -1,0 +1,13 @@
+﻿panel,mask_type,method,n,bias_overall,bias_slope,monotone_bias
+price,single_cell,group_mean,600,-0.23881464427897897,-0.3322021725029222,False
+price,single_cell,interpolation,600,0.3077244759114901,-0.18806318000884759,False
+price,single_cell,mice,600,0.4492591924014558,-0.22653878174508274,False
+price,single_cell,hierarchical_rw,600,-1.1748654839726365,-0.45450743738465904,False
+price,consecutive_years,group_mean,200,-1.5785760978554249,-0.3944775048911436,False
+price,consecutive_years,interpolation,200,-0.4645510724637679,-0.252982164904597,False
+price,consecutive_years,mice,200,-0.1214885443857888,-0.10615170749385507,False
+price,consecutive_years,hierarchical_rw,200,-0.866811123922379,-0.2643107241614159,False
+price,province_group,group_mean,648,-0.22609223581928234,-0.31368068054504455,False
+price,province_group,interpolation,648,-0.22609223581928234,-0.31368068054504455,False
+price,province_group,mice,648,-4.818203703315202,-0.991016854356314,False
+price,province_group,hierarchical_rw,648,-0.8869627370806766,-0.3406266741295104,False

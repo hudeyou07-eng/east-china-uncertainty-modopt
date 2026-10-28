@@ -1,0 +1,1118 @@
+{
+  "command": "diagnose-scope-activation",
+  "evidence_status": "structural",
+  "evidence_note": "只做契约装配与可达范围复算，不含求解。用于说明「K=4 的可行率」与「K=6 的可行率」不可直接比较：K 变大后部分营养素从 non_actionable 变为 active，约束才开始被施加",
+  "scopes": [
+    "k4_official",
+    "k6_price",
+    "k5_notrace",
+    "k3_prereg"
+  ],
+  "scenarios": [
+    "HEAL_base",
+    "CDG",
+    "EAT"
+  ],
+  "n_masked_constraints": 10,
+  "masked_constraints": [
+    {
+      "scenario": "HEAL_base",
+      "province": "福建",
+      "nutrient": "硫胺素",
+      "effective_lower_k4": 0.8816037544393709,
+      "effective_upper_k4": null,
+      "reachable_low_k4": 0.0,
+      "reachable_high_k4": 0.8669851714439372,
+      "effective_lower_k6": 1.1539325215626586,
+      "effective_upper_k6": null,
+      "reachable_low_k6": 0.0,
+      "reachable_high_k6": 1.4116427056905123,
+      "reason_k4": "最大可达 0.867 < 下界 0.8816",
+      "reason_k6": "",
+      "hard_feasible_k4": true,
+      "hard_feasible_k6": false,
+      "conflict_set_k4": "",
+      "conflict_set_k6": "脂肪+碳水化合物+硫胺素"
+    },
+    {
+      "scenario": "CDG",
+      "province": "安徽",
+      "nutrient": "碳水化合物",
+      "effective_lower_k4": -56.49223236935569,
+      "effective_upper_k4": 18.50776763064431,
+      "reachable_low_k4": 41.68000000000001,
+      "reachable_high_k4": 70.2722662,
+      "effective_lower_k6": 219.75024353120244,
+      "effective_upper_k6": 294.75024353120244,
+      "reachable_low_k6": 182.98666666666668,
+      "reachable_high_k6": 282.3472662,
+      "reason_k4": "最小可达 41.68 > 上界 18.51",
+      "reason_k6": "",
+      "hard_feasible_k4": true,
+      "hard_feasible_k6": true,
+      "conflict_set_k4": "",
+      "conflict_set_k6": ""
+    },
+    {
+      "scenario": "CDG",
+      "province": "江西",
+      "nutrient": "碳水化合物",
+      "effective_lower_k4": -66.48591577879245,
+      "effective_upper_k4": 8.514084221207554,
+      "reachable_low_k4": 41.68000000000001,
+      "reachable_high_k4": 70.2722662,
+      "effective_lower_k6": 222.69674277016742,
+      "effective_upper_k6": 297.6967427701674,
+      "reachable_low_k6": 182.98666666666668,
+      "reachable_high_k6": 282.3472662,
+      "reason_k4": "最小可达 41.68 > 上界 8.514",
+      "reason_k6": "",
+      "hard_feasible_k4": true,
+      "hard_feasible_k6": true,
+      "conflict_set_k4": "",
+      "conflict_set_k6": ""
+    },
+    {
+      "scenario": "CDG",
+      "province": "浙江",
+      "nutrient": "碳水化合物",
+      "effective_lower_k4": -49.369074074074035,
+      "effective_upper_k4": 25.630925925925965,
+      "reachable_low_k4": 41.68000000000001,
+      "reachable_high_k4": 70.2722662,
+      "effective_lower_k6": 215.96798325722983,
+      "effective_upper_k6": 290.96798325722983,
+      "reachable_low_k6": 182.98666666666668,
+      "reachable_high_k6": 282.3472662,
+      "reason_k4": "最小可达 41.68 > 上界 25.63",
+      "reason_k6": "",
+      "hard_feasible_k4": true,
+      "hard_feasible_k6": true,
+      "conflict_set_k4": "",
+      "conflict_set_k6": ""
+    },
+    {
+      "scenario": "EAT",
+      "province": "安徽",
+      "nutrient": "碳水化合物",
+      "effective_lower_k4": -56.49223236935569,
+      "effective_upper_k4": 18.50776763064431,
+      "reachable_low_k4": 26.880000000000003,
+      "reachable_high_k4": 82.26064604800001,
+      "effective_lower_k6": 219.75024353120244,
+      "effective_upper_k6": 294.75024353120244,
+      "reachable_low_k6": 26.880000000000003,
+      "reachable_high_k6": 365.02731271466666,
+      "reason_k4": "最小可达 26.88 > 上界 18.51",
+      "reason_k6": "",
+      "hard_feasible_k4": true,
+      "hard_feasible_k6": true,
+      "conflict_set_k4": "",
+      "conflict_set_k6": ""
+    },
+    {
+      "scenario": "EAT",
+      "province": "山东",
+      "nutrient": "脂肪",
+      "effective_lower_k4": 27.526519533231863,
+      "effective_upper_k4": 50.52651953323186,
+      "reachable_low_k4": 1.3599999999999999,
+      "reachable_high_k4": 25.293025068,
+      "effective_lower_k6": 37.22439878234399,
+      "effective_upper_k6": 60.22439878234399,
+      "reachable_low_k6": 1.3599999999999999,
+      "reachable_high_k6": 38.82635840133333,
+      "reason_k4": "最大可达 25.29 < 下界 27.53",
+      "reason_k6": "",
+      "hard_feasible_k4": false,
+      "hard_feasible_k6": false,
+      "conflict_set_k4": "碳水化合物+硒",
+      "conflict_set_k6": "脂肪+碳水化合物"
+    },
+    {
+      "scenario": "EAT",
+      "province": "江苏",
+      "nutrient": "脂肪",
+      "effective_lower_k4": 27.05648401826484,
+      "effective_upper_k4": 50.05648401826484,
+      "reachable_low_k4": 1.3599999999999999,
+      "reachable_high_k4": 25.293025068,
+      "effective_lower_k6": 37.739690512430236,
+      "effective_upper_k6": 60.739690512430236,
+      "reachable_low_k6": 1.3599999999999999,
+      "reachable_high_k6": 38.82635840133333,
+      "reason_k4": "最大可达 25.29 < 下界 27.06",
+      "reason_k6": "",
+      "hard_feasible_k4": false,
+      "hard_feasible_k6": false,
+      "conflict_set_k4": "碳水化合物+硒",
+      "conflict_set_k6": "脂肪+碳水化合物"
+    },
+    {
+      "scenario": "EAT",
+      "province": "江西",
+      "nutrient": "碳水化合物",
+      "effective_lower_k4": -66.48591577879245,
+      "effective_upper_k4": 8.514084221207554,
+      "reachable_low_k4": 26.880000000000003,
+      "reachable_high_k4": 82.26064604800001,
+      "effective_lower_k6": 222.69674277016742,
+      "effective_upper_k6": 297.6967427701674,
+      "reachable_low_k6": 26.880000000000003,
+      "reachable_high_k6": 365.02731271466666,
+      "reason_k4": "最小可达 26.88 > 上界 8.514",
+      "reason_k6": "",
+      "hard_feasible_k4": true,
+      "hard_feasible_k6": true,
+      "conflict_set_k4": "",
+      "conflict_set_k6": ""
+    },
+    {
+      "scenario": "EAT",
+      "province": "浙江",
+      "nutrient": "脂肪",
+      "effective_lower_k4": 26.279814814814817,
+      "effective_upper_k4": 49.27981481481481,
+      "reachable_low_k4": 1.3599999999999999,
+      "reachable_high_k4": 25.293025068,
+      "effective_lower_k6": 38.32344748858448,
+      "effective_upper_k6": 61.32344748858448,
+      "reachable_low_k6": 1.3599999999999999,
+      "reachable_high_k6": 38.82635840133333,
+      "reason_k4": "最大可达 25.29 < 下界 26.28",
+      "reason_k6": "",
+      "hard_feasible_k4": true,
+      "hard_feasible_k6": false,
+      "conflict_set_k4": "",
+      "conflict_set_k6": "脂肪+碳水化合物"
+    },
+    {
+      "scenario": "EAT",
+      "province": "浙江",
+      "nutrient": "碳水化合物",
+      "effective_lower_k4": -49.369074074074035,
+      "effective_upper_k4": 25.630925925925965,
+      "reachable_low_k4": 26.880000000000003,
+      "reachable_high_k4": 82.26064604800001,
+      "effective_lower_k6": 215.96798325722983,
+      "effective_upper_k6": 290.96798325722983,
+      "reachable_low_k6": 26.880000000000003,
+      "reachable_high_k6": 365.02731271466666,
+      "reason_k4": "最小可达 26.88 > 上界 25.63",
+      "reason_k6": "",
+      "hard_feasible_k4": true,
+      "hard_feasible_k6": false,
+      "conflict_set_k4": "",
+      "conflict_set_k6": "脂肪+碳水化合物"
+    }
+  ],
+  "scope_summary": [
+    {
+      "scenario": "HEAL_base",
+      "scope": "k4_official",
+      "k": 4,
+      "groups": "G02 G05 G06 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 1,
+      "n_excluded_constraints": 8,
+      "conflicts": "上海:脂肪+硫胺素; 安徽:碳水化合物+硫胺素; 山东:碳水化合物+硫胺素; 江苏:碳水化合物+硫胺素; 江西:碳水化合物+硫胺素; 浙江:碳水化合物+硫胺素"
+    },
+    {
+      "scenario": "HEAL_base",
+      "scope": "k6_price",
+      "k": 6,
+      "groups": "G02 G04 G05 G06 G07 G08",
+      "n_provinces": 6,
+      "n_hard_feasible": 0,
+      "n_excluded_constraints": 6,
+      "conflicts": "安徽:脂肪+碳水化合物+硫胺素; 山东:脂肪+碳水化合物+硫胺素; 江苏:脂肪+碳水化合物+硫胺素; 江西:脂肪+碳水化合物+硫胺素; 浙江:脂肪+碳水化合物+硫胺素; 福建:脂肪+碳水化合物+硫胺素"
+    },
+    {
+      "scenario": "HEAL_base",
+      "scope": "k5_notrace",
+      "k": 5,
+      "groups": "G02 G04 G05 G06 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 0,
+      "n_excluded_constraints": 7,
+      "conflicts": "上海:脂肪+碳水化合物+硫胺素; 安徽:脂肪+碳水化合物+硫胺素; 山东:碳水化合物+硫胺素; 江苏:脂肪+碳水化合物+硫胺素; 江西:脂肪+碳水化合物+硫胺素; 浙江:脂肪+碳水化合物+硫胺素; 福建:碳水化合物+硫胺素"
+    },
+    {
+      "scenario": "HEAL_base",
+      "scope": "k3_prereg",
+      "k": 3,
+      "groups": "G02 G05 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 5,
+      "n_excluded_constraints": 14,
+      "conflicts": "安徽:碳水化合物+锌; 江西:碳水化合物+硒"
+    },
+    {
+      "scenario": "CDG",
+      "scope": "k4_official",
+      "k": 4,
+      "groups": "G02 G05 G06 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 6,
+      "n_excluded_constraints": 17,
+      "conflicts": "山东:碳水化合物+硒"
+    },
+    {
+      "scenario": "CDG",
+      "scope": "k6_price",
+      "k": 6,
+      "groups": "G02 G04 G05 G06 G07 G08",
+      "n_provinces": 6,
+      "n_hard_feasible": 6,
+      "n_excluded_constraints": 12,
+      "conflicts": ""
+    },
+    {
+      "scenario": "CDG",
+      "scope": "k5_notrace",
+      "k": 5,
+      "groups": "G02 G04 G05 G06 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 7,
+      "n_excluded_constraints": 14,
+      "conflicts": ""
+    },
+    {
+      "scenario": "CDG",
+      "scope": "k3_prereg",
+      "k": 3,
+      "groups": "G02 G05 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 6,
+      "n_excluded_constraints": 17,
+      "conflicts": "山东:碳水化合物+硒"
+    },
+    {
+      "scenario": "EAT",
+      "scope": "k4_official",
+      "k": 4,
+      "groups": "G02 G05 G06 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 5,
+      "n_excluded_constraints": 24,
+      "conflicts": "山东:碳水化合物+硒; 江苏:碳水化合物+硒"
+    },
+    {
+      "scenario": "EAT",
+      "scope": "k6_price",
+      "k": 6,
+      "groups": "G02 G04 G05 G06 G07 G08",
+      "n_provinces": 6,
+      "n_hard_feasible": 3,
+      "n_excluded_constraints": 15,
+      "conflicts": "山东:脂肪+碳水化合物; 江苏:脂肪+碳水化合物; 浙江:脂肪+碳水化合物"
+    },
+    {
+      "scenario": "EAT",
+      "scope": "k5_notrace",
+      "k": 5,
+      "groups": "G02 G04 G05 G06 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 6,
+      "n_excluded_constraints": 20,
+      "conflicts": "上海:脂肪+碳水化合物"
+    },
+    {
+      "scenario": "EAT",
+      "scope": "k3_prereg",
+      "k": 3,
+      "groups": "G02 G05 G08",
+      "n_provinces": 7,
+      "n_hard_feasible": 6,
+      "n_excluded_constraints": 17,
+      "conflicts": "山东:碳水化合物+硒"
+    }
+  ],
+  "per_scope_detail": [
+    {
+      "scope": "k4_official",
+      "audit_file": "group_audit.csv",
+      "k": 4,
+      "groups": [
+        "G02",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "安徽": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "山东": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "江苏": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "江西": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "浙江": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        }
+      },
+      "scenario": "HEAL_base"
+    },
+    {
+      "scope": "k6_price",
+      "audit_file": "group_audit_trace_c0.95.csv",
+      "k": 6,
+      "groups": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "skipped_provinces": {
+        "上海": [
+          "G07"
+        ]
+      },
+      "by_province": {
+        "安徽": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "山东": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "江苏": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "江西": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "浙江": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "福建": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        }
+      },
+      "scenario": "HEAL_base"
+    },
+    {
+      "scope": "k5_notrace",
+      "audit_file": "group_audit_notrace_c0.95.csv",
+      "k": 5,
+      "groups": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "安徽": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "山东": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "江苏": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "江西": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "浙江": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        },
+        "福建": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硫胺素"
+          ],
+          "n_active": 10,
+          "n_excluded": 1
+        }
+      },
+      "scenario": "HEAL_base"
+    },
+    {
+      "scope": "k3_prereg",
+      "audit_file": "group_audit_k3_strict.csv",
+      "k": 3,
+      "groups": [
+        "G02",
+        "G05",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "安徽": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "锌"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "山东": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江苏": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江西": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硒"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "浙江": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        }
+      },
+      "scenario": "HEAL_base"
+    },
+    {
+      "scope": "k4_official",
+      "audit_file": "group_audit.csv",
+      "k": 4,
+      "groups": [
+        "G02",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "安徽": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "山东": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硒"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江苏": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江西": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "浙江": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        }
+      },
+      "scenario": "CDG"
+    },
+    {
+      "scope": "k6_price",
+      "audit_file": "group_audit_trace_c0.95.csv",
+      "k": 6,
+      "groups": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "skipped_provinces": {
+        "上海": [
+          "G07"
+        ]
+      },
+      "by_province": {
+        "安徽": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "山东": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江苏": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江西": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "浙江": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        }
+      },
+      "scenario": "CDG"
+    },
+    {
+      "scope": "k5_notrace",
+      "audit_file": "group_audit_notrace_c0.95.csv",
+      "k": 5,
+      "groups": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "安徽": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "山东": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江苏": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江西": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "浙江": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        }
+      },
+      "scenario": "CDG"
+    },
+    {
+      "scope": "k3_prereg",
+      "audit_file": "group_audit_k3_strict.csv",
+      "k": 3,
+      "groups": [
+        "G02",
+        "G05",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "安徽": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "山东": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硒"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江苏": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江西": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "浙江": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        }
+      },
+      "scenario": "CDG"
+    },
+    {
+      "scope": "k4_official",
+      "audit_file": "group_audit.csv",
+      "k": 4,
+      "groups": [
+        "G02",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "安徽": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 7,
+          "n_excluded": 4
+        },
+        "山东": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硒"
+          ],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "江苏": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硒"
+          ],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "江西": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 7,
+          "n_excluded": 4
+        },
+        "浙江": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 7,
+          "n_excluded": 4
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        }
+      },
+      "scenario": "EAT"
+    },
+    {
+      "scope": "k6_price",
+      "audit_file": "group_audit_trace_c0.95.csv",
+      "k": 6,
+      "groups": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "skipped_provinces": {
+        "上海": [
+          "G07"
+        ]
+      },
+      "by_province": {
+        "安徽": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "山东": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江苏": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江西": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "浙江": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        }
+      },
+      "scenario": "EAT"
+    },
+    {
+      "scope": "k5_notrace",
+      "audit_file": "group_audit_notrace_c0.95.csv",
+      "k": 5,
+      "groups": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "脂肪",
+            "碳水化合物"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "安徽": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "山东": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "江苏": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "江西": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "浙江": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        }
+      },
+      "scenario": "EAT"
+    },
+    {
+      "scope": "k3_prereg",
+      "audit_file": "group_audit_k3_strict.csv",
+      "k": 3,
+      "groups": [
+        "G02",
+        "G05",
+        "G08"
+      ],
+      "skipped_provinces": {},
+      "by_province": {
+        "上海": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "安徽": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "山东": {
+          "hard_feasible": false,
+          "conflict_set": [
+            "碳水化合物",
+            "硒"
+          ],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江苏": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        },
+        "江西": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "浙江": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 8,
+          "n_excluded": 3
+        },
+        "福建": {
+          "hard_feasible": true,
+          "conflict_set": [],
+          "n_active": 9,
+          "n_excluded": 2
+        }
+      },
+      "scenario": "EAT"
+    }
+  ]
+}

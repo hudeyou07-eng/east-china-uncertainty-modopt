@@ -1,0 +1,940 @@
+{
+  "provinces": {
+    "安徽": {
+      "active_nutrients": [
+        "能量",
+        "蛋白质",
+        "脂肪",
+        "碳水化合物",
+        "铁",
+        "锌",
+        "硒",
+        "核黄素",
+        "烟酸"
+      ],
+      "non_actionable": {
+        "钙": "最大可达 319.1 < 下界 703.5",
+        "硫胺素": "最大可达 0.8419 < 下界 1.141"
+      },
+      "offset_missing_pairs": 17,
+      "joint_constraints": 1,
+      "skipped_joint": [],
+      "baseline": {
+        "G02": 36.895,
+        "G04": 391.416,
+        "G05": 39.543,
+        "G06": 82.922,
+        "G07": 38.417,
+        "G08": 297.534
+      },
+      "baseline_adequacy": {
+        "能量": {
+          "baseline": 8776.962170278233,
+          "lower": 7520.0,
+          "upper": 9200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "蛋白质": {
+          "baseline": 69.8463697897108,
+          "lower": 60.0,
+          "upper": 200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "脂肪": {
+          "baseline": 54.78905691661085,
+          "lower": 44.0,
+          "upper": 67.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "碳水化合物": {
+          "baseline": 349.5421352120955,
+          "lower": 250.0,
+          "upper": 325.0,
+          "meets_lower": true,
+          "within_upper": false,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "钙": {
+          "baseline": 314.7783909162861,
+          "lower": 800.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "铁": {
+          "baseline": 21.440708350725522,
+          "lower": 15.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "锌": {
+          "baseline": 10.474082759078641,
+          "lower": 10.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "硒": {
+          "baseline": 57.710953243876205,
+          "lower": 60.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "核黄素": {
+          "baseline": 5.139604753623542,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "硫胺素": {
+          "baseline": 0.9106011308736683,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "烟酸": {
+          "baseline": 31.164347908269917,
+          "lower": 13.5,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        }
+      },
+      "hard_feasible": true,
+      "conflict_set": [],
+      "observed_prices": {
+        "G02": 10.79,
+        "G04": 4.79,
+        "G05": 23.04,
+        "G06": 44.38,
+        "G07": 16.38,
+        "G08": 5.0
+      }
+    },
+    "山东": {
+      "active_nutrients": [
+        "能量",
+        "蛋白质",
+        "脂肪",
+        "碳水化合物",
+        "铁",
+        "锌",
+        "硒",
+        "核黄素",
+        "烟酸"
+      ],
+      "non_actionable": {
+        "钙": "最大可达 319.1 < 下界 668.3",
+        "硫胺素": "最大可达 0.8419 < 下界 1.084"
+      },
+      "offset_missing_pairs": 17,
+      "joint_constraints": 1,
+      "skipped_joint": [],
+      "baseline": {
+        "G02": 55.099,
+        "G04": 334.642,
+        "G05": 21.218,
+        "G06": 70.594,
+        "G07": 35.89,
+        "G08": 268.371
+      },
+      "baseline_adequacy": {
+        "能量": {
+          "baseline": 7964.095624249316,
+          "lower": 7520.0,
+          "upper": 9200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "蛋白质": {
+          "baseline": 63.800011783926934,
+          "lower": 60.0,
+          "upper": 200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "脂肪": {
+          "baseline": 50.37332992609842,
+          "lower": 44.0,
+          "upper": 67.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "碳水化合物": {
+          "baseline": 315.04917415232876,
+          "lower": 250.0,
+          "upper": 325.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "钙": {
+          "baseline": 337.93009633485536,
+          "lower": 800.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "铁": {
+          "baseline": 19.853317919928973,
+          "lower": 15.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "锌": {
+          "baseline": 9.82694783788128,
+          "lower": 10.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "硒": {
+          "baseline": 54.32033016188736,
+          "lower": 60.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "核黄素": {
+          "baseline": 4.746175612202943,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "硫胺素": {
+          "baseline": 0.8904002215941147,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "烟酸": {
+          "baseline": 27.438742500355147,
+          "lower": 13.5,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        }
+      },
+      "hard_feasible": true,
+      "conflict_set": [],
+      "observed_prices": {
+        "G02": 9.29,
+        "G04": 5.48,
+        "G05": 21.97,
+        "G06": 48.03,
+        "G07": 35.39,
+        "G08": 6.12
+      }
+    },
+    "江苏": {
+      "active_nutrients": [
+        "能量",
+        "蛋白质",
+        "脂肪",
+        "碳水化合物",
+        "铁",
+        "锌",
+        "硒",
+        "核黄素",
+        "烟酸"
+      ],
+      "non_actionable": {
+        "钙": "最大可达 319.1 < 下界 679.1",
+        "硫胺素": "最大可达 0.8419 < 下界 1.118"
+      },
+      "offset_missing_pairs": 17,
+      "joint_constraints": 1,
+      "skipped_joint": [],
+      "baseline": {
+        "G02": 36.56,
+        "G04": 343.957,
+        "G05": 36.043,
+        "G06": 87.032,
+        "G07": 57.93,
+        "G08": 313.76
+      },
+      "baseline_adequacy": {
+        "能量": {
+          "baseline": 8386.389760709995,
+          "lower": 7520.0,
+          "upper": 9200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "蛋白质": {
+          "baseline": 72.74683615693556,
+          "lower": 60.0,
+          "upper": 200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "脂肪": {
+          "baseline": 56.324684499614406,
+          "lower": 44.0,
+          "upper": 67.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "碳水化合物": {
+          "baseline": 319.60300621645865,
+          "lower": 250.0,
+          "upper": 325.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "钙": {
+          "baseline": 368.5027894652461,
+          "lower": 800.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "铁": {
+          "baseline": 21.262129040578387,
+          "lower": 15.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "锌": {
+          "baseline": 10.946630489449012,
+          "lower": 10.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "硒": {
+          "baseline": 63.69111595224759,
+          "lower": 60.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "核黄素": {
+          "baseline": 5.425297301863014,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "硫胺素": {
+          "baseline": 0.9271720749274481,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "烟酸": {
+          "baseline": 31.81223768655505,
+          "lower": 13.5,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        }
+      },
+      "hard_feasible": true,
+      "conflict_set": [],
+      "observed_prices": {
+        "G02": 10.17,
+        "G04": 5.75,
+        "G05": 21.74,
+        "G06": 50.15,
+        "G07": 19.87,
+        "G08": 9.12
+      }
+    },
+    "江西": {
+      "active_nutrients": [
+        "能量",
+        "蛋白质",
+        "脂肪",
+        "碳水化合物",
+        "铁",
+        "锌",
+        "硒",
+        "核黄素",
+        "烟酸"
+      ],
+      "non_actionable": {
+        "钙": "最大可达 319.1 < 下界 711.6",
+        "硫胺素": "最大可达 0.8419 < 下界 1.157"
+      },
+      "offset_missing_pairs": 17,
+      "joint_constraints": 1,
+      "skipped_joint": [],
+      "baseline": {
+        "G02": 25.662,
+        "G04": 409.711,
+        "G05": 32.359,
+        "G06": 94.399,
+        "G07": 43.896,
+        "G08": 313.333
+      },
+      "baseline_adequacy": {
+        "能量": {
+          "baseline": 9035.962240779605,
+          "lower": 7520.0,
+          "upper": 9200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "蛋白质": {
+          "baseline": 71.20404856188736,
+          "lower": 60.0,
+          "upper": 200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "脂肪": {
+          "baseline": 56.09715148496194,
+          "lower": 44.0,
+          "upper": 67.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "碳水化合物": {
+          "baseline": 361.54577878688985,
+          "lower": 250.0,
+          "upper": 325.0,
+          "meets_lower": true,
+          "within_upper": false,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "钙": {
+          "baseline": 316.9167578914257,
+          "lower": 800.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "铁": {
+          "baseline": 21.864605465357684,
+          "lower": 15.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "锌": {
+          "baseline": 10.812808758526637,
+          "lower": 10.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "硒": {
+          "baseline": 58.677083838315575,
+          "lower": 60.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "核黄素": {
+          "baseline": 5.344638898887874,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "硫胺素": {
+          "baseline": 0.9253538327742264,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "烟酸": {
+          "baseline": 32.48218427590056,
+          "lower": 13.5,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        }
+      },
+      "hard_feasible": true,
+      "conflict_set": [],
+      "observed_prices": {
+        "G02": 11.26,
+        "G04": 5.04,
+        "G05": 36.07,
+        "G06": 48.43,
+        "G07": 22.2,
+        "G08": 6.73
+      }
+    },
+    "浙江": {
+      "active_nutrients": [
+        "能量",
+        "蛋白质",
+        "脂肪",
+        "碳水化合物",
+        "铁",
+        "锌",
+        "硒",
+        "核黄素",
+        "烟酸"
+      ],
+      "non_actionable": {
+        "钙": "最大可达 319.1 < 下界 689.4",
+        "硫胺素": "最大可达 0.8419 < 下界 1.124"
+      },
+      "offset_missing_pairs": 17,
+      "joint_constraints": 1,
+      "skipped_joint": [],
+      "baseline": {
+        "G02": 29.285,
+        "G04": 375.556,
+        "G05": 34.155,
+        "G06": 90.868,
+        "G07": 74.399,
+        "G08": 276.286
+      },
+      "baseline_adequacy": {
+        "能量": {
+          "baseline": 8766.849874708778,
+          "lower": 7520.0,
+          "upper": 9200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "蛋白质": {
+          "baseline": 73.69947261684425,
+          "lower": 60.0,
+          "upper": 200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "脂肪": {
+          "baseline": 56.81248955712835,
+          "lower": 44.0,
+          "upper": 67.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "碳水化合物": {
+          "baseline": 339.4874483437849,
+          "lower": 250.0,
+          "upper": 325.0,
+          "meets_lower": true,
+          "within_upper": false,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "钙": {
+          "baseline": 376.5827909386099,
+          "lower": 800.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "铁": {
+          "baseline": 21.475375092186706,
+          "lower": 15.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "锌": {
+          "baseline": 11.115841920933537,
+          "lower": 10.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "硒": {
+          "baseline": 66.62340419086757,
+          "lower": 60.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "核黄素": {
+          "baseline": 4.868904414195839,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "硫胺素": {
+          "baseline": 0.9189528336022323,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "烟酸": {
+          "baseline": 30.550947226281075,
+          "lower": 13.5,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        }
+      },
+      "hard_feasible": true,
+      "conflict_set": [],
+      "observed_prices": {
+        "G02": 11.71,
+        "G04": 6.49,
+        "G05": 31.25,
+        "G06": 52.42,
+        "G07": 46.73,
+        "G08": 8.85
+      }
+    },
+    "福建": {
+      "active_nutrients": [
+        "能量",
+        "蛋白质",
+        "脂肪",
+        "碳水化合物",
+        "铁",
+        "锌",
+        "硒",
+        "核黄素",
+        "烟酸"
+      ],
+      "non_actionable": {
+        "钙": "最大可达 319.1 < 下界 706.3",
+        "硫胺素": "最大可达 0.8419 < 下界 1.154"
+      },
+      "offset_missing_pairs": 17,
+      "joint_constraints": 1,
+      "skipped_joint": [],
+      "baseline": {
+        "G02": 29.072,
+        "G04": 339.787,
+        "G05": 37.108,
+        "G06": 93.486,
+        "G07": 73.881,
+        "G08": 253.973
+      },
+      "baseline_adequacy": {
+        "能量": {
+          "baseline": 8150.273756001319,
+          "lower": 7520.0,
+          "upper": 9200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "蛋白质": {
+          "baseline": 70.76938553580922,
+          "lower": 60.0,
+          "upper": 200.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "脂肪": {
+          "baseline": 56.135229959949264,
+          "lower": 44.0,
+          "upper": 67.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "碳水化合物": {
+          "baseline": 305.65765885345496,
+          "lower": 250.0,
+          "upper": 325.0,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "钙": {
+          "baseline": 348.7061175464231,
+          "lower": 800.0,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "铁": {
+          "baseline": 19.973648739533232,
+          "lower": 15.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "锌": {
+          "baseline": 10.555168482686963,
+          "lower": 10.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G11"
+          ]
+        },
+        "硒": {
+          "baseline": 65.17070707545408,
+          "lower": 60.0,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "核黄素": {
+          "baseline": 4.497352928700153,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "硫胺素": {
+          "baseline": 0.8518888312825976,
+          "lower": 1.3,
+          "upper": null,
+          "meets_lower": false,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        },
+        "烟酸": {
+          "baseline": 28.677282787316088,
+          "lower": 13.5,
+          "upper": null,
+          "meets_lower": true,
+          "within_upper": true,
+          "groups_without_coefficient": [
+            "G09",
+            "G11"
+          ]
+        }
+      },
+      "hard_feasible": true,
+      "conflict_set": [],
+      "observed_prices": {
+        "G02": 10.33,
+        "G04": 5.41,
+        "G05": 27.23,
+        "G06": 37.73,
+        "G07": 29.91,
+        "G08": 7.32
+      }
+    }
+  }
+}

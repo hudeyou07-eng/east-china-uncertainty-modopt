@@ -1,0 +1,69 @@
+{
+  "command": "scripts/run_b2.py --profile formal --bounds-basis rni",
+  "scope": "k6_price",
+  "audit_file": "group_audit_trace_c0.95.csv",
+  "profile": "formal",
+  "scenario": "CDG",
+  "scenario_source": "posterior",
+  "protocol": "masking",
+  "mask_type": "single_cell",
+  "b1_run": "B1_formal_withmice_20261023_124906",
+  "b1_method": "hierarchical_rw",
+  "repeats": 20,
+  "folds": null,
+  "n_cells": 100,
+  "train_scenarios": 200,
+  "epsilon": 0.05,
+  "cv_price": null,
+  "cv_nutrient": 0.0,
+  "bounds_basis": "rni",
+  "objective_weights": {
+    "cost": 0.5,
+    "ghg": 0.25,
+    "land": 0.25
+  },
+  "groups": [
+    "G02",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08"
+  ],
+  "nutrients": [
+    "能量",
+    "蛋白质",
+    "脂肪",
+    "碳水化合物",
+    "钙",
+    "铁",
+    "锌",
+    "硒",
+    "核黄素",
+    "硫胺素",
+    "烟酸"
+  ],
+  "provinces": [
+    "安徽",
+    "山东",
+    "江苏",
+    "江西",
+    "浙江",
+    "福建"
+  ],
+  "provinces_excluded": {
+    "上海": [
+      "G07"
+    ]
+  },
+  "contract_hashes": {
+    "group_audit_trace_c0.95.csv": "25d358a457273eba2d96b818df4652f5d20df08710269b1dfd0effdf69dd4b12",
+    "group_prices.csv": "eadc85e6af57c4210992c4ed641899c6b7fb6724b4ef55741f0dc56600309e37",
+    "nutrients.csv": "9b302d6cb804ac5112f1584c8fef21ab20b1ab88efdfd98cee8ad3aef93f2c8c",
+    "environment.csv": "c6437a46aab3b920868951a68f5bdea4d97c48453b936f592145781b324cdeb2",
+    "baseline_consumption.csv": "d6936e7fdddf3eaab7cbfe329e6006fe0cec83afa0cf654af33eff34137faeec",
+    "decision_bounds.csv": "a4e401dc8fb85488446a427f13f2d595ab8e209f0b9f52b9bf2e96e37eb9a33c"
+  },
+  "nutrient_bounds_sha256": "d550690e8dc0e4700f9254fd0b477611fc6fba0e7f851389f4ec06966019cb80",
+  "b1_prediction_sha256": "c4a3adfc68c6183b5f3d16c5d6eca22dbd6d305b916379fe305bd5d4c9d210cd"
+}

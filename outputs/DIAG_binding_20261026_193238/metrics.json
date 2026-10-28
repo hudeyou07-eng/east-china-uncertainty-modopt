@@ -1,0 +1,22 @@
+{
+  "command": "verify-binding-constraints",
+  "scenario": "CDG",
+  "epsilon": 0.05,
+  "provinces_used": [
+    "上海",
+    "安徽",
+    "山东",
+    "江苏",
+    "江西",
+    "浙江",
+    "福建"
+  ],
+  "provinces_skipped": {},
+  "n_constraints": 110,
+  "n_tight": 24,
+  "n_violated": 15,
+  "fat_lower_tight_count": 6,
+  "fat_lower_total": 6,
+  "evidence_status": "plumbing_only",
+  "evidence_note": "D1 确定性实例（省内价）的最优解约束余量诊断。目的只是正面检验「脂肪下界紧」这一因果主张，不是决策可靠性结果。violated 记录应只出现在 active_mask=False 的不可达营养素上（已知设计）。"
+}

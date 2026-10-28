@@ -1,0 +1,19 @@
+{
+  "command": "sensitivity-mar-mnar",
+  "panel": "price",
+  "profile": "formal",
+  "folds": 5,
+  "repeats": 20,
+  "methods": [
+    "group_mean",
+    "interpolation",
+    "mice",
+    "hierarchical_rw"
+  ],
+  "delta_grid": [
+    -0.5,
+    0.0,
+    0.5
+  ],
+  "bookkeeping_reconstructed": true
+}

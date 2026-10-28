@@ -1,0 +1,12 @@
+{
+  "command": "r304-weight-uncertainty",
+  "scenario": "CDG",
+  "epsilon": 0.05,
+  "draws": 200,
+  "seed": 20261026,
+  "kappas": {
+    "tight": 100.0,
+    "medium": 20.0,
+    "loose": 5.0
+  }
+}

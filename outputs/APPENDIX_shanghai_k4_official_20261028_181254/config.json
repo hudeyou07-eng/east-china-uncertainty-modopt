@@ -1,0 +1,58 @@
+{
+  "command": "scripts\\run_b2.py --run-id APPENDIX_shanghai_k4_official --scope k4_official --provinces 上海 --scenario CDG --profile smoke --bounds-basis ear",
+  "scope": "k4_official",
+  "audit_file": "group_audit.csv",
+  "profile": "smoke",
+  "scenario": "CDG",
+  "scenario_source": "posterior",
+  "protocol": "masking",
+  "mask_type": "single_cell",
+  "b1_run": "B1_formal_withmice_20261023_124906",
+  "b1_method": "hierarchical_rw",
+  "repeats": 2,
+  "folds": null,
+  "n_cells": 4,
+  "train_scenarios": 20,
+  "epsilon": 0.05,
+  "cv_price": null,
+  "cv_nutrient": 0.0,
+  "bounds_basis": "ear",
+  "objective_weights": {
+    "cost": 0.5,
+    "ghg": 0.25,
+    "land": 0.25
+  },
+  "groups": [
+    "G02",
+    "G05",
+    "G06",
+    "G08"
+  ],
+  "nutrients": [
+    "能量",
+    "蛋白质",
+    "脂肪",
+    "碳水化合物",
+    "钙",
+    "铁",
+    "锌",
+    "硒",
+    "核黄素",
+    "硫胺素",
+    "烟酸"
+  ],
+  "provinces": [
+    "上海"
+  ],
+  "provinces_excluded": {},
+  "contract_hashes": {
+    "group_audit.csv": "a62fa3b44f9c3e4d6e5e62d4565d3ab51c1c56748a9ce9852af2dc4cb54a111c",
+    "group_prices.csv": "3b7ae42d9fbc0fc9ec3485435d9b962af36dde881a2a41ebca299fad8cb043c7",
+    "nutrients.csv": "9b302d6cb804ac5112f1584c8fef21ab20b1ab88efdfd98cee8ad3aef93f2c8c",
+    "environment.csv": "c6437a46aab3b920868951a68f5bdea4d97c48453b936f592145781b324cdeb2",
+    "baseline_consumption.csv": "d6936e7fdddf3eaab7cbfe329e6006fe0cec83afa0cf654af33eff34137faeec",
+    "decision_bounds.csv": "a4e401dc8fb85488446a427f13f2d595ab8e209f0b9f52b9bf2e96e37eb9a33c"
+  },
+  "nutrient_bounds_sha256": "d550690e8dc0e4700f9254fd0b477611fc6fba0e7f851389f4ec06966019cb80",
+  "b1_prediction_sha256": "c4a3adfc68c6183b5f3d16c5d6eca22dbd6d305b916379fe305bd5d4c9d210cd"
+}

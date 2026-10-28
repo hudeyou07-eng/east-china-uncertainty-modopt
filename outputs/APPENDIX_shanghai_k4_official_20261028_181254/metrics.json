@@ -1,0 +1,229 @@
+{
+  "command": "b2-main",
+  "evidence_status": "plumbing_only",
+  "resolved_components": [
+    "scenarios = B1 经验残差后验（已替换占位对数正态）",
+    "repeats = B1 5×20×3 遮蔽协议单元（已替换换种子重抽）"
+  ],
+  "placeholder_components": [
+    "truth = 冻结合同点估计，非遮蔽前伪完整面板"
+  ],
+  "scenario": "CDG",
+  "decision_scope": "k4_official",
+  "audit_file": "group_audit.csv",
+  "bounds_basis": "ear",
+  "k_count": 4,
+  "scenario_source": "posterior",
+  "protocol": "masking",
+  "mask_type": "single_cell",
+  "n_cells": 4,
+  "n_rows": 16,
+  "provinces_used": [
+    "上海"
+  ],
+  "provinces_excluded": {},
+  "active_nutrients": [
+    "能量",
+    "蛋白质",
+    "脂肪",
+    "碳水化合物",
+    "铁",
+    "锌",
+    "硒",
+    "核黄素",
+    "烟酸"
+  ],
+  "non_actionable_by_province": {
+    "上海": {
+      "钙": "最大可达 155.6 < 下界 329",
+      "硫胺素": "最大可达 0.5969 < 下界 0.6245"
+    }
+  },
+  "per_method": {
+    "D0": {
+      "n_repeats": 4,
+      "feasible_all_count": 0,
+      "feasible_all_rate": 0.0,
+      "feasible_all_wilson95": [
+        0.0,
+        0.4898908364545973
+      ],
+      "feasible_active_count": 4,
+      "feasible_active_rate": 1.0,
+      "feasible_active_wilson95": [
+        0.5101091635454027,
+        1.0
+      ],
+      "gap_mean": 0.0,
+      "gap_p95": 0.0,
+      "gap_n_valid": 4,
+      "flip_rate": 0.0,
+      "flip_rate_per_repeat_mean": 0.0,
+      "dq_ref_n_valid": 4,
+      "dq_ref_mean": 0.0,
+      "dq_ref_median": 0.0,
+      "dq_ref_p95": 0.0,
+      "dq_ref_max": 0.0,
+      "dq_ref_change_rate": 0.0,
+      "solver_failures": 0
+    },
+    "D1": {
+      "n_repeats": 4,
+      "feasible_all_count": 0,
+      "feasible_all_rate": 0.0,
+      "feasible_all_wilson95": [
+        0.0,
+        0.4898908364545973
+      ],
+      "feasible_active_count": 4,
+      "feasible_active_rate": 1.0,
+      "feasible_active_wilson95": [
+        0.5101091635454027,
+        1.0
+      ],
+      "gap_mean": 0.0,
+      "gap_p95": 0.0,
+      "gap_n_valid": 4,
+      "flip_rate": 0.0,
+      "flip_rate_per_repeat_mean": 0.0,
+      "dq_ref_n_valid": 4,
+      "dq_ref_mean": 0.0,
+      "dq_ref_median": 0.0,
+      "dq_ref_p95": 0.0,
+      "dq_ref_max": 0.0,
+      "dq_ref_change_rate": 0.0,
+      "solver_failures": 0
+    },
+    "D2": {
+      "n_repeats": 4,
+      "feasible_all_count": 0,
+      "feasible_all_rate": 0.0,
+      "feasible_all_wilson95": [
+        0.0,
+        0.4898908364545973
+      ],
+      "feasible_active_count": 0,
+      "feasible_active_rate": 0.0,
+      "feasible_active_wilson95": [
+        0.0,
+        0.4898908364545973
+      ],
+      "gap_mean": -0.7204063556884708,
+      "gap_p95": -0.7204063556884708,
+      "gap_n_valid": 4,
+      "flip_rate": 0.0,
+      "flip_rate_per_repeat_mean": 0.0,
+      "dq_ref_n_valid": 4,
+      "dq_ref_mean": 85.05283529243343,
+      "dq_ref_median": 85.05283529243343,
+      "dq_ref_p95": 85.05283529243343,
+      "dq_ref_max": 85.05283529243343,
+      "dq_ref_change_rate": 1.0,
+      "solver_failures": 0
+    },
+    "D3": {
+      "n_repeats": 4,
+      "feasible_all_count": 0,
+      "feasible_all_rate": 0.0,
+      "feasible_all_wilson95": [
+        0.0,
+        0.4898908364545973
+      ],
+      "feasible_active_count": 4,
+      "feasible_active_rate": 1.0,
+      "feasible_active_wilson95": [
+        0.5101091635454027,
+        1.0
+      ],
+      "gap_mean": 4.2766873476071377e-16,
+      "gap_p95": 4.2766873476071377e-16,
+      "gap_n_valid": 4,
+      "flip_rate": 0.0,
+      "flip_rate_per_repeat_mean": 0.0,
+      "dq_ref_n_valid": 4,
+      "dq_ref_mean": 5.684341886080802e-14,
+      "dq_ref_median": 5.684341886080802e-14,
+      "dq_ref_p95": 5.684341886080802e-14,
+      "dq_ref_max": 5.684341886080802e-14,
+      "dq_ref_change_rate": 0.0,
+      "solver_failures": 0
+    }
+  },
+  "solver_success_by_province": {
+    "上海/D0": {
+      "success": 4,
+      "total": 4
+    },
+    "上海/D1": {
+      "success": 4,
+      "total": 4
+    },
+    "上海/D2": {
+      "success": 4,
+      "total": 4
+    },
+    "上海/D3": {
+      "success": 4,
+      "total": 4
+    }
+  },
+  "residual_pool": [
+    {
+      "group_id": "G02",
+      "n": 89,
+      "sd": 0.13071149978436744,
+      "min": -0.30529166615432596,
+      "max": 0.22894491597820693
+    },
+    {
+      "group_id": "G05",
+      "n": 49,
+      "sd": 0.1672932401895111,
+      "min": -0.25465692718132,
+      "max": 0.346011127758218
+    },
+    {
+      "group_id": "G06",
+      "n": 198,
+      "sd": 0.2239740686282185,
+      "min": -0.48188641771902624,
+      "max": 0.6216315245662608
+    },
+    {
+      "group_id": "G08",
+      "n": 66,
+      "sd": 0.19095582017073506,
+      "min": -0.3425921953218928,
+      "max": 0.43658625598649914
+    }
+  ],
+  "residual_pool_meta": {
+    "b1_run": "B1_formal_withmice_20261023_124906",
+    "method": "hierarchical_rw",
+    "mask_type": "single_cell",
+    "n_pairs": 600,
+    "provinces": [
+      "上海",
+      "安徽",
+      "山东",
+      "江苏",
+      "江西",
+      "浙江",
+      "福建"
+    ],
+    "groups": [
+      "G02",
+      "G05",
+      "G06",
+      "G08"
+    ],
+    "note": "残差 = truth/prediction − 1，已减组内均值。衡量价格估计误差，非未来价格波动。跨省池化，多品类组为混合分布（离散度偏高）"
+  },
+  "protocol_shift": {
+    "n_cells": 4,
+    "abs_shift_mean": 0.004756612094646112,
+    "abs_shift_max": 0.04595194969584783,
+    "n_nonzero_mean": 1.0,
+    "n_cells_per_unit": 4.0
+  }
+}

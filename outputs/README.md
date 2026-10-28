@@ -1,6 +1,11 @@
 # Generated outputs
 
-Formal and smoke runs create timestamped folders here. Large generated folders are ignored by Git. A run is complete only when it contains `metrics.json`, `config.json`, `environment.json`, and `DONE`. Failed runs retain `FAILED.json` and traceback information.
+Formal and smoke runs create timestamped folders here. A run is complete only when it contains `metrics.json`, `config.json`, `environment.json`, and `DONE`. Failed runs retain `FAILED.json` and traceback information.
+
+**These folders are versioned as of 2026-10-28** (44 directories, ~9 MB) so that collaborators can
+audit the paper numbers without re-running ~1.5 h of experiments. Two directories are exempt from the
+timestamp convention because they are gate deliverables that get regenerated: `R500_504_paper_artifacts`
+and `R505_reproducibility` (both created with `--exact`).
 
 Small reviewed evidence suitable for version control belongs in `artifacts/`, not here.
 

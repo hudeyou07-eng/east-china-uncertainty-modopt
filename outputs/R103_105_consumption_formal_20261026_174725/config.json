@@ -1,0 +1,73 @@
+{
+  "args": {
+    "config": "D:\\汇总\\SRT\\east-china-uncertainty-modopt\\configs\\default.yaml",
+    "profile": "formal",
+    "workers": 20,
+    "blocks_per_fold": 4,
+    "run_id": "R103_105_consumption_formal",
+    "panel": "consumption"
+  },
+  "config": {
+    "project": {
+      "name": "east_china_uncertainty_modopt",
+      "seed": 20261015
+    },
+    "paths": {
+      "price_workbook": "../data/input/price/price_category_catalog.xlsx",
+      "clean_price_workbook": "../data/input/price/price_panel_clean.xlsx",
+      "clean_consumption_table": "../data/input/clean_tables/consumption.csv",
+      "output_root": "../outputs"
+    },
+    "audit": {
+      "min_price_regions": 3,
+      "min_price_observations": 18,
+      "invalid_text_tokens": [
+        "全国",
+        "同比",
+        "暂无",
+        "缺失"
+      ],
+      "oil_density_kg_per_litre": 0.92
+    },
+    "calibration": {
+      "training_data_natures": [
+        "实测"
+      ],
+      "formal_folds": 5,
+      "formal_repeats": 20,
+      "smoke_folds": 2,
+      "smoke_repeats": 2,
+      "point_mask_fraction": 0.1,
+      "block_years": 2,
+      "min_series_observations": 5,
+      "posterior_draws": 100,
+      "methods": [
+        "group_mean",
+        "interpolation",
+        "mice",
+        "hierarchical_rw"
+      ],
+      "mask_types": [
+        "single_cell",
+        "consecutive_years",
+        "province_group"
+      ]
+    },
+    "optimization": {
+      "train_scenarios_smoke": 20,
+      "train_scenarios_formal": 200,
+      "test_scenarios_formal": 1000,
+      "epsilon": 0.05,
+      "mip_time_limit_seconds": 300,
+      "mip_relative_gap": 0.001,
+      "objective_weights": [
+        0.5,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "command": "diagnose-vertex-radius",
+  "evidence_status": "structural",
+  "scope": "k6_price",
+  "bounds_basis": "ear",
+  "scenarios": [
+    "CDG",
+    "EAT",
+    "HEAL_base"
+  ],
+  "thetas_deg": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    8.0,
+    10.0,
+    12.0,
+    15.0,
+    20.0,
+    25.0,
+    30.0
+  ],
+  "n_dir": 40,
+  "dq_tol": 0.0001,
+  "evidence_note": "可行域的几何常数，不依赖场景分布。θ 为成本方向与点估计方向 c̄ 的精确夹角",
+  "summary": {
+    "min_radius_overall": 0.5,
+    "min_radius_cdg": 4.0,
+    "median_radius_overall": 9.0,
+    "provinces_never_switch": 0,
+    "provinces_total": 15,
+    "threshold_16_3_deg": 16.3
+  }
+}

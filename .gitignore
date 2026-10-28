@@ -25,8 +25,11 @@ data/raw/
 student_doc/
 
 # Generated experiment runs
-outputs/*
-!outputs/README.md
+# 2026-10-28：为对外交付，运行产物（44 个目录、约 9 MB、747 个文件）一并纳入版本控制，
+# 使协作者克隆后即可直接复核 tracker 与论文数字，无需先重跑约 1.5 小时的实验。
+# 如需恢复「产物不入库」的旧策略，取消下面两行的注释即可（并删除已入库的 outputs/）。
+# outputs/*
+# !outputs/README.md
 
 # Document QA intermediates
 docs/_rendered/

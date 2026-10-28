@@ -1,0 +1,28 @@
+{
+  "command": "diagnose-cvar-angle",
+  "evidence_status": "plumbing_only",
+  "scope": "k6_price",
+  "bounds_basis": "ear",
+  "scenarios": [
+    "CDG",
+    "EAT"
+  ],
+  "cvs": [
+    0.05,
+    0.2,
+    0.5
+  ],
+  "alpha": 0.9,
+  "n_scenarios": 200,
+  "evidence_note": "占位对数正态场景；本脚本度量的是『CVaR 对目标方向的旋转量』这一几何量，与场景分布是否为真实后验关系较弱",
+  "summary": {
+    "angle_max_cdg_iid": 9.89524934936142,
+    "angle_max_cdg_spike": 16.286588194356657,
+    "dq_max_cdg_iid": 1.1847305358969606e-09,
+    "dq_max_cdg_spike": 1.4785541679884773e-09,
+    "angle_max_all": 16.286588194356657,
+    "dq_max_all": 339.4731103162863,
+    "corr_angle_vs_dq_iid": 0.06523103260512407,
+    "corr_angle_vs_dq_spike": -0.554371807488849
+  }
+}

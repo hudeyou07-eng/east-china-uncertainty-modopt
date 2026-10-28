@@ -1,0 +1,110 @@
+{
+  "command": "big-m-diagnostic",
+  "purpose": "R306：验证 tight Big-M 不裁剪可行解、且不劣于 global",
+  "epsilon": 0.05,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "scenario_grid": [
+    20,
+    50,
+    100
+  ],
+  "max_delta_q_between_modes": 0.0,
+  "solutions_agree": true,
+  "tight_not_slower": true,
+  "m_spread": {
+    "20": {
+      "ratio_max_over_min": 2.381,
+      "global_over_mean": 1.549
+    },
+    "50": {
+      "ratio_max_over_min": 2.531,
+      "global_over_mean": 1.646
+    },
+    "100": {
+      "ratio_max_over_min": 2.579,
+      "global_over_mean": 1.674
+    }
+  },
+  "summary": [
+    {
+      "n_scenarios": 20,
+      "big_m": "global",
+      "n": 5,
+      "solve_rate": 1.0,
+      "runtime_mean": 0.05178070068359375,
+      "runtime_max": 0.12308788299560547,
+      "objective_mean": 0.13463217922751958
+    },
+    {
+      "n_scenarios": 20,
+      "big_m": "tight",
+      "n": 5,
+      "solve_rate": 1.0,
+      "runtime_mean": 0.0527498722076416,
+      "runtime_max": 0.12120676040649414,
+      "objective_mean": 0.13463217922751958
+    },
+    {
+      "n_scenarios": 50,
+      "big_m": "global",
+      "n": 5,
+      "solve_rate": 1.0,
+      "runtime_mean": 0.21049785614013672,
+      "runtime_max": 0.3690187931060791,
+      "objective_mean": 0.13255648187731014
+    },
+    {
+      "n_scenarios": 50,
+      "big_m": "tight",
+      "n": 5,
+      "solve_rate": 1.0,
+      "runtime_mean": 0.19993085861206056,
+      "runtime_max": 0.3727419376373291,
+      "objective_mean": 0.13255648187731014
+    },
+    {
+      "n_scenarios": 100,
+      "big_m": "global",
+      "n": 5,
+      "solve_rate": 1.0,
+      "runtime_mean": 0.6872063159942627,
+      "runtime_max": 0.9907076358795166,
+      "objective_mean": 0.12594599057156936
+    },
+    {
+      "n_scenarios": 100,
+      "big_m": "tight",
+      "n": 5,
+      "solve_rate": 1.0,
+      "runtime_mean": 0.673585844039917,
+      "runtime_max": 0.9578990936279297,
+      "objective_mean": 0.12594599057156936
+    }
+  ],
+  "agreement": [
+    {
+      "n_scenarios": 20,
+      "n_pairs": 5,
+      "delta_mean": 0.0,
+      "delta_max": 0.0
+    },
+    {
+      "n_scenarios": 50,
+      "n_pairs": 5,
+      "delta_mean": 0.0,
+      "delta_max": 0.0
+    },
+    {
+      "n_scenarios": 100,
+      "n_pairs": 5,
+      "delta_mean": 0.0,
+      "delta_max": 0.0
+    }
+  ]
+}

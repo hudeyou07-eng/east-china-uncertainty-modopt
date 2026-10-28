@@ -1,0 +1,9 @@
+{
+  "command": "diagnose-scope-activation",
+  "scopes": [
+    "k4_official",
+    "k6_price",
+    "k5_notrace",
+    "k3_prereg"
+  ]
+}

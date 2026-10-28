@@ -1,0 +1,68 @@
+{
+  "ontology_groups": 12,
+  "included_groups": 5,
+  "included_group_ids": [
+    "G02",
+    "G04",
+    "G05",
+    "G06",
+    "G08"
+  ],
+  "excluded": [
+    {
+      "group_id": "G01",
+      "group_zh": "乳及乳制品",
+      "reason": "价格不足(4观测/2省，门槛18/3)"
+    },
+    {
+      "group_id": "G03",
+      "group_zh": "水果",
+      "reason": "价格不足(16观测/6省，门槛18/3)"
+    },
+    {
+      "group_id": "G07",
+      "group_zh": "水产品",
+      "reason": "营养格子覆盖不足(0.909，门槛0.95，3种食物，痕量2格)"
+    },
+    {
+      "group_id": "G09",
+      "group_zh": "糖",
+      "reason": "价格不足(4观测/2省，门槛18/3)；营养格子覆盖不足(0.455，门槛0.95，1种食物，痕量0格)"
+    },
+    {
+      "group_id": "G10",
+      "group_zh": "薯类",
+      "reason": "价格不足(8观测/3省，门槛18/3)；消费基线缺(0/7省)；环境系数不全(LCA 2/3，全球表 4/4)"
+    },
+    {
+      "group_id": "G11",
+      "group_zh": "食用油",
+      "reason": "营养格子覆盖不足(0.000，门槛0.95，0种食物，痕量0格)"
+    },
+    {
+      "group_id": "G12",
+      "group_zh": "大豆及坚果",
+      "reason": "价格不足(0观测/0省，门槛18/3)；消费基线缺(0/7省)；环境系数不全(LCA 2/3，全球表 4/4)"
+    }
+  ],
+  "gates": {
+    "min_price_regions": 3,
+    "min_price_observations": 18,
+    "min_consumption_regions": 7,
+    "hard_nutrients": [
+      "能量",
+      "蛋白质",
+      "脂肪",
+      "碳水化合物",
+      "钙",
+      "铁",
+      "锌",
+      "硒",
+      "核黄素",
+      "硫胺素",
+      "烟酸"
+    ],
+    "trace_as_valid": false,
+    "min_cell_coverage": 0.95
+  }
+}

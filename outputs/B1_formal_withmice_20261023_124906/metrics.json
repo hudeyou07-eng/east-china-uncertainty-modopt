@@ -1,0 +1,208 @@
+{
+  "command": "calibration-parallel",
+  "calibration": {
+    "profile": "formal",
+    "shards": 20,
+    "result_rows": 1200,
+    "duplicate_rows": 0,
+    "methods": [
+      "group_mean",
+      "hierarchical_rw",
+      "interpolation",
+      "mice"
+    ],
+    "mask_types": [
+      "consecutive_years",
+      "province_group",
+      "single_cell"
+    ],
+    "folds_covered": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "repeats_covered": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "source_tree_sha256": null,
+    "summary": [
+      {
+        "mask_type": "consecutive_years",
+        "method": "group_mean",
+        "n_eval": 200,
+        "scaled_mae": 0.17380564839022714,
+        "log_rmse": 0.18490310949828748,
+        "coverage80": 0.83,
+        "coverage95": 0.925,
+        "width95": 36.97571225771398,
+        "runtime_seconds": 0.21697640419006348
+      },
+      {
+        "mask_type": "consecutive_years",
+        "method": "hierarchical_rw",
+        "n_eval": 200,
+        "scaled_mae": 0.1675119515419749,
+        "log_rmse": 0.17663124144445103,
+        "coverage80": 0.845,
+        "coverage95": 0.955,
+        "width95": 38.23361142680352,
+        "runtime_seconds": 0.8490197658538818
+      },
+      {
+        "mask_type": "consecutive_years",
+        "method": "interpolation",
+        "n_eval": 200,
+        "scaled_mae": 0.14055823569289572,
+        "log_rmse": 0.14900348761111099,
+        "coverage80": 0.8,
+        "coverage95": 0.865,
+        "width95": 25.756408786262973,
+        "runtime_seconds": 1.5491769313812256
+      },
+      {
+        "mask_type": "consecutive_years",
+        "method": "mice",
+        "n_eval": 200,
+        "scaled_mae": 0.12661861715150177,
+        "log_rmse": 0.13962325964906802,
+        "coverage80": 0.74,
+        "coverage95": 0.84,
+        "width95": 15.967543022242978,
+        "runtime_seconds": 1733.0972831249237
+      },
+      {
+        "mask_type": "province_group",
+        "method": "group_mean",
+        "n_eval": 648,
+        "scaled_mae": 0.18925437629496553,
+        "log_rmse": 0.21579236378766276,
+        "coverage80": 0.8101111111111112,
+        "coverage95": 0.9185555555555556,
+        "width95": 37.03330560080381,
+        "runtime_seconds": 0.21221423149108887
+      },
+      {
+        "mask_type": "province_group",
+        "method": "hierarchical_rw",
+        "n_eval": 648,
+        "scaled_mae": 0.17759397578098593,
+        "log_rmse": 0.20216555813884457,
+        "coverage80": 0.8574325396825396,
+        "coverage95": 0.9748412698412698,
+        "width95": 34.01133594948391,
+        "runtime_seconds": 0.9144837856292725
+      },
+      {
+        "mask_type": "province_group",
+        "method": "interpolation",
+        "n_eval": 648,
+        "scaled_mae": 0.18925437629496553,
+        "log_rmse": 0.21579236378766276,
+        "coverage80": 0.7019603174603175,
+        "coverage95": 0.8252539682539681,
+        "width95": 25.59554003532807,
+        "runtime_seconds": 2.0382182598114014
+      },
+      {
+        "mask_type": "province_group",
+        "method": "mice",
+        "n_eval": 648,
+        "scaled_mae": 1.18210323729917,
+        "log_rmse": 0.8277508063185589,
+        "coverage80": 0.43844444444444447,
+        "coverage95": 0.7330595238095239,
+        "width95": 53.69186248056996,
+        "runtime_seconds": 1728.3625032901764
+      },
+      {
+        "mask_type": "single_cell",
+        "method": "group_mean",
+        "n_eval": 600,
+        "scaled_mae": 0.20819726560859528,
+        "log_rmse": 0.23939401479626252,
+        "coverage80": 0.8533333333333333,
+        "coverage95": 0.9133333333333334,
+        "width95": 36.89467729757809,
+        "runtime_seconds": 0.2311720848083496
+      },
+      {
+        "mask_type": "single_cell",
+        "method": "hierarchical_rw",
+        "n_eval": 600,
+        "scaled_mae": 0.1746129523340481,
+        "log_rmse": 0.23565382200939794,
+        "coverage80": 0.8816666666666666,
+        "coverage95": 0.95,
+        "width95": 28.522233369874975,
+        "runtime_seconds": 0.8946070671081543
+      },
+      {
+        "mask_type": "single_cell",
+        "method": "interpolation",
+        "n_eval": 600,
+        "scaled_mae": 0.16671988486138997,
+        "log_rmse": 0.20552733558641242,
+        "coverage80": 0.8466666666666667,
+        "coverage95": 0.8866666666666666,
+        "width95": 25.839593064208476,
+        "runtime_seconds": 2.3336071968078613
+      },
+      {
+        "mask_type": "single_cell",
+        "method": "mice",
+        "n_eval": 600,
+        "scaled_mae": 0.15549028215517458,
+        "log_rmse": 0.3680866922062257,
+        "coverage80": 0.7700000000000001,
+        "coverage95": 0.865,
+        "width95": 17.6806498006213,
+        "runtime_seconds": 1737.0933375358582
+      }
+    ],
+    "wall_seconds": 1064.7369048595428,
+    "shard_dirs": [
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f0_r0to4_20261023_124908",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f0_r5to9_20261023_124908",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f0_r10to14_20261023_124908",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f0_r15to19_20261023_124908",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f1_r0to4_20261023_124908",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f1_r5to9_20261023_124908",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f1_r10to14_20261023_125334",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f1_r15to19_20261023_125334",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f2_r0to4_20261023_125335",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f2_r5to9_20261023_125335",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f2_r10to14_20261023_125335",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f2_r15to19_20261023_125337",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f3_r0to4_20261023_125755",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f3_r5to9_20261023_125756",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f3_r10to14_20261023_125756",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f3_r15to19_20261023_125756",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f4_r0to4_20261023_125757",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f4_r5to9_20261023_125758",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f4_r10to14_20261023_130216",
+      "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\outputs\\B1_formal_withmice_f4_r15to19_20261023_130217"
+    ],
+    "config_sha256": "ce57c967f52b9e063332f1c026e640c26f240460a376273a8f85c35827f5dd58"
+  }
+}

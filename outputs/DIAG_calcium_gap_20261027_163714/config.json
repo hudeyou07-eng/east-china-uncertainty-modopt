@@ -1,0 +1,5 @@
+{
+  "command": "diagnose-calcium-gap",
+  "scope": "k6_price",
+  "bounds_basis": "ear"
+}

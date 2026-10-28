@@ -1,0 +1,21 @@
+{
+  "command": "diagnose-vertex-stability",
+  "evidence_status": "structural",
+  "scope": "k6_price",
+  "bounds_basis": "ear",
+  "scenarios": [
+    "CDG",
+    "EAT",
+    "HEAL_base"
+  ],
+  "n_dir": 60,
+  "sigma": 0.6,
+  "evidence_note": "纯 LP 顶点枚举 + 可行性检验，无随机场景语义；随机价格方向仅用于探测顶点对目标方向的敏感性",
+  "summary": {
+    "scenarios_with_single_vertex": 0,
+    "scenarios_total": 15,
+    "componentwise_min_count": 0,
+    "cdg_single_vertex": false,
+    "cdg_componentwise_min": false
+  }
+}

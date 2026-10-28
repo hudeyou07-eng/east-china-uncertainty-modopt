@@ -1,0 +1,22 @@
+{
+  "command": "m4",
+  "block": "bounds",
+  "block_definition": "R409：边界网格 low/mid/high/worst",
+  "scope": "k6_price",
+  "bounds_basis": "ear",
+  "scenario": [
+    "HEAL_base",
+    "CDG",
+    "EAT"
+  ],
+  "n_scenarios": 200,
+  "epsilon": 0.05,
+  "time_limit": 300.0,
+  "gap": 0.001,
+  "seed": 7,
+  "b1_run": "B1_formal_withmice_20261023_124906",
+  "b1_method": "hierarchical_rw",
+  "dry_run": false,
+  "direction_tol": 1.0,
+  "label_rule": "d1==d3==+1 stable-up / ==-1 stable-down / ==0 stable-neutral / d1!=d3 data-sensitive"
+}

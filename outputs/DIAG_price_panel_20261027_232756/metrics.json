@@ -1,0 +1,40 @@
+{
+  "command": "diagnose-price-panel",
+  "evidence_status": "structural",
+  "scope": "k6_price",
+  "scenarios": [
+    "CDG",
+    "EAT"
+  ],
+  "bases": [
+    "ear",
+    "rni"
+  ],
+  "price_columns": [
+    "price_cny_kg",
+    "price_cny_kg_full"
+  ],
+  "provinces_excluded": {
+    "上海": [
+      "G07"
+    ]
+  },
+  "evidence_note": "对比观测口径与「观测+桥接」口径的组价，以及换面板后决策是否改变。注意 price_cny_kg_full 是桥接口径，不是 MICE 插补（CHANGELOG §28.1）。",
+  "summary": {
+    "panel_abs_diff_median_pct": 1.7947694724840202,
+    "panel_abs_diff_max_pct": 21.645112352511266,
+    "panel_nan_full": 0,
+    "g06_lowerbound_rows": 3,
+    "g06_lowerbound_understate_median_pct": 54.09109506204657,
+    "g06_lowerbound_understate_max_pct": 54.09109506204657,
+    "g06_lowerbound_ref_sources": [
+      "same_province_complete_or_bridged"
+    ],
+    "g06_pooled_lb_to_ref_ratio": 0.584782648321323,
+    "n_decision_cells": 18,
+    "n_decision_unchanged": 17,
+    "dq_max_ear": 5.115907697472721e-13,
+    "dq_max_rni": 48.99609523316417,
+    "obj_rel_change_abs_median": 0.004505598706750935
+  }
+}

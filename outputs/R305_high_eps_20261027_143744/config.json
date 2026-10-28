@@ -1,0 +1,16 @@
+{
+  "command": "r305-chance-mode",
+  "scenario": "CDG",
+  "profile": "smoke",
+  "scenarios": 200,
+  "epsilons": [
+    0.2,
+    0.3
+  ],
+  "modes": [
+    "marginal"
+  ],
+  "seed": 20261026,
+  "time_limit": 240.0,
+  "mip_rel_gap": 0.01
+}

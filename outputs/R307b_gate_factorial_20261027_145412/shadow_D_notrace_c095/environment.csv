@@ -1,0 +1,83 @@
+﻿impact,group_id,value_per_kg,lower,upper,unit,source,boundary,dataset,aggregation,n_records,n_sources,n_group_average_proxy
+ghg,G01,13.514999999999999,3.15,23.88,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+freshwater,G01,3116.7,628.2,5605.2,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+land,G01,48.370000000000005,8.95,87.79,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+eutrophication,G01,54.510000000000005,10.65,98.37,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+ghg,G02,4.67,4.67,4.67,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+freshwater,G02,577.7,577.7,577.7,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+land,G02,6.27,6.27,6.27,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+eutrophication,G02,21.76,21.76,21.76,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+ghg,G03,0.8520000000000001,0.39,1.53,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,5,1,0
+freshwater,G03,190.08,82.7,419.6,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,5,1,0
+land,G03,1.344,0.63,2.41,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,5,1,0
+eutrophication,G03,3.106,1.45,6.12,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,5,1,0
+ghg,G04,2.0214285714285714,0.98,4.45,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,7,1,0
+freshwater,G04,634.7714285714285,17.1,2248.4,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,7,1,0
+land,G04,5.904285714285714,1.11,15.57,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,7,1,0
+eutrophication,G04,12.059999999999999,2.33,35.07,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,7,1,0
+ghg,G05,9.87,9.87,9.87,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+freshwater,G05,660.0,660.0,660.0,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+land,G05,12.22,12.22,12.22,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+eutrophication,G05,48.7,48.7,48.7,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+ghg,G06,21.75106771,12.31,99.48,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,structure_weighted(beef=0.136/lamb=0.076/pork=0.788),4,1,0
+freshwater,G06,1835.3634359999999,1451.2,2714.3,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,structure_weighted(beef=0.136/lamb=0.076/pork=0.788),4,1,0
+land,G06,66.93621125,17.36,369.81,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,structure_weighted(beef=0.136/lamb=0.076/pork=0.788),4,1,0
+eutrophication,G06,112.91153265,76.38,365.29,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,structure_weighted(beef=0.136/lamb=0.076/pork=0.788),4,1,0
+ghg,G07,20.25,13.63,26.87,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+freshwater,G07,3603.3500000000004,3515.4,3691.3,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+land,G07,5.69,2.97,8.41,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+eutrophication,G07,231.17000000000002,227.22,235.12,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+ghg,G08,0.8119999999999999,0.43,2.09,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,5,1,0
+freshwater,G08,126.88000000000002,14.3,369.8,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,5,1,0
+land,G08,0.49000000000000005,0.33,0.8,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,5,1,0
+eutrophication,G08,3.928,1.61,7.51,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,5,1,0
+ghg,G09,2.505,1.81,3.2,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+freshwater,G09,418.9,217.7,620.1,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+land,G09,1.935,1.83,2.04,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+eutrophication,G09,11.165000000000001,5.41,16.92,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+ghg,G10,0.89,0.46,1.32,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+freshwater,G10,29.55,0.0,59.1,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+land,G10,1.345,0.88,1.81,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+eutrophication,G10,2.085,0.69,3.48,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,2,1,0
+ghg,G11,4.61,4.61,4.61,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+freshwater,G11,22.29,22.29,22.29,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+land,G11,2.64,2.64,2.64,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+eutrophication,G11,2.7,2.7,2.7,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,1,1,0
+ghg,G12,1.9500000000000002,0.43,3.23,kg CO2e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,4,1,0
+freshwater,G12,1540.6250000000002,27.8,4133.8,L/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,4,1,0
+land,G12,6.5625,0.66,12.96,m2/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,4,1,0
+eutrophication,G12,10.127500000000001,1.06,19.15,g PO4e/kg,data/input/clean_tables/global_environment.csv,"farm-to-retail (Poore & Nemecek 2018, via Our World in Data)",global_pn,flat,4,1,0
+ghg,G01,1.632515991471215,1.4898425365753647,1.7238805970149251,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,110,24,1
+freshwater,G01,1715.0472129150166,1715.0472129150166,1715.0472129150166,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,53,15,21
+land,G01,1.8265813432835822,1.8265813432835822,1.8265813432835822,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,49,3,0
+ghg,G02,3.926886277531626,3.4305474860335203,4.329608938547487,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,44,15,8
+freshwater,G02,4135.347892331133,3649.9462253159254,4188.216030006685,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,38,17,8
+land,G02,1.7075785790869586,1.519553072625698,1.7516900897349166,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,24,2,0
+ghg,G03,0.5299026618727151,0.3559057263132308,0.8125705139900607,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,115,24,0
+freshwater,G03,1153.2190327675748,768.1183818089336,1761.3473315407919,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,126,25,0
+land,G03,0.9463199981073601,0.8750916111530426,1.0303362287085585,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,23,2,0
+ghg,G04,1.1998250895984328,0.8389360698277896,1.6595141248864083,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,644,75,15
+freshwater,G04,1754.244698587149,1390.6343698928654,2751.695389630011,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,644,45,64
+land,G04,1.6341118188251946,0.9529411764705883,1.7449482026405108,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,171,10,0
+ghg,G05,6.185323116203894,4.762698799476999,7.216210302237877,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,61,13,0
+freshwater,G05,4724.931010887269,4160.228218233687,6028.360255269964,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,61,17,0
+land,G05,3.2911394466163753,2.4188755497444436,3.6248293896555825,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,26,2,0
+ghg,G06,5.800146645217067,5.194356105900838,7.417507940476523,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,247,26,0
+freshwater,G06,9853.59625540504,7094.589303891629,17978.110830223504,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,185,32,0
+land,G06,16.520266876245557,3.3582334977683823,25.563982183700496,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,134,6,0
+ghg,G07,8.932789432017046,6.097416474654377,10.543375065322936,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,124,14,0
+freshwater,G07,5735.34706221198,3710.5461769961435,7536.838526777017,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,120,20,0
+land,G07,5.175236478292506,3.9331797235023043,6.555299539170507,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,105,5,0
+ghg,G08,0.7755421683473048,0.571467983013607,1.8148904840538467,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,313,30,0
+freshwater,G08,940.7878119269525,612.456031450445,1188.1373973178386,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,349,34,0
+land,G08,1.0345541071798057,0.9931719428926133,1.1965927022802572,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,137,7,0
+ghg,G09,1.5529712393958208,1.5529712393958208,1.5529712393958208,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,25,6,15
+freshwater,G09,1649.9748751145403,1649.9748751145403,1649.9748751145403,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,28,7,21
+land,G09,3.341609766190772,3.341609766190772,3.341609766190772,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,22,2,20
+ghg,G10,0.3758204961915952,0.24014368915529483,1.4436934064532583,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,29,8,0
+freshwater,G10,1164.9333534297186,949.7268856827314,1384.0147940313736,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,61,15,0
+ghg,G11,2.999491764705882,2.6953176470588236,2.999491764705882,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,11,5,2
+freshwater,G11,5499.281045751633,3928.235294117647,6164.705882352941,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,21,14,0
+land,G11,6.129411764705883,6.129411764705883,6.129411764705883,m2/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,9,2,0
+ghg,G12,1.1231214757006884,0.9688708036622585,1.8544243430037783,kg CO2e/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,42,3,0
+freshwater,G12,2392.721878916769,1698.8325340309061,2854.223726426168,L/kg,data/input/clean_tables/china_lca.csv,unspecified_pending_review,china_lca,median,59,9,0

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="702" height="412" font-family="sans-serif" font-size="12">
+<rect width="702" height="412" fill="white"/>
+<text x="351.0" y="26" text-anchor="middle" font-size="15">Figure 2. Direction labels by region, CDG scenario (6 provinces x 6 food groups)</text>
+<text x="156.0" y="64" text-anchor="middle">G02</text>
+<text x="248.0" y="64" text-anchor="middle">G04</text>
+<text x="340.0" y="64" text-anchor="middle">G05</text>
+<text x="432.0" y="64" text-anchor="middle">G06</text>
+<text x="524.0" y="64" text-anchor="middle">G07</text>
+<text x="616.0" y="64" text-anchor="middle">G08</text>
+<text x="100" y="103.0" text-anchor="end">Anhui</text>
+<rect x="110" y="76" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="155.0" y="103.0" text-anchor="middle" fill="white">UP</text>
+<rect x="202" y="76" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="247.0" y="103.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="294" y="76" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="339.0" y="103.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="386" y="76" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="431.0" y="103.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="478" y="76" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="523.0" y="103.0" text-anchor="middle" fill="white">UP</text>
+<rect x="570" y="76" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="615.0" y="103.0" text-anchor="middle" fill="white">UP</text>
+<text x="100" y="149.0" text-anchor="end">Shandong</text>
+<rect x="110" y="122" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="155.0" y="149.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="202" y="122" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="247.0" y="149.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="294" y="122" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="339.0" y="149.0" text-anchor="middle" fill="white">UP</text>
+<rect x="386" y="122" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="431.0" y="149.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="478" y="122" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="523.0" y="149.0" text-anchor="middle" fill="white">UP</text>
+<rect x="570" y="122" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="615.0" y="149.0" text-anchor="middle" fill="white">UP</text>
+<text x="100" y="195.0" text-anchor="end">Jiangsu</text>
+<rect x="110" y="168" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="155.0" y="195.0" text-anchor="middle" fill="white">UP</text>
+<rect x="202" y="168" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="247.0" y="195.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="294" y="168" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="339.0" y="195.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="386" y="168" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="431.0" y="195.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="478" y="168" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="523.0" y="195.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="570" y="168" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="615.0" y="195.0" text-anchor="middle" fill="white">UP</text>
+<text x="100" y="241.0" text-anchor="end">Jiangxi</text>
+<rect x="110" y="214" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="155.0" y="241.0" text-anchor="middle" fill="white">UP</text>
+<rect x="202" y="214" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="247.0" y="241.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="294" y="214" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="339.0" y="241.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="386" y="214" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="431.0" y="241.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="478" y="214" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="523.0" y="241.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="570" y="214" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="615.0" y="241.0" text-anchor="middle" fill="white">UP</text>
+<text x="100" y="287.0" text-anchor="end">Zhejiang</text>
+<rect x="110" y="260" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="155.0" y="287.0" text-anchor="middle" fill="white">UP</text>
+<rect x="202" y="260" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="247.0" y="287.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="294" y="260" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="339.0" y="287.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="386" y="260" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="431.0" y="287.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="478" y="260" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="523.0" y="287.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="570" y="260" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="615.0" y="287.0" text-anchor="middle" fill="white">UP</text>
+<text x="100" y="333.0" text-anchor="end">Fujian</text>
+<rect x="110" y="306" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="155.0" y="333.0" text-anchor="middle" fill="white">UP</text>
+<rect x="202" y="306" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="247.0" y="333.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="294" y="306" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="339.0" y="333.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="386" y="306" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="431.0" y="333.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="478" y="306" width="90" height="44" fill="#c92a2a" stroke="#dee2e6"/>
+<text x="523.0" y="333.0" text-anchor="middle" fill="white">DOWN</text>
+<rect x="570" y="306" width="90" height="44" fill="#2b8a3e" stroke="#dee2e6"/>
+<text x="615.0" y="333.0" text-anchor="middle" fill="white">UP</text>
+<rect x="110" y="380" width="12" height="12" fill="#2b8a3e"/>
+<text x="128" y="390">Stable up</text>
+<rect x="240" y="380" width="12" height="12" fill="#c92a2a"/>
+<text x="258" y="390">Stable down</text>
+<rect x="370" y="380" width="12" height="12" fill="#adb5bd"/>
+<text x="388" y="390">Neutral</text>
+<rect x="500" y="380" width="12" height="12" fill="#f08c00"/>
+<text x="518" y="390">Data-sensitive</text>
+</svg>

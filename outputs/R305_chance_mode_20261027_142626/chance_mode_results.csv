@@ -1,0 +1,73 @@
+﻿province,epsilon,mode,solve_success,objective,marginal_viol_max,joint_viol_rate,joint_viol_over_eps,z_sum,z_budget,n_nutrients,seconds,message
+上海,0.0,joint,True,0.399251270827478,0.0,0.0,inf,0.0,0.0,9,0.12600064277648926,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.0,marginal,True,0.399251270827478,0.0,0.0,inf,0.0,0.0,9,0.13768672943115234,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.02,joint,True,0.38705520640059154,0.015,0.02,1.0,4.0,4.0,9,3.2417454719543457,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.02,marginal,True,0.3860376146460806,0.02,0.04,2.0,15.0,4.0,9,3.453573226928711,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.05,joint,True,0.38369033953319154,0.045,0.05,1.0,10.0,10.0,9,5.561271667480469,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.05,marginal,True,0.37976113000269185,0.05,0.1,2.0,40.0,10.0,9,4.662810325622559,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.1,joint,True,0.37966163437010064,0.09,0.1,1.0,20.0,20.0,9,11.261799335479736,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.1,marginal,True,0.3737788628224565,0.1,0.18,1.7999999999999998,40.0,20.0,9,7.024584770202637,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.2,joint,True,0.37212847651348124,0.16,0.2,1.0,40.0,40.0,9,8.526256084442139,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.2,marginal,False,,,,,,40.0,9,45.11511468887329,Time limit reached. (HiGHS Status 13: Time limit reached)
+上海,0.3,joint,True,0.36842660526397353,0.255,0.3,1.0,60.0,60.0,9,12.536839962005615,Optimization terminated successfully. (HiGHS Status 7: Optim
+上海,0.3,marginal,False,,,,,,60.0,9,45.10973644256592,Time limit reached. (HiGHS Status 13: Time limit reached)
+安徽,0.0,joint,False,,,,,,0.0,8,0.08977246284484863,The problem is infeasible. (HiGHS Status 8: model_status is 
+安徽,0.0,marginal,False,,,,,,0.0,8,0.09676694869995117,The problem is infeasible. (HiGHS Status 8: model_status is 
+安徽,0.02,joint,True,0.429723130063538,0.015,0.02,1.0,4.0,4.0,8,0.15021562576293945,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.02,marginal,True,0.42869336229824895,0.02,0.04,2.0,9.0,4.0,8,1.9159095287322998,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.05,joint,True,0.42789854150310513,0.03,0.05,1.0,10.0,10.0,8,5.588490962982178,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.05,marginal,True,0.4231460954173034,0.05,0.1,2.0,38.0,10.0,8,7.137478828430176,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.1,joint,True,0.4201140449694915,0.085,0.1,1.0,20.0,20.0,8,9.685691833496094,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.1,marginal,True,0.4167240369254925,0.1,0.195,1.95,42.0,20.0,8,8.692569255828857,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.2,joint,True,0.4126372069160521,0.185,0.2,1.0,40.0,40.0,8,14.806371212005615,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.2,marginal,True,0.4082547080970804,0.2,0.365,1.825,80.0,40.0,8,21.687139987945557,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.3,joint,True,0.4066437086925289,0.28,0.295,0.9833333333333333,59.0,60.0,8,11.518226385116577,Optimization terminated successfully. (HiGHS Status 7: Optim
+安徽,0.3,marginal,False,,,,,,60.0,8,45.133047580718994,Time limit reached. (HiGHS Status 13: Time limit reached)
+江苏,0.0,joint,False,,,,,,0.0,9,0.13334369659423828,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.0,marginal,False,,,,,,0.0,9,0.12642574310302734,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.02,joint,False,,,,,,4.0,9,0.16593647003173828,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.02,marginal,False,,,,,,4.0,9,0.2875328063964844,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.05,joint,False,,,,,,10.0,9,0.2742781639099121,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.05,marginal,False,,,,,,10.0,9,0.9453389644622803,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.1,joint,False,,,,,,20.0,9,0.5451178550720215,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.1,marginal,False,,,,,,20.0,9,14.480780363082886,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.2,joint,False,,,,,,40.0,9,13.031564235687256,The problem is infeasible. (HiGHS Status 8: model_status is 
+江苏,0.2,marginal,True,0.4001489719721647,0.2,0.445,2.225,140.0,40.0,9,34.02171564102173,Optimization terminated successfully. (HiGHS Status 7: Optim
+江苏,0.3,joint,True,0.4174204884971595,0.205,0.3,1.0,60.0,60.0,9,21.499486923217773,Optimization terminated successfully. (HiGHS Status 7: Optim
+江苏,0.3,marginal,False,,,,,,60.0,9,45.116576194763184,Time limit reached. (HiGHS Status 13: Time limit reached)
+江西,0.0,joint,False,,,,,,0.0,8,0.11419939994812012,The problem is infeasible. (HiGHS Status 8: model_status is 
+江西,0.0,marginal,False,,,,,,0.0,8,0.1172943115234375,The problem is infeasible. (HiGHS Status 8: model_status is 
+江西,0.02,joint,True,0.39832736667872326,0.015,0.02,1.0,4.0,4.0,8,2.9474987983703613,Optimization terminated successfully. (HiGHS Status 7: Optim
+江西,0.02,marginal,True,0.3975042369685623,0.02,0.04,2.0,12.0,4.0,8,3.905092716217041,Optimization terminated successfully. (HiGHS Status 7: Optim
+江西,0.05,joint,True,0.3962755122993712,0.025,0.05,1.0,10.0,10.0,8,13.893740177154541,Optimization terminated successfully. (HiGHS Status 7: Optim
+江西,0.05,marginal,True,0.39220685225529045,0.05,0.1,2.0,25.0,10.0,8,4.971524953842163,Optimization terminated successfully. (HiGHS Status 7: Optim
+江西,0.1,joint,True,0.39108887911409707,0.085,0.1,1.0,20.0,20.0,8,17.73708438873291,Optimization terminated successfully. (HiGHS Status 7: Optim
+江西,0.1,marginal,True,0.3870356307347459,0.1,0.195,1.95,60.0,20.0,8,15.529825925827026,Optimization terminated successfully. (HiGHS Status 7: Optim
+江西,0.2,joint,True,0.3854140535472698,0.155,0.2,1.0,40.0,40.0,8,13.6771821975708,Optimization terminated successfully. (HiGHS Status 7: Optim
+江西,0.2,marginal,False,,,,,,40.0,8,45.15242910385132,Time limit reached. (HiGHS Status 13: Time limit reached)
+江西,0.3,joint,True,0.379794507702392,0.26,0.3,1.0,60.0,60.0,8,11.763849020004272,Optimization terminated successfully. (HiGHS Status 7: Optim
+江西,0.3,marginal,False,,,,,,60.0,8,45.099310874938965,Time limit reached. (HiGHS Status 13: Time limit reached)
+浙江,0.0,joint,True,0.3894374930086146,0.0,0.0,inf,0.0,0.0,8,0.12389922142028809,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.0,marginal,True,0.3894374930086146,0.0,0.0,inf,0.0,0.0,8,0.11903691291809082,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.02,joint,True,0.377535769748186,0.02,0.02,1.0,4.0,4.0,8,0.2215733528137207,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.02,marginal,True,0.377535769748186,0.02,0.02,1.0,4.0,4.0,8,0.22569894790649414,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.05,joint,True,0.3745062840488095,0.05,0.05,1.0,10.0,10.0,8,0.33177924156188965,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.05,marginal,True,0.37484796858939173,0.04,0.04,0.7999999999999999,13.0,10.0,8,0.34334397315979004,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.1,joint,True,0.37018856591876176,0.1,0.1,1.0,20.0,20.0,8,1.6646947860717773,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.1,marginal,True,0.37018856591877136,0.1,0.1,1.0,62.0,20.0,8,0.8665390014648438,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.2,joint,True,0.36549593647834794,0.2,0.2,1.0,40.0,40.0,8,1.02663254737854,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.2,marginal,True,0.36549593647834866,0.2,0.2,1.0,76.0,40.0,8,1.6359243392944336,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.3,joint,True,0.36056039369351334,0.3,0.3,1.0,60.0,60.0,8,1.5820329189300537,Optimization terminated successfully. (HiGHS Status 7: Optim
+浙江,0.3,marginal,True,0.3606605990712315,0.29,0.29,0.9666666666666667,61.0,60.0,8,1.9880499839782715,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.0,joint,True,0.41162346220756185,0.0,0.0,inf,0.0,0.0,9,0.12305426597595215,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.0,marginal,True,0.41162346220756185,0.0,0.0,inf,0.0,0.0,9,0.12488555908203125,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.02,joint,True,0.39547976065048834,0.01,0.02,1.0,4.0,4.0,9,3.688993215560913,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.02,marginal,True,0.3943393276861286,0.02,0.04,2.0,10.0,4.0,9,0.8282732963562012,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.05,joint,True,0.3921300576895166,0.04,0.05,1.0,10.0,10.0,9,5.450223684310913,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.05,marginal,True,0.38967136236541017,0.05,0.09,1.7999999999999998,27.0,10.0,9,1.8401093482971191,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.1,joint,True,0.3887524654366175,0.085,0.1,1.0,20.0,20.0,9,7.097274541854858,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.1,marginal,True,0.38585739965718097,0.1,0.18,1.7999999999999998,71.0,20.0,9,2.6182334423065186,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.2,joint,True,0.38267030805404323,0.155,0.2,1.0,40.0,40.0,9,7.968311786651611,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.2,marginal,True,0.3790669347685065,0.2,0.345,1.7249999999999999,118.0,40.0,9,2.553424835205078,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.3,joint,True,0.3785751623697009,0.27,0.3,1.0,60.0,60.0,9,5.162490129470825,Optimization terminated successfully. (HiGHS Status 7: Optim
+福建,0.3,marginal,True,0.37331823727988633,0.3,0.475,1.5833333333333333,123.0,60.0,9,2.3268940448760986,Optimization terminated successfully. (HiGHS Status 7: Optim

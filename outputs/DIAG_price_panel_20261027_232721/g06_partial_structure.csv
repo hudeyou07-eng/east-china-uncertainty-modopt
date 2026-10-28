@@ -1,0 +1,4 @@
+﻿province,year,aggregation,price_obs,price_full,understate_pct
+福建,2017,structure_weighted_partial_lowerbound(pork=1.000),28.0866,28.0866,0.0
+福建,2022,structure_weighted_partial_lowerbound(pork=1.000),30.87,30.87,0.0
+福建,2023,structure_weighted_partial_lowerbound(pork=1.000),25.625,25.625,0.0

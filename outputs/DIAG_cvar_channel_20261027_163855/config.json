@@ -1,0 +1,5 @@
+{
+  "command": "diagnose-cvar-channel",
+  "scope": "k6_price",
+  "alpha": 0.9
+}

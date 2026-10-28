@@ -148,15 +148,16 @@
 ### 6.1 目录约定
 
 ```
-data/processed/     合同文件（7 件）+ 审计表 + manifest —— 已纳入版本控制
-outputs/            运行产物（44 个目录）—— **.gitignore 排除**，可命令重建
+data/processed/     合同文件（7 件）+ 审计表 + manifest
+outputs/            运行产物（44 个目录 / 747 个文件 / 约 9 MB）—— **已纳入版本控制**
 artifacts/          小体量、人工复核过的证据与修复前备份
 docs/               方案 / 台账 / 总结 / 证据（archive/ 为历史留痕）
 scripts/ src/ tests/ 代码
 ```
 
-> **克隆后 `outputs/` 是空的**，这是设计而不是缺失。需要产物时按 6.2 重跑；
-> 此时 `check_tracker.py` 会报「目录缺失」，属预期，重跑后即恢复全绿。
+> **`outputs/` 现在随仓库交付**（2026-10-28 决定）。克隆后即可直接复核 tracker、
+> 数值断言与论文图表，不必先重跑约 1.5 小时的实验；
+> 需要复算时按 6.2 重跑即可，产物可重建、不构成唯一副本。
 
 ### 6.2 复现命令
 
@@ -263,6 +264,7 @@ docs/
 └── archive/                   4 份历史文档（AUDIT / DECISIONS / CLEANUP / TO_DECIDE）
 ```
 
-> **上传说明**：`.gitignore` 排除了 `outputs/`（44 个运行目录，9.3 MB）与 `.venv/`。
-> 克隆方拿到的是「代码 + 合同数据 + 文档」，运行产物按 §6.2 重跑即可重建。
-> 若希望连同产物一并交付，只需在 `.gitignore` 里去掉 `outputs/*` 一行。
+> **上传说明**：为便于协作者直接复核，`.gitignore` 已放行 `outputs/`
+> （44 个运行目录、747 个文件、约 9 MB），仅排除 `.venv/`、缓存与会话残留。
+> 克隆后 `check_tracker.py`、`verify_tracker_numbers.py`、`verify_reproducibility.py`
+> 三门应直接全绿，无需先重跑实验。

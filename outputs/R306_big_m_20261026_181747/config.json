@@ -1,0 +1,16 @@
+{
+  "command": "big-m-diagnostic",
+  "epsilon": 0.05,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "scenario_grid": [
+    20,
+    50,
+    100
+  ]
+}

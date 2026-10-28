@@ -1,0 +1,354 @@
+{
+  "command": "b2-main",
+  "evidence_status": "plumbing_only",
+  "resolved_components": [
+    "scenarios = B1 经验残差后验（已替换占位对数正态）",
+    "repeats = B1 5×20×3 遮蔽协议单元（已替换换种子重抽）"
+  ],
+  "placeholder_components": [
+    "truth = 冻结合同点估计，非遮蔽前伪完整面板"
+  ],
+  "scenario": "CDG",
+  "decision_scope": "k6_price",
+  "audit_file": "group_audit_trace_c0.95.csv",
+  "bounds_basis": "rni",
+  "k_count": 6,
+  "scenario_source": "posterior",
+  "protocol": "masking",
+  "mask_type": "single_cell",
+  "n_cells": 100,
+  "n_rows": 2400,
+  "provinces_used": [
+    "安徽",
+    "山东",
+    "江苏",
+    "江西",
+    "浙江",
+    "福建"
+  ],
+  "provinces_excluded": {
+    "上海": [
+      "G07"
+    ]
+  },
+  "active_nutrients": [
+    "能量",
+    "蛋白质",
+    "脂肪",
+    "碳水化合物",
+    "铁",
+    "锌",
+    "硒",
+    "核黄素",
+    "烟酸"
+  ],
+  "non_actionable_by_province": {
+    "安徽": {
+      "钙": "最大可达 319.1 < 下界 703.5",
+      "硫胺素": "最大可达 0.8419 < 下界 1.141"
+    },
+    "山东": {
+      "钙": "最大可达 319.1 < 下界 668.3",
+      "硫胺素": "最大可达 0.8419 < 下界 1.084"
+    },
+    "江苏": {
+      "钙": "最大可达 319.1 < 下界 679.1",
+      "硫胺素": "最大可达 0.8419 < 下界 1.118"
+    },
+    "江西": {
+      "钙": "最大可达 319.1 < 下界 711.6",
+      "硫胺素": "最大可达 0.8419 < 下界 1.157"
+    },
+    "浙江": {
+      "钙": "最大可达 319.1 < 下界 689.4",
+      "硫胺素": "最大可达 0.8419 < 下界 1.124"
+    },
+    "福建": {
+      "钙": "最大可达 319.1 < 下界 706.3",
+      "硫胺素": "最大可达 0.8419 < 下界 1.154"
+    }
+  },
+  "per_method": {
+    "D0": {
+      "n_repeats": 600,
+      "feasible_all_count": 0,
+      "feasible_all_rate": 0.0,
+      "feasible_all_wilson95": [
+        4.336808689942018e-19,
+        0.00636170101370071
+      ],
+      "feasible_active_count": 600,
+      "feasible_active_rate": 1.0,
+      "feasible_active_wilson95": [
+        0.9936382989862994,
+        1.0
+      ],
+      "gap_mean": 0.0034688554424154726,
+      "gap_p95": 0.01652885232757911,
+      "gap_n_valid": 600,
+      "flip_rate": 0.020277777777777777,
+      "flip_rate_per_repeat_mean": 0.02027777777777778,
+      "dq_ref_n_valid": 600,
+      "dq_ref_mean": 20.725439883504883,
+      "dq_ref_median": 1.4210854715202004e-12,
+      "dq_ref_p95": 54.00344621457083,
+      "dq_ref_max": 110.96661991680679,
+      "dq_ref_change_rate": 0.46,
+      "solver_failures": 0
+    },
+    "D1": {
+      "n_repeats": 600,
+      "feasible_all_count": 0,
+      "feasible_all_rate": 0.0,
+      "feasible_all_wilson95": [
+        4.336808689942018e-19,
+        0.00636170101370071
+      ],
+      "feasible_active_count": 600,
+      "feasible_active_rate": 1.0,
+      "feasible_active_wilson95": [
+        0.9936382989862994,
+        1.0
+      ],
+      "gap_mean": 0.00018355443303122787,
+      "gap_p95": 0.0,
+      "gap_n_valid": 600,
+      "flip_rate": 0.0,
+      "flip_rate_per_repeat_mean": 0.0,
+      "dq_ref_n_valid": 600,
+      "dq_ref_mean": 1.0493963070724968,
+      "dq_ref_median": 0.0,
+      "dq_ref_p95": 0.0,
+      "dq_ref_max": 110.96661991680679,
+      "dq_ref_change_rate": 0.013333333333333334,
+      "solver_failures": 0
+    },
+    "D2": {
+      "n_repeats": 600,
+      "feasible_all_count": 0,
+      "feasible_all_rate": 0.0,
+      "feasible_all_wilson95": [
+        4.336808689942018e-19,
+        0.00636170101370071
+      ],
+      "feasible_active_count": 0,
+      "feasible_active_rate": 0.0,
+      "feasible_active_wilson95": [
+        4.336808689942018e-19,
+        0.00636170101370071
+      ],
+      "gap_mean": -0.8085446267683009,
+      "gap_p95": -0.7832897684286009,
+      "gap_n_valid": 600,
+      "flip_rate": 0.2222222222222222,
+      "flip_rate_per_repeat_mean": 0.2222222222222222,
+      "dq_ref_n_valid": 600,
+      "dq_ref_mean": 153.2463360229526,
+      "dq_ref_median": 156.95053246067502,
+      "dq_ref_p95": 177.3942204760338,
+      "dq_ref_max": 177.3942204760338,
+      "dq_ref_change_rate": 1.0,
+      "solver_failures": 0
+    },
+    "D3": {
+      "n_repeats": 600,
+      "feasible_all_count": 0,
+      "feasible_all_rate": 0.0,
+      "feasible_all_wilson95": [
+        4.336808689942018e-19,
+        0.00636170101370071
+      ],
+      "feasible_active_count": 600,
+      "feasible_active_rate": 1.0,
+      "feasible_active_wilson95": [
+        0.9936382989862994,
+        1.0
+      ],
+      "gap_mean": 0.00043891814085508915,
+      "gap_p95": 0.0015940010354126904,
+      "gap_n_valid": 600,
+      "flip_rate": 0.027777777777777776,
+      "flip_rate_per_repeat_mean": 0.027777777777777776,
+      "dq_ref_n_valid": 600,
+      "dq_ref_mean": 10.905994520659839,
+      "dq_ref_median": 1.5717205315013416e-09,
+      "dq_ref_p95": 36.40918783892829,
+      "dq_ref_max": 36.40918837411385,
+      "dq_ref_change_rate": 0.3333333333333333,
+      "solver_failures": 0
+    }
+  },
+  "solver_success_by_province": {
+    "安徽/D0": {
+      "success": 100,
+      "total": 100
+    },
+    "安徽/D1": {
+      "success": 100,
+      "total": 100
+    },
+    "安徽/D2": {
+      "success": 100,
+      "total": 100
+    },
+    "安徽/D3": {
+      "success": 100,
+      "total": 100
+    },
+    "山东/D0": {
+      "success": 100,
+      "total": 100
+    },
+    "山东/D1": {
+      "success": 100,
+      "total": 100
+    },
+    "山东/D2": {
+      "success": 100,
+      "total": 100
+    },
+    "山东/D3": {
+      "success": 100,
+      "total": 100
+    },
+    "江苏/D0": {
+      "success": 100,
+      "total": 100
+    },
+    "江苏/D1": {
+      "success": 100,
+      "total": 100
+    },
+    "江苏/D2": {
+      "success": 100,
+      "total": 100
+    },
+    "江苏/D3": {
+      "success": 100,
+      "total": 100
+    },
+    "江西/D0": {
+      "success": 100,
+      "total": 100
+    },
+    "江西/D1": {
+      "success": 100,
+      "total": 100
+    },
+    "江西/D2": {
+      "success": 100,
+      "total": 100
+    },
+    "江西/D3": {
+      "success": 100,
+      "total": 100
+    },
+    "浙江/D0": {
+      "success": 100,
+      "total": 100
+    },
+    "浙江/D1": {
+      "success": 100,
+      "total": 100
+    },
+    "浙江/D2": {
+      "success": 100,
+      "total": 100
+    },
+    "浙江/D3": {
+      "success": 100,
+      "total": 100
+    },
+    "福建/D0": {
+      "success": 100,
+      "total": 100
+    },
+    "福建/D1": {
+      "success": 100,
+      "total": 100
+    },
+    "福建/D2": {
+      "success": 100,
+      "total": 100
+    },
+    "福建/D3": {
+      "success": 100,
+      "total": 100
+    }
+  },
+  "residual_pool": [
+    {
+      "group_id": "G02",
+      "n": 89,
+      "sd": 0.13071149978436744,
+      "min": -0.30529166615432596,
+      "max": 0.22894491597820693
+    },
+    {
+      "group_id": "G04",
+      "n": 38,
+      "sd": 0.12386218818081383,
+      "min": -0.19143465766014411,
+      "max": 0.2134310900212788
+    },
+    {
+      "group_id": "G05",
+      "n": 49,
+      "sd": 0.1672932401895111,
+      "min": -0.25465692718132,
+      "max": 0.346011127758218
+    },
+    {
+      "group_id": "G06",
+      "n": 198,
+      "sd": 0.2239740686282185,
+      "min": -0.48188641771902624,
+      "max": 0.6216315245662608
+    },
+    {
+      "group_id": "G07",
+      "n": 42,
+      "sd": 0.37676014326145585,
+      "min": -0.3399116733502201,
+      "max": 1.0085533969017064
+    },
+    {
+      "group_id": "G08",
+      "n": 66,
+      "sd": 0.19095582017073506,
+      "min": -0.3425921953218928,
+      "max": 0.43658625598649914
+    }
+  ],
+  "residual_pool_meta": {
+    "b1_run": "B1_formal_withmice_20261023_124906",
+    "method": "hierarchical_rw",
+    "mask_type": "single_cell",
+    "n_pairs": 600,
+    "provinces": [
+      "上海",
+      "安徽",
+      "山东",
+      "江苏",
+      "江西",
+      "浙江",
+      "福建"
+    ],
+    "groups": [
+      "G02",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08"
+    ],
+    "note": "残差 = truth/prediction − 1，已减组内均值。衡量价格估计误差，非未来价格波动。跨省池化，多品类组为混合分布（离散度偏高）"
+  },
+  "protocol_shift": {
+    "n_cells": 100,
+    "abs_shift_mean": 0.0029647128756859226,
+    "abs_shift_max": 0.5227867122822712,
+    "n_nonzero_mean": 4.06,
+    "n_cells_per_unit": 36.0
+  }
+}

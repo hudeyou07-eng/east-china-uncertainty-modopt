@@ -1,0 +1,49 @@
+{
+  "command": "r305-chance-mode",
+  "scenario": "CDG",
+  "profile": "smoke",
+  "scenarios": 200,
+  "epsilons": [
+    0.2,
+    0.3
+  ],
+  "modes": [
+    "marginal"
+  ],
+  "seed": 20261026,
+  "cv_price": 0.05,
+  "cv_nutrient": 0.05,
+  "provinces_used": [
+    "上海",
+    "安徽",
+    "山东",
+    "江苏",
+    "江西",
+    "浙江",
+    "福建"
+  ],
+  "provinces_skipped": {},
+  "wall_seconds": 824.4645729064941,
+  "evidence_status": "plumbing_only",
+  "evidence_note": "场景为占位对数正态噪声。可采信的是两种模式的语义差别与「marginal 能救回哪些省」这类结构性事实；绝对违反率数值不作结论。",
+  "summary": [
+    {
+      "mode": "marginal",
+      "epsilon": 0.2,
+      "solve_rate": 1.0,
+      "joint_viol_mean": 0.32583333333333336,
+      "marginal_viol_mean": 0.19416666666666668,
+      "objective_mean": 0.3837704193869036,
+      "seconds_mean": 19.876599351565044
+    },
+    {
+      "mode": "marginal",
+      "epsilon": 0.3,
+      "solve_rate": 0.8333333333333334,
+      "joint_viol_mean": 0.461,
+      "marginal_viol_mean": 0.292,
+      "objective_mean": 0.38046881959701706,
+      "seconds_mean": 117.46589386463165
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "block": "provinces",
+  "provinces": [
+    "安徽",
+    "山东",
+    "江苏",
+    "江西",
+    "浙江",
+    "福建"
+  ],
+  "skipped_provinces": {},
+  "scenarios": [
+    "HEAL_base",
+    "CDG",
+    "EAT"
+  ],
+  "n_cells": 18,
+  "n_cells_ok": 15,
+  "n_cells_hard_infeasible": 3,
+  "label_counts": {
+    "stable-up": 36,
+    "stable-down": 49,
+    "stable-neutral": 1,
+    "data-sensitive": 4
+  },
+  "label_share": {
+    "stable-up": 0.4,
+    "stable-down": 0.5444,
+    "stable-neutral": 0.0111,
+    "data-sensitive": 0.0444
+  },
+  "direction_agreement_mean": 0.9555555555555555,
+  "direction_agreement_min": 0.6666666666666666,
+  "feasible_all_rate_d3": 0.0,
+  "gate_90pct_cells": 13,
+  "run_id": "provinces",
+  "evidence_status": "formal",
+  "note": "provinces 块产出 R400/R402–R406 的方向标签；looro/delta/bounds 分别产出 R407/R408/R409。四个块合起来才构成完整的 B4 证据，单块不可单独引用。"
+}

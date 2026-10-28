@@ -1,0 +1,128 @@
+{
+  "command": "python scripts/build_contract_files.py",
+  "scopes": {
+    "primary": {
+      "label": "trace_as_near_zero_all_four_domains",
+      "role": "main",
+      "description": "痕量（value_status=trace）视为真实近零并按 0 计入，营养硬系数全或无规则（min_cell_coverage=1.0）",
+      "params": {
+        "trace_as_valid": true,
+        "min_cell_coverage": 1.0,
+        "min_mapping_ratio": null
+      },
+      "included_k": 4,
+      "included_group_ids": [
+        "G02",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "excluded_group_ids": [
+        "G01",
+        "G03",
+        "G04",
+        "G07",
+        "G09",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "audit_file": "group_audit.csv"
+    },
+    "preregistered_k3": {
+      "label": "strict_no_trace_k3",
+      "role": "preregistered_reference",
+      "description": "原始预注册口径：痕量不算有效观测，红肉因 10/11 被排除，K=3。该口径下 CDG 畜禽肉约束不可满足，仅作对照",
+      "params": {
+        "trace_as_valid": false,
+        "min_cell_coverage": 1.0,
+        "min_mapping_ratio": null
+      },
+      "included_k": 3,
+      "included_group_ids": [
+        "G02",
+        "G05",
+        "G08"
+      ],
+      "excluded_group_ids": [
+        "G01",
+        "G03",
+        "G04",
+        "G06",
+        "G07",
+        "G09",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "audit_file": "group_audit_k3_strict.csv"
+    },
+    "sensitivity_cell_coverage_090": {
+      "label": "cell_coverage_0.90",
+      "role": "sensitivity",
+      "description": "组内营养格子可用比例 >= 0.90，用于检验阈值选择对结论范围的影响",
+      "params": {
+        "trace_as_valid": false,
+        "min_cell_coverage": 0.9,
+        "min_mapping_ratio": null
+      },
+      "included_k": 6,
+      "included_group_ids": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "excluded_group_ids": [
+        "G01",
+        "G03",
+        "G09",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "audit_file": "group_audit_sensitivity_c0.90.csv"
+    },
+    "k6_price": {
+      "label": "trace_as_near_zero_plus_coverage_0.95",
+      "role": "decision_main",
+      "description": "决策口径（2026-10-27 修订）：痕量视为近零，营养硬系数按组内格子比例 >= 0.95。纳入 G04 谷物豆类与 G07 水产品，K=6。相对正式合同口径 K=4 的变化是『G04 解决山东硬不可行 + G07 恢复价格传导』，不是单纯的阈值放松",
+      "params": {
+        "trace_as_valid": true,
+        "min_cell_coverage": 0.95,
+        "min_mapping_ratio": null
+      },
+      "included_k": 6,
+      "included_group_ids": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "excluded_group_ids": [
+        "G01",
+        "G03",
+        "G09",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "audit_file": "group_audit_trace_c0.95.csv"
+    }
+  },
+  "decision_scope": "k6_price",
+  "units": {
+    "price": "CNY/kg",
+    "consumption": "g/person/day",
+    "nutrient": "per kg food (converted from per 100 g)",
+    "environment": "per kg food",
+    "year": "calendar year",
+    "province": "prefecture-level province, canonical short name"
+  },
+  "seed": 20261015,
+  "config_sha256": "622a18ce1d8e6bad094bec00a257a1d52c001ef461cd7fd75b4e47979bd72ef8"
+}

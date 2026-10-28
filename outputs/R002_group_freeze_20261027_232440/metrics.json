@@ -1,0 +1,261 @@
+{
+  "run_id": "R002",
+  "milestone": "M0",
+  "purpose": "food-group freeze",
+  "ontology_version": "onto-v1.0.0",
+  "ontology_groups": 12,
+  "gate_pass_rank": [
+    {
+      "group_id": "G02",
+      "group_zh": "蛋类",
+      "gates_passed": 4,
+      "include": true
+    },
+    {
+      "group_id": "G05",
+      "group_zh": "禽肉",
+      "gates_passed": 4,
+      "include": true
+    },
+    {
+      "group_id": "G06",
+      "group_zh": "红肉（猪牛羊）",
+      "gates_passed": 4,
+      "include": true
+    },
+    {
+      "group_id": "G08",
+      "group_zh": "蔬菜",
+      "gates_passed": 4,
+      "include": true
+    },
+    {
+      "group_id": "G03",
+      "group_zh": "水果",
+      "gates_passed": 3,
+      "include": false
+    },
+    {
+      "group_id": "G04",
+      "group_zh": "谷物及豆类",
+      "gates_passed": 3,
+      "include": false
+    },
+    {
+      "group_id": "G07",
+      "group_zh": "水产品",
+      "gates_passed": 3,
+      "include": false
+    },
+    {
+      "group_id": "G11",
+      "group_zh": "食用油",
+      "gates_passed": 3,
+      "include": false
+    },
+    {
+      "group_id": "G01",
+      "group_zh": "乳及乳制品",
+      "gates_passed": 2,
+      "include": false
+    },
+    {
+      "group_id": "G09",
+      "group_zh": "糖",
+      "gates_passed": 2,
+      "include": false
+    },
+    {
+      "group_id": "G10",
+      "group_zh": "薯类",
+      "gates_passed": 1,
+      "include": false
+    },
+    {
+      "group_id": "G12",
+      "group_zh": "大豆及坚果",
+      "gates_passed": 0,
+      "include": false
+    }
+  ],
+  "scopes": {
+    "primary": {
+      "role": "main",
+      "included_k": 4,
+      "included_group_ids": [
+        "G02",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "excluded_k": 8
+    },
+    "preregistered_k3": {
+      "role": "preregistered_reference",
+      "included_k": 3,
+      "included_group_ids": [
+        "G02",
+        "G05",
+        "G08"
+      ],
+      "excluded_k": 9
+    },
+    "sensitivity_cell_coverage_090": {
+      "role": "sensitivity",
+      "included_k": 6,
+      "included_group_ids": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "excluded_k": 6
+    },
+    "k6_price": {
+      "role": "decision_main",
+      "included_k": 6,
+      "included_group_ids": [
+        "G02",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "excluded_k": 6
+    }
+  },
+  "decision_scope": {
+    "scope": "k6_price",
+    "audit_file": "group_audit_trace_c0.95.csv",
+    "included_k": 6,
+    "included_group_ids": [
+      "G02",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08"
+    ],
+    "excluded_group_ids": [
+      "G01",
+      "G03",
+      "G09",
+      "G10",
+      "G11",
+      "G12"
+    ],
+    "params": {
+      "trace_as_valid": true,
+      "min_cell_coverage": 0.95,
+      "min_mapping_ratio": null
+    },
+    "role": "decision_main",
+    "usable_provinces": [
+      "安徽",
+      "山东",
+      "江苏",
+      "江西",
+      "浙江",
+      "福建"
+    ],
+    "n_usable_provinces": 6,
+    "skipped_provinces": {
+      "上海": [
+        "G07"
+      ]
+    },
+    "load_command": "Contract.load_scope('k6_price')  # 等价于 python scripts/run_b2.py --scope k6_price",
+    "why": "K=4 下价格传导目标链不显形（D1 相对 D0 的位移 0/7 省），且山东硬不可行。R307b 的 2×2 因子分解把原因拆开：G04 解决山东硬不可行，G07 恢复价格传导，二者都与 K 的大小无关。故决策口径取 K=6",
+    "cost": "上海在 G07 水产品上源表整块缺失（price_source=missing），批发价源亦无水产品品类，仓库内无法桥接，因此本口径只覆盖 6 省，上海出局",
+    "contract_file_unchanged": "Plan 第 3 节的七个合同文件不变，group_audit.csv 仍是 K=4；本口径只换审计表，其余六个文件逐字节相同",
+    "precedent": "docs/CHANGELOG_2026-10-26.md §20"
+  },
+  "coverage": {
+    "price_gate_pass": 7,
+    "consumption_gate_pass": 10,
+    "nutrition_gate_pass": 6,
+    "environment_gate_pass": 10,
+    "mapping_verdict": {
+      "口径一致": 5,
+      "严重错位": 3,
+      "部分错位": 3,
+      "无价格观测": 1
+    }
+  },
+  "artifacts": {
+    "group_audit.csv": {
+      "path": "data/processed/group_audit.csv",
+      "bytes": 2910,
+      "sha256": "a62fa3b44f9c3e4d6e5e62d4565d3ab51c1c56748a9ce9852af2dc4cb54a111c"
+    },
+    "baseline_consumption.csv": {
+      "path": "data/processed/baseline_consumption.csv",
+      "bytes": 25374,
+      "sha256": "d6936e7fdddf3eaab7cbfe329e6006fe0cec83afa0cf654af33eff34137faeec"
+    },
+    "group_prices.csv": {
+      "path": "data/processed/group_prices.csv",
+      "bytes": 108098,
+      "sha256": "3b7ae42d9fbc0fc9ec3485435d9b962af36dde881a2a41ebca299fad8cb043c7"
+    },
+    "nutrients.csv": {
+      "path": "data/processed/nutrients.csv",
+      "bytes": 18197,
+      "sha256": "9b302d6cb804ac5112f1584c8fef21ab20b1ab88efdfd98cee8ad3aef93f2c8c"
+    },
+    "environment.csv": {
+      "path": "data/processed/environment.csv",
+      "bytes": 14322,
+      "sha256": "c6437a46aab3b920868951a68f5bdea4d97c48453b936f592145781b324cdeb2"
+    },
+    "decision_bounds.csv": {
+      "path": "data/processed/decision_bounds.csv",
+      "bytes": 34991,
+      "sha256": "a4e401dc8fb85488446a427f13f2d595ab8e209f0b9f52b9bf2e96e37eb9a33c"
+    },
+    "ontology.csv": {
+      "path": "data/processed/ontology.csv",
+      "bytes": 1392,
+      "sha256": "3af7394ebc4e3a1eac633c109cb3f1cd3b3cf973b0497f18b0107d9a4cc3d91d"
+    },
+    "group_audit_k3_strict.csv": {
+      "path": "data/processed/group_audit_k3_strict.csv",
+      "bytes": 2961,
+      "sha256": "6a316d077b2e844a34cd044836a4ebde34b0fc24d9613f2f2fc17deffdb86b2c"
+    },
+    "group_audit_sensitivity_c0.90.csv": {
+      "path": "data/processed/group_audit_sensitivity_c0.90.csv",
+      "bytes": 2831,
+      "sha256": "8a06727298a37a764bfc56150529b78bb3febfe092edc2ab2eb55322ba4c2016"
+    },
+    "group_audit_trace_c0.95.csv": {
+      "path": "data/processed/group_audit_trace_c0.95.csv",
+      "bytes": 2801,
+      "sha256": "25d358a457273eba2d96b818df4652f5d20df08710269b1dfd0effdf69dd4b12"
+    }
+  },
+  "contract_status": {
+    "plan_files_expected": 7,
+    "plan_files_present": 7,
+    "plan_files_missing": [],
+    "extra_files": {
+      "ontology.csv": true,
+      "group_audit_k3_strict.csv": true,
+      "group_audit_sensitivity_c0.90.csv": true,
+      "group_audit_trace_c0.95.csv": true
+    },
+    "self_carrier": "model_manifest.json（本文件，自哈希不适用）",
+    "gate_ready": true
+  },
+  "gate_verification": {
+    "script": "scripts/check_contract_gates.py",
+    "report": "data/processed/contract_gate_report.json",
+    "passed": 7,
+    "total": 7,
+    "all_passed": true,
+    "failed_gates": []
+  }
+}

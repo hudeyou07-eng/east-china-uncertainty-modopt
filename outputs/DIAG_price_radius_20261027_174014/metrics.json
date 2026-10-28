@@ -1,0 +1,54 @@
+{
+  "command": "diagnose-price-radius",
+  "evidence_status": "structural",
+  "scope": "k6_price",
+  "scenarios": [
+    "CDG",
+    "EAT",
+    "HEAL_base"
+  ],
+  "bases": [
+    "ear",
+    "rni"
+  ],
+  "deltas": [
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "t_grid": [
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0,
+    6.0,
+    8.0,
+    12.0
+  ],
+  "dq_tol": 0.0001,
+  "evidence_note": "纯 LP 价格扰动扫描，无随机场景。A 度量单组价格半径，B 度量省际价差需要放大几倍才翻转决策。B 的合并价口径 = 6 个决策省均值，与 run_b2.py 的 D0 一致；t=1 即真正的 D0↔D1 对比度。",
+  "summary": {
+    "min_radius_ear": 0.02,
+    "median_radius_ear": 0.5,
+    "min_radius_rni": 0.05,
+    "median_radius_rni": 1.0,
+    "groups_never_moved_ear": 60,
+    "groups_total_ear": 90,
+    "t_first_move_ear_median": 2.0,
+    "ear_never_moved_to_t12": 4,
+    "ear_cells_total": 15,
+    "ear_cells_moved_at_t1": 3,
+    "rni_cells_moved_at_t1": 5,
+    "max_rel_gap_ear": 0.644613177699179,
+    "max_rel_gap_rni": 0.644613177699179,
+    "pool_scope": "6 省（与 D0 的 base_panel.reindex(provinces) 一致）",
+    "protocol_shift_mean_ref": 0.00298
+  }
+}

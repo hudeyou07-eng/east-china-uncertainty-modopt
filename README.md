@@ -58,7 +58,7 @@ Smoke results prove that the software path runs. They are not paper evidence. Th
 ├── docs/                    # Bilingual proposal and experiment protocol
 ├── data/                    # Versioned reproducibility inputs and processed contract
 ├── artifacts/smoke/         # Small reviewed smoke evidence only
-├── outputs/                 # Generated runs, ignored by Git
+├── outputs/                 # All 44 run directories, versioned so results are auditable
 └── scripts/                 # Reproducible document or utility builders
 ```
 

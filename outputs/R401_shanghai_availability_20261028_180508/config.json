@@ -1,0 +1,29 @@
+{
+  "command": "report-shanghai-availability",
+  "run_id": "R401",
+  "province": "上海",
+  "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "scopes": {
+    "k4_official": "group_audit.csv",
+    "k6_price": "group_audit_trace_c0.95.csv"
+  },
+  "data_inputs": [
+    "data/processed/group_prices.csv",
+    "data/processed/ontology.csv",
+    "data/processed/group_audit.csv",
+    "data/processed/group_audit_trace_c0.95.csv",
+    "data/input/price/price_panel_clean.xlsx",
+    "data/input/external/price_bridge_wholesale.csv",
+    "data/input/clean_tables/prices.csv"
+  ]
+}

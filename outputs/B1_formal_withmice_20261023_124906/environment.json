@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-23T13:06:52.843504+08:00",
+  "python": "3.13.14 (main, Jun 11 2026, 04:04:46) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cwd": "C:\\Users\\destiny\\WorkBuddy AI\\2026-10-23-12-25-50\\repo_tmp",
+  "git_hash": "ca090c9ef49df0283915dadb815bc2510c5f0eff",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "yaml": "6.0.3",
+    "openpyxl": "3.1.5"
+  }
+}
