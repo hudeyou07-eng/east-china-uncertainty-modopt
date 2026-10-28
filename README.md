@@ -77,7 +77,6 @@ python -m pip install -r requirements.txt
 ```powershell
 python -m unittest tests.test_smoke -v
 python scripts/check_tracker.py          # 文档与磁盘产物的一致性门禁（15 项）
-python scripts/check_tracker.py --file docs/EXPERIMENT_TRACKER_EN.md   # 英文版同一套校验
 python scripts/verify_tracker_numbers.py # 关键数字对回产物（27 项断言）
 ```
 
@@ -123,9 +122,8 @@ point (results, key decisions, limitations, reproduction, change digest).
 - `docs/README.md`: the documentation map (what to read, what is archived, verification commands).
 - `docs/PROJECT_SUMMARY.md`: **consolidated summary of all substantive changes** (2026-10-23 → 10-28).
 - `docs/EXPERIMENT_PLAN.md`: claim driven full experiment plan, with four pre-registration revisions.
-- `docs/EXPERIMENT_TRACKER.md`: run level tracker (Chinese, with the full derivation narrative).
-- `docs/EXPERIMENT_TRACKER_EN.md`: the same 46-run ledger in English, with the artifact index and five
-  interpretation traps. Figure 1 and Figure 2 are English-labelled SVG.
+- `docs/EXPERIMENT_TRACKER.md`: the single run-level ledger (46 runs, artifact index, and the five
+  interpretation traps). Figure 1 and Figure 2 are English-labelled SVG.
 - `docs/CHANGELOG_2026-10-26.md`: the round-by-round evidence chain (§1–§38), cited by section number.
 - `docs/PANEL_LEDGER.md`: price panel v1/v2/v3 version ledger.
 - `docs/Research_Proposal.docx`: reviewed Chinese and English research proposal.

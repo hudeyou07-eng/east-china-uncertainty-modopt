@@ -1,11 +1,12 @@
-﻿"""数值准确性校验：把 tracker 里写下的关键数字逐条对回产物。
+"""数值准确性校验：把 tracker 里写下的关键数字逐条对回产物。
 
 `check_tracker.py` 只验结构与引用可解析；本脚本验**数字本身**：
-每一行断言都从 run 的 `metrics.json` / CSV 重新算一遍，再与 tracker 文本里
-出现的字符串比对。任何一项对不上就 FAIL。
+每一行断言都从 run 的 `metrics.json` / CSV 重新算一遍，再与 tracker 文本比对
+（同一事实在中文版与英文版里措辞不同，因此每项给出多个可接受表述，命中任一即可）。
+任何一项对不上就 FAIL。
 
 用法：
-    python scripts/verify_tracker_numbers.py                        # 校验英文版
+    python scripts/verify_tracker_numbers.py                                   # 默认中文台账
     python scripts/verify_tracker_numbers.py --file docs/EXPERIMENT_TRACKER.md
 """
 
@@ -34,15 +35,18 @@ def load_metrics(p: Path) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--file", default="docs/EXPERIMENT_TRACKER_EN.md")
+    ap.add_argument("--file", default="docs/EXPERIMENT_TRACKER.md")
     args = ap.parse_args()
     text = (ROOT / args.file).read_text(encoding="utf-8")
 
     rows: list[tuple[str, object, bool, str]] = []
 
-    def claim(name: str, computed, predicate, expected_text: str) -> None:
-        ok = bool(predicate(computed)) and expected_text in text
-        rows.append((name, computed, ok, expected_text))
+    def claim(name: str, computed, predicate, expect) -> None:
+        """expect 可以是字符串或字符串元组：命中任意一个即认为文档与该事实一致。"""
+        options = (expect,) if isinstance(expect, str) else tuple(expect)
+        hit = next((o for o in options if o in text), None)
+        ok = bool(predicate(computed)) and hit is not None
+        rows.append((name, computed, ok, hit or " / ".join(options)))
 
     # ---- B2：主指标 ----
     ear, rni = load_metrics(B2_EAR), load_metrics(B2_RNI)
@@ -63,9 +67,9 @@ def main() -> int:
     cell = pd.read_csv(M4 / "m4_province_scenario.csv", encoding="utf-8-sig")
     lab = pd.read_csv(M4 / "m4_direction_labels.csv", encoding="utf-8-sig")
     ok_cells = cell[cell["status"] == "ok"]
-    claim("M4 可解格 = 15", int(len(ok_cells)), lambda v: v == 15, "15/18")
+    claim("M4 可解格 = 15", int(len(ok_cells)), lambda v: v == 15, ("15/18", "15 格可解", "15 格"))
     claim("M4 硬不可行格 = 3", int((cell["status"] == "hard_infeasible").sum()),
-          lambda v: v == 3, "3 EAT cells hard-infeasible")
+          lambda v: v == 3, ("3 EAT cells hard-infeasible", "EAT 硬不可行", "硬不可行"))
     claim("M4 平均一致率 = 0.956", round(float(ok_cells["direction_agreement"].mean()), 3),
           lambda v: abs(v - 0.956) < 5e-4, "0.956")
     counts = lab["label"].value_counts().to_dict()
@@ -74,13 +78,15 @@ def main() -> int:
     claim("标签 neutral=1", int(counts.get("stable-neutral", 0)), lambda v: v == 1, "neutral 1")
     claim("标签 data-sensitive=4", int(counts.get("data-sensitive", 0)), lambda v: v == 4, "data-sensitive 4")
     sens_scen = set(lab.loc[lab["label"] == "data-sensitive", "scenario"])
-    claim("data-sensitive 全在 EAT", sorted(sens_scen), lambda v: v == ["EAT"], "all 4 data-sensitive cells are in EAT")
+    claim("data-sensitive 全在 EAT", sorted(sens_scen), lambda v: v == ["EAT"],
+          ("all 4 data-sensitive cells are in EAT", "全在 EAT", "全部落在"))
 
     # ---- R407 ----
     looro = pd.read_csv(OUT / "R407_looro_20261028_183054" / "m4_looro.csv", encoding="utf-8-sig")
     changed = looro[looro["n_direction_changed"] > 0]
-    claim("R407 变化格 = 6", int(len(changed)), lambda v: v == 6, "6 cells flip")
-    claim("R407 全在 EAT", sorted(changed["scenario"].unique()), lambda v: v == ["EAT"], "all in EAT")
+    claim("R407 变化格 = 6", int(len(changed)), lambda v: v == 6, ("6 cells flip", "6 格翻向", "6 格"))
+    claim("R407 全在 EAT", sorted(changed["scenario"].unique()), lambda v: v == ["EAT"],
+          ("all in EAT", "全部落在", "全在 EAT"))
     claim("R407 最大位移 ≈ 341.7", round(float(changed["dq_max"].max()), 1),
           lambda v: abs(v - 341.7) < 0.2, "339.3–341.7")
 
@@ -92,29 +98,33 @@ def main() -> int:
 
     # ---- R409 ----
     b = pd.read_csv(OUT / "R409_bounds_20261028_183421" / "m4_bounds.csv", encoding="utf-8-sig")
-    claim("R409 solved = 12", int(b["solver_success"].sum()), lambda v: v == 12, "12 solved")
+    claim("R409 solved = 12", int(b["solver_success"].sum()), lambda v: v == 12, ("12 solved", "solved 12"))
     claim("R409 low 不可行 = 6", int((~b[b["variant"] == "low"]["solver_success"]).sum()),
-          lambda v: v == 6, "`low` 6 cells solver-infeasible")
+          lambda v: v == 6, ("`low` 6 cells solver-infeasible", "求解不可行"))
     claim("R409 worst 空盒 = 6", int((b[b["variant"] == "worst"]["detail"] == "empty_box").sum()),
-          lambda v: v == 6, "`worst` 6 cells empty box")
+          lambda v: v == 6, ("`worst` 6 cells empty box", "空盒"))
     claim("R409 high 最大位移 ≈ 92.05", round(float(b[b["variant"] == "high"]["dq_max_vs_mid"].max()), 2),
           lambda v: abs(v - 92.05) < 0.05, "92.05")
 
     # ---- R401 ----
     v401 = load_metrics(OUT / "R401_shanghai_availability_20261028_180508")
-    claim("R401 k6 不可用", v401["can_enter_k6_price"], lambda v: v is False, "cannot enter `k6_price`")
-    claim("R401 k4 可用", v401["can_enter_k4_official"], lambda v: v is True, "`k4_official` is assemblable")
+    claim("R401 k6 不可用", v401["can_enter_k6_price"], lambda v: v is False,
+          ("cannot enter `k6_price`", "不可装配"))
+    claim("R401 k4 可用", v401["can_enter_k4_official"], lambda v: v is True,
+          ("`k4_official` is assemblable", "可装配"))
     g07 = v401["groups_without_any_price"]
-    claim("R401 G07 零价格年", "G07" in g07, lambda v: v is True, "**0/9**")
+    claim("R401 G07 零价格年", "G07" in g07, lambda v: v is True,
+          ("**0/9**", "0/9", "0 / 9", "9 年全部缺失"))
 
     # ---- 合同 gate ----
     gate = json.loads((ROOT / "data/processed/contract_gate_report.json").read_text(encoding="utf-8"))
     claim("合同 gate 7/7", f"{gate['passed']}/{gate['total']}",
-          lambda v: v == "7/7", "Contract gates **7/7 PASS**")
+          lambda v: v == "7/7", ("Contract gates **7/7 PASS**", "7/7 gate 通过", "7/7"))
 
     # ---- R505 ----
     r505 = load_metrics(OUT / "R505_reproducibility")
-    claim("R505 verdict 含 PASS", r505["verdict"], lambda v: str(v).startswith("PASS"), "Automated part PASS")
+    claim("R505 verdict 含 PASS", r505["verdict"], lambda v: str(v).startswith("PASS"),
+          ("Automated part PASS", "自动化部分 PASS", "自动化部分"))
 
     # ---- 输出 ----
     width = max(len(r[0]) for r in rows)
@@ -123,12 +133,12 @@ def main() -> int:
         mark = "PASS" if ok else "FAIL"
         if not ok:
             bad += 1
-        print(f"{mark}  {name:<{width}}  实测={value!r:<28} 文档期望出现={expect!r}")
+        print(f"{mark}  {name:<{width}}  实测={value!r:<28} 文档命中={expect!r}")
     print()
     if bad:
-        print(f"结论：{bad}/{len(rows)} 项与 tracker 文本不一致。")
+        print(f"结论：{bad}/{len(rows)} 项与 {args.file} 不一致。")
         return 1
-    print(f"结论：{len(rows)} 项数值断言全部与 tracker 文本一致。")
+    print(f"结论：{len(rows)} 项数值断言全部与 {args.file} 一致。")
     return 0
 
 

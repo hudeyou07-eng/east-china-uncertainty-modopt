@@ -3,7 +3,7 @@
 > **这是给共创者的唯一入口文档。** 它把 2026-10-23 至 10-28 的全部重要改动、
 > 最终结论、关键决定、已知限制与复现方式收在一处。
 > 更细的逐轮推导在 `CHANGELOG_2026-10-26.md`（按 § 号反查），逐 run 状态在
-> `EXPERIMENT_TRACKER.md`（中文）/ `EXPERIMENT_TRACKER_EN.md`（英文）。
+> `EXPERIMENT_TRACKER.md`（唯一台账，46 run 全结案）。
 >
 > **English abstract.** This repository studies whether dietary-optimization advice for East China
 > stays directionally stable when price, consumption, nutrient and environmental data are incomplete
@@ -215,16 +215,16 @@ python scripts/verify_reproducibility.py --exact --force
 | 10-27 下午 | B1→B2 接线、主指标换轨、价格面板审计 | §25–§30；零结果 + 五条证据 |
 | 10-27 夜 | 真值口径查证、D0 二值开关 | §31–§32；M2 定稿条件成型 |
 | 10-28 | 清理 163 个中间目录；tracker 变可核对账本；M2 定稿；M4 全部结案；M5 交付 | §33–§37；46 run 全部 `DONE`/`DONE-conditional` |
-| 10-28 晚 | 英文台账 + 英文图 + 数值门禁；图 1 图例越界修复 | §38；`EXPERIMENT_TRACKER_EN.md`、`verify_tracker_numbers.py` |
+| 10-28 晚 | 英文图 + 数值门禁；图 1 图例越界修复；台账收敛为单一中文版 | §38–§39；`verify_tracker_numbers.py` |
 
 ## 10. 文档地图
 
 | 想知道 | 看 |
 |---|---|
 | 现在到哪了 | 本文 §3（结果）+ §8（未完成） |
-| 逐 run 状态与产物 | `EXPERIMENT_TRACKER.md` / `EXPERIMENT_TRACKER_EN.md` |
+| 逐 run 状态与产物 | `EXPERIMENT_TRACKER.md`（唯一台账） |
 | 为什么这么设计 | `EXPERIMENT_PLAN.md`（含修订 R-2026-10-26-a/b、R-2026-10-28-c/d） |
-| 某个数字怎么来的 | `CHANGELOG_2026-10-26.md` §1–§38（按 § 号反查） |
+| 某个数字怎么来的 | `CHANGELOG_2026-10-26.md` §1–§39（按 § 号反查） |
 | 价格面板哪一版 | `PANEL_LEDGER.md` |
 | 历史审计 / 裁定 / 清理台账 | `archive/`（正文仍按原文件名引用） |
 
@@ -256,9 +256,8 @@ docs/
 ├── README.md                  文档地图
 ├── PROJECT_SUMMARY.md         唯一入口（本文）
 ├── EXPERIMENT_PLAN.md         预注册方案 + 4 条修订
-├── EXPERIMENT_TRACKER.md      逐 run 台账（中文）
-├── EXPERIMENT_TRACKER_EN.md   逐 run 台账（英文）
-├── CHANGELOG_2026-10-26.md    逐轮证据链 §1–§38
+├── EXPERIMENT_TRACKER.md      逐 run 台账（唯一版本）
+├── CHANGELOG_2026-10-26.md    逐轮证据链 §1–§39
 ├── PANEL_LEDGER.md            价格面板版本台账
 ├── Research_Proposal.docx
 └── archive/                   4 份历史文档（AUDIT / DECISIONS / CLEANUP / TO_DECIDE）

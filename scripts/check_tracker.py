@@ -173,7 +173,7 @@ def main() -> int:
     parser.add_argument(
         "--file",
         default=None,
-        help="要校验的 tracker 路径（默认 docs/EXPERIMENT_TRACKER.md；英文版传 docs/EXPERIMENT_TRACKER_EN.md）",
+        help="要校验的 tracker 路径（默认 docs/EXPERIMENT_TRACKER.md；如另存台账副本可指定其它路径）",
     )
     parser.add_argument(
         "--ignore",

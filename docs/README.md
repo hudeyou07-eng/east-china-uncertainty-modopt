@@ -8,8 +8,7 @@
 |---|---|---|
 | `PROJECT_SUMMARY.md` | **唯一入口**：结论、关键决定、限制、复现、变更大事记 | 有新结论或新决定时 |
 | `EXPERIMENT_PLAN.md` | 预注册方案、claim map、四条修订留痕（R-2026-10-26-a/b、R-2026-10-28-c/d） | 只在预注册变更时 |
-| `EXPERIMENT_TRACKER.md` | 逐 run 台账（中文，含推导叙事） | 每跑完一个 run |
-| `EXPERIMENT_TRACKER_EN.md` | 同一份台账的英文结案版 | 与中文版同步 |
+| `EXPERIMENT_TRACKER.md` | 逐 run 台账（**唯一版本**，含推导叙事与产物索引） | 每跑完一个 run |
 | `PANEL_LEDGER.md` | 价格面板 v1/v2/v3 版本台账（引用成本数字前必查） | 面板重建时 |
 | `CHANGELOG_2026-10-26.md` | **逐轮证据链**（§1–§38），被正文以 § 号引用 | 每轮工作后追加一节 |
 | `Research_Proposal.docx` | 中英文研究计划书 | 少变 |
@@ -29,10 +28,10 @@
 ## 校验（改完文档必跑）
 
 ```powershell
-python scripts/check_tracker.py                                   # 中文台账结构
-python scripts/check_tracker.py --file docs/EXPERIMENT_TRACKER_EN.md
-python scripts/verify_tracker_numbers.py                          # 27 条数值断言
-python -m unittest discover -s tests                              # 69 tests
+python scripts/check_tracker.py                    # 台账结构（15 项）
+python scripts/verify_tracker_numbers.py           # 27 条数值断言（对回产物）
+python -m unittest discover -s tests               # 69 tests
+python scripts/verify_reproducibility.py --exact   # 哈希/目录/门禁
 ```
 
 ## 写作约定

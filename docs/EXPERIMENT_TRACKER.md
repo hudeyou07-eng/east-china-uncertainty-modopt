@@ -1,8 +1,8 @@
 # Experiment Tracker
 
-> **英文版**（同一份 46-run 账本的英文结案版，含产物索引与五条解读陷阱）：
-> `docs/EXPERIMENT_TRACKER_EN.md`。图 1 / 图 2 现为英文标注。
-> 两个版本由同一套门禁校验：`check_tracker.py [--file ...]` + `verify_tracker_numbers.py`。
+> 本文件是**唯一的 run 台账**（2026-10-28 起不再维护英文副本，原因见 CHANGELOG §39）。
+> 图 1 / 图 2 仍为英文标注。
+> 门禁：`check_tracker.py` + `verify_tracker_numbers.py`（27 条数值断言，中英表述均可命中）。
 
 | Run ID | Milestone | Purpose | Variant | Split / scope | Primary metrics | Priority | Status | Notes |
 |---|---|---|---|---|---|---|---|---|
