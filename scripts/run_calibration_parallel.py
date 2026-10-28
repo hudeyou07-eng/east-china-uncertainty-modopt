@@ -53,7 +53,7 @@ def build_shards(folds: int, repeats: int, blocks_per_fold: int) -> list[dict]:
     return shards
 
 
-def run_shard(shard: dict, config_path: Path, profile: str, run_id: str) -> Path:
+def run_shard(shard: dict, config_path: Path, profile: str, run_id: str, panel: str = "price") -> Path:
     shard_id = f"{run_id}_f{shard['fold']}_r{shard['repeats'].replace('-', 'to')}"
     cmd = [
         sys.executable,
@@ -64,6 +64,7 @@ def run_shard(shard: dict, config_path: Path, profile: str, run_id: str) -> Path
         "--run-id", shard_id,
         "--folds", str(shard["fold"]),
         "--repeats", shard["repeats"],
+        "--panel", panel,
     ]
     proc = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
     if proc.returncode != 0:
@@ -88,9 +89,15 @@ def merge(shard_dirs: list[Path], run_dir: Path, config: dict, profile: str) -> 
             n_eval=("n", "sum"),
             scaled_mae=("scaled_mae", "mean"),
             log_rmse=("log_rmse", "mean"),
+            coverage50=("coverage50", "mean"),
             coverage80=("coverage80", "mean"),
+            coverage90=("coverage90", "mean"),
             coverage95=("coverage95", "mean"),
+            width50=("width50", "mean"),
+            width80=("width80", "mean"),
+            width90=("width90", "mean"),
             width95=("width95", "mean"),
+            asymmetry95=("asymmetry95", "mean"),
             runtime_seconds=("runtime_seconds", "sum"),
         )
         .sort_values(["mask_type", "method"])
@@ -122,6 +129,7 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=10)
     parser.add_argument("--blocks-per-fold", type=int, default=4)
     parser.add_argument("--run-id", default="B1_formal_parallel")
+    parser.add_argument("--panel", choices=["price", "consumption"], default="price")
     args = parser.parse_args()
 
     config_path = Path(args.config).resolve()
@@ -138,9 +146,14 @@ def main() -> int:
     start = time.time()
     print(json.dumps({"shards": len(shards), "workers": args.workers, "run_dir": str(run_dir)}, ensure_ascii=False))
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        shard_dirs = list(pool.map(lambda s: run_shard(s, config_path, args.profile, args.run_id), shards))
+        shard_dirs = list(
+            pool.map(
+                lambda s: run_shard(s, config_path, args.profile, args.run_id, args.panel), shards
+            )
+        )
 
     metrics = {"command": "calibration-parallel", "calibration": merge(shard_dirs, run_dir, config, args.profile)}
+    metrics["calibration"]["panel"] = args.panel
     metrics["calibration"]["wall_seconds"] = time.time() - start
     metrics["calibration"]["shard_dirs"] = [str(d) for d in shard_dirs]
     metrics["calibration"]["config_sha256"] = sha256_file(config_path)

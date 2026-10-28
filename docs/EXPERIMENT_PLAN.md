@@ -12,6 +12,127 @@
 | C2 决策层 | 论文主张不是插补更漂亮，而是建议更可靠 | 在遮蔽前真值上，机会约束 MODOpt 相比确定性均值填充显著提高联合营养可行率、降低方向翻转率和 95 分位 regret | B2, B3, B4 |
 | Anti-claim | 改善不能只来自更保守的食物界、更大场景数或不同目标权重 | 冻结相同 (K\)、相同决策界和目标权重；通过无机会约束、场景数和权重消融隔离主机制 | B3 |
 
+### 1.1 预注册修订记录
+
+修订必须写明时间、原文、依据，不得覆盖原条款。
+
+**修订 R-2026-10-26-a｜C1 最小可信证据**
+
+原文：`层级模型的点误差不劣于强基线，且 80%/95% 区间覆盖接近名义覆盖；硬约束违反率为 0`
+
+修订后：`层级模型的 80%/95% 区间覆盖接近名义覆盖；点误差在部分缺失几何下允许劣于强基线，
+但必须同时证明基线在该几何下不稳健。硬约束违反率为 0`
+
+依据（`outputs/B1_formal_withmice_20261023_124906/calibration_summary.csv`）：
+
+| 缺失几何 | hierarchical_rw sMAE / cov95 | interpolation | mice |
+|---|---|---|---|
+| consecutive_years | 0.1675 / **0.955** | 0.1406 / 0.865 | 0.1266 / 0.840 |
+| single_cell | 0.1746 / **0.950** | 0.1667 / 0.887 | 0.1555 / 0.865 |
+| province_group | **0.1776** / **0.975** | 0.1893 / 0.825 | 1.1821（崩溃） / 0.733 |
+
+主方法区间校准在三种几何下均最接近名义覆盖（0.950–0.975 对 0.95），
+但点误差在 consecutive_years 与 single_cell 上劣于两个基线（4.7%–32%）。
+唯一在全部几何下不崩溃的方法只有主方法与插值；MICE 在整块缺失下失效。
+
+因此原条款「点误差不劣于强基线」在现有实现下不成立，改为要求
+**以点精度换取区间校准，并证明基线的不稳健性**。
+若后续加入收缩重跑使点误差追平基线，应恢复原条款并记录为 R-xxxx-b。
+
+**修订 R-2026-10-26-b｜主口径 K 从 3 改为 4**
+
+原文：主口径 `trace_as_valid=False`，痕量不算有效观测，G06 红肉因营养 10/11 被排除，K=3（G02/G05/G08）。
+
+修订后：主口径 `trace_as_valid=True`（痕量按真实近零计入），G06 纳入，K=4（G02/G05/G06/G08）。
+原 K=3 口径保留为 `group_audit_k3_strict.csv`，作为偏离对照。
+
+依据（`data/processed/baseline_consumption.csv`，2016–2024 均值）：
+
+| 省 | 红肉 G06 | 禽肉 G05 | 畜禽肉合计 | 是否超 CDG 上限 75 |
+|---|---|---|---|---|
+| 上海 | 86.5 | 35.9 | 122.4 | 是 |
+| 安徽 | 82.9 | 39.5 | 122.5 | 是 |
+| 山东 | 70.6 | 21.2 | 91.8 | 是 |
+| 江苏 | 87.0 | 36.0 | 123.1 | 是 |
+| 江西 | 94.4 | 32.4 | 126.8 | 是 |
+| 浙江 | 90.9 | 34.2 | 125.0 | 是 |
+| 福建 | 93.5 | 37.1 | 130.6 | 是 |
+
+CDG 情景的约束对象是「畜禽肉合计 40–75 g」。若红肉不作为决策变量（固定在实际基线），
+禽肉须满足的剩余区间为负（上海 [-46.5, -11.5]、江西 [-54.4, -19.4]），
+即 **CDG 情景在 K=3 下不可满足，而非缺少一条约束**。7 省畜禽肉合计全部超上限。
+
+因此 CDG 情景必然要求红肉下降，红肉必须是决策变量，主口径必须含 G06。
+痕量处理有独立依据：羊肉碳水化合物在源表标 `Tr`（真实近零），按 0 计入不是补值。
+
+**已知代价**：G06 价格面板不完整——51 个省-年观测中仅 27 行三品类齐全，
+23 行只有单品类，此时「等权」退化为单品类价。纳入主口径后这一缺陷由敏感性转为
+主结论风险，G3 断言「主口径等于最低价比例 <50%」实测为 45%，接近阈值。
+B2 应同时报告 `price_complete_equal`（仅齐全行的严格等权）口径下的结果。
+
+**修订 R-2026-10-28-c｜R401 由「上海决策情景」改为「上海数据可得性报告」**
+
+原文：`R401 | M4 | Shanghai scenarios | D3 | 3 scenarios | stable labels`。
+
+修订后：**R401 不再求解**，改为上海的数据可得性审计（覆盖矩阵 / 口径缺口 / 缺失分级 / 桥接可行性）。
+上海不进入决策层，`k4_official` 下的单点结果只作附录对照，**不得与 K=6 结果并列比较**。
+
+依据（`outputs/R401_shanghai_availability_20261028_180508/`）：
+
+| 事实 | 数值 |
+|---|---|
+| 上海 G07（水产品）有价年数 | **0 / 9**（权威面板标 `整块缺失-品类 / P0`） |
+| 批发价桥接表品类数 / 其中水产品 | 9 / **0** —— 仓库内无法桥接 |
+| `k6_price` 需要组 vs 上海缺组 | 6 / **G07** → 不可装配 |
+| `k4_official` 需要组 vs 上海缺组 | 4 / **无** → 可装配（G02 3 年、G05 1 年、G06 7 年、G08 3 年） |
+| 旧清洗表 `clean_tables/prices.csv` 的一条上海水产价 | 30.26 元/kg（P023），**无年份字段**，不可用 |
+
+为什么不是「补一格」：D0 的池化价按口径内可用省计算，加入上海会改变其余 6 省的 D0，
+进而作废 RNI 附录的全部对比读数；且 `k6_price` 的语义会在 35 处脚本与文档中被悄悄改写。
+为一个样本很薄的省（G05 仅 1 年）承担这个代价不划算。
+
+影响：M4 的「七地区」实际是 **6 省决策 + 上海可得性说明**；R503 地区热图只画 6 省；
+论文方法节需写明「上海因 G07 整块缺失出局，批发价桥接表不含水产品、仓库内不可修复」。
+
+**修订 R-2026-10-28-d｜B4 三层敏感性的**操作性定义**
+
+原文（B4 §Sensitivity layers）：`leave-one-region-out fit；δ residual SD；
+boundary low/mid/high/worst endpoints` —— **只有名字，没有算子**，无法复现。
+
+修订后（实现见 `scripts/run_m4.py` 的 `PROTOCOLS` 与三个 block 函数）：
+
+| run | 算子 | 参照与比较 |
+|---|---|---|
+| R407 | 逐省留一，**只重算 D0 的池化价**（去掉该省后对剩余省取均值）；B1 残差池保持不变 | 对每个 fold 与每个未被移除的省求 D0，与**全样本 D0** 比较 `max\|Δq\|` 与方向改变数 |
+| R408 | δ 作用于乘性残差的**对数域**：`mult' = exp((1+δ)·log(mult))`，δ ∈ {−0.5, 0, +0.5} | 对每个 δ 求 D3，与 **δ=0** 比较逐组位移 |
+| R409 | low = 三情景下界/上界的逐元素最小值；high = 逐元素最大值；mid = HEAL_base 冻结边界；worst = 三情景边界**交集**（max 下界、min 上界） | 对每个变体求 D1，与 **mid** 比较；交集为空记 `infeasible` |
+
+为什么这样定：
+
+1. **R407 不重算残差池**——残差池没有省份留一机制，硬造会引入一条 Plan 里没有的假设；
+   而池化价是 D0 唯一的跨省统计量，留一它才是「去掉一个地区重新估计」的本义。
+2. **R408 在对数域缩放**——B1 的残差是乘性的（`price_s = price_point × mult`），
+   线性域缩放会让 δ=−0.5 时出现负价格，与残差的定义域冲突。
+3. **R409 不新造边界**——只重组 `decision_bounds.csv` 里已有的三套冻结值，
+   避免「为了做敏感性而发明边界」；`worst` 取交集是唯一的对抗性取法（最紧），
+   其不可行本身就是要报告的结论。
+
+**实施核验**（2026-10-28 冒烟，三个过程目录已删除，命令可重跑）：
+
+| 项 | 实测 |
+|---|---|
+| R407 池化价确实变了 | 留一后最大相对变化 **15.7% / 24.1% / 17.6%**（去掉安徽/山东/江苏） |
+| R407 决策是否跟着变 | **否**，3 省 × 2 fold = 6 格 `max\|Δq\| = 0.0` |
+| R408 离散度确实变了 | δ=−0.5/0/+0.5 时 `max\|mult−1\|` = **0.32 / 0.75 / 1.31** |
+| R408 决策是否跟着变 | **否**，`max\|Δq\| = 0.0` |
+| R409 边界是否起作用 | 是：`max\|Δq\|` 达 **150–300 g/day**，且 `worst` 交集为**空盒**（记 infeasible） |
+
+即：**扰动真实生效，但 R407/R408 的决策不动、R409 动**。这与「顶点稳定半径 ≫ 扰动幅度」
+的既有机制一致（§26），也说明 B4 的结论门必须把 R409 单独看待——
+边界变体改变的是可行域本身，不是对不确定性的反应。
+
+
+
 ## 2. Paper Storyline
 
 ### Main paper must prove
@@ -135,9 +256,11 @@
 ### B4 — Regional and scenario robustness
 
 - **Claim tested:** stable directions reflect traceable regional structure and survive predeclared sensitivity settings。
-- **Scope:** seven regions × HEAL_base/CDG/EAT。
-- **Sensitivity layers:** leave-one-region-out fit；
-  (delta=-0.5,0,+0.5\) residual SD；boundary low/mid/high/worst endpoints；original/equal weights。
+- **Scope:** **6 个决策省**（安徽/山东/江苏/江西/浙江/福建）× HEAL_base/CDG/EAT；
+  上海只做可得性说明、不进入决策层（修订 `R-2026-10-28-c`）。
+- **Sensitivity layers:** leave-one-province-out（只重算 D0 池化价）；
+  δ ∈ {−0.5, 0, +0.5} 作用于乘性残差的对数域；boundary low/mid/high/worst；
+  original/equal weights。**三条的算子定义见修订 `R-2026-10-28-d`。**
 - **Metrics:** stable-up/down/data-sensitive label, direction agreement, regional heterogeneity, feasibility, regret, CHEI/ELDI。
 - **Conclusion gate:** a group enters the main conclusion only when test direction agreement ≥90%, unchanged across delta and boundary grid, and test feasibility point estimate ≥95% with Wilson 95% CI reported。
 - **Target:** Main Figure 2 regional stability heatmap; appendix province scenario panels。

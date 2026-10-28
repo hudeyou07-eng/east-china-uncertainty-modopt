@@ -27,6 +27,11 @@ def make_mask(
     min_series_observations: int = 5,
 ) -> np.ndarray:
     eligibility = panel["truth_eligible"] if "truth_eligible" in panel else panel["observed"]
+    # 位置化：``mask`` 是按位置索引的布尔数组，而下面要用 ``frame.index`` 回写。
+    # 若调用方过滤过行（索引不连续），标签 ≠ 位置，会静默错位甚至越界。
+    # 在函数内部重置索引，使两者恒等，调用方无需关心自己传进来的索引形态。
+    panel = panel.reset_index(drop=True)
+    eligibility = np.asarray(eligibility, dtype=bool)
     observed_idx = panel.index[eligibility].to_numpy()
     if len(observed_idx) == 0:
         raise ValueError("Cannot mask a panel with no observed values")

@@ -12,12 +12,36 @@ Which food group adjustment directions remain unchanged across defensible data c
 
 ## Current status
 
+> 快照日期 **2026-10-28**。逐 run 状态见 `docs/EXPERIMENT_TRACKER.md`，全部重要改动汇总见 `docs/PROJECT_SUMMARY.md`。
+
 | Block | Status | Meaning |
 |---|---|---|
-| B0 data and solver checks | Implemented and smoke tested | 数据审计、失败保护和 synthetic MILP 链路已验证 |
-| B1 structured missingness calibration | Implemented, formal run pending | 可正式运行 5 folds × 20 repeats |
-| Food group crosswalk | Pending two person review | 未冻结前不得启动正式 B2 to B4 |
-| B2 to B4 real MODOpt | Solver core only | 真实数据接口等待 processed data contract |
+| B0 data and solver checks | Implemented and smoke tested | 数据审计、失败保护和 synthetic MILP 链路已验证；R003 手工可验算 LP fixture 已补（`tests/test_lp_fixture.py`） |
+| B1 structured missingness calibration | **Done (both panels)** | 价格面板 `B1_formal_withmice_20261023_124906`（1200 行）；消费面板 `R103_105_consumption_formal_20261026_174725`（1200 行）；MAR/MNAR 敏感性 `R108_109_price_formal_20261026_175443` |
+| Food group crosswalk | Frozen at `onto-v1.0.0` | **决策口径 `k6_price`（K=6，6 省，上海因缺 G07 出局）**；合同口径仍 K=4，K=3 仅作偏离对照 |
+| B2 decision reliability | **Done-conditional** | `R200_203_b2_formal_20261027_222841`（EAR）/ `_224315`（RNI）；EAR 下 D0≡D1≡D3，是**干净零结果**。已按 `DONE-conditional` 定稿，放行条件（口径披露）见 tracker 同名小节 |
+| B3 / B4 | Not started | M3 敏感性只跑了 smoke + 8 个单点；B4 未开工 |
+
+关键口径（作者 2026-10-27 裁定）：`optimization.decision_scope: k6_price`、
+`optimization.bounds_basis: ear`（钙 650 / 铁 12 / 锌 8.25 / 硒 50 / 硫胺素 1.1 / 核黄素 1.1 / 烟酸 11）、
+`optimization.cv_nutrient: 0.0`（食物成分表是物理常数，只扰动价格）。
+
+合同闭合方式：`python scripts/build_contract_files.py` 一条命令完成
+「重建审计表 → 汇总 7 个产物 hash → 跑 §3 七条 gate → 回写 manifest → 落 R002 run 目录」。
+run 目录自包含 `metrics.json` / `config.json` / `environment.json` / `DONE` / `contract_gate_report.json`。
+
+三处口径决策仍需人工复核（详见 `docs/EXPERIMENT_TRACKER.md` 末节）：
+G06 组内权重来源、痕量格决定红肉去留、决策边界用联合约束而非硬拆指南类别。
+
+价格 / 营养 / 环境三个维度的组内权重已统一为**消费结构加权**
+（猪肉 0.788 / 牛肉 0.136 / 羊肉 0.076，表观消费份额，来源见
+`data/input/external/meat_consumption_structure.csv`），由 `src/component_weights.py` 统一提供。
+等权并不中性：它等价于假设"中国人吃的红肉有三分之二是牛羊肉"，
+会把红肉成本高估 19%、排放高估 45%，同时把能量与脂肪低估 42% / 67%。
+
+价格源：主分析使用零售价面板 `data/input/price/price_panel_clean.xlsx`（元/500g）。
+商务预报批发价（元/公斤）不在主分析中使用，登记于
+`data/processed/model_manifest.json` 的 `alternative_sources`，计划用于 B4 的价格口径敏感性检验。
 
 Smoke results prove that the software path runs. They are not paper evidence. The optimization smoke test uses a synthetic fixture and must not be reported as a substantive research result.
 
@@ -52,9 +76,16 @@ python -m pip install -r requirements.txt
 
 ```powershell
 python -m unittest tests.test_smoke -v
+python scripts/check_tracker.py          # 文档与磁盘产物的一致性门禁（15 项）
+python scripts/check_tracker.py --file docs/EXPERIMENT_TRACKER_EN.md   # 英文版同一套校验
+python scripts/verify_tracker_numbers.py # 关键数字对回产物（27 项断言）
 ```
 
-All tests must pass before a formal run.
+All tests must pass before a formal run. The tracker check must pass before a run is
+cited in the paper: it verifies that every run directory the tracker references exists,
+that every `outputs/` directory is indexed, and that the progress totals match the
+per-run status column. `verify_tracker_numbers.py` re-derives 27 key numbers from the
+run artifacts and asserts they appear verbatim in the ledger.
 
 ## Run order
 
@@ -86,9 +117,20 @@ Formal B2 to B4 experiments require all processed files listed in `data/README.m
 
 ## Main documents
 
+Start here: **[`docs/PROJECT_SUMMARY.md`](docs/PROJECT_SUMMARY.md)** — the single consolidated entry
+point (results, key decisions, limitations, reproduction, change digest).
+
+- `docs/README.md`: the documentation map (what to read, what is archived, verification commands).
+- `docs/PROJECT_SUMMARY.md`: **consolidated summary of all substantive changes** (2026-10-23 → 10-28).
+- `docs/EXPERIMENT_PLAN.md`: claim driven full experiment plan, with four pre-registration revisions.
+- `docs/EXPERIMENT_TRACKER.md`: run level tracker (Chinese, with the full derivation narrative).
+- `docs/EXPERIMENT_TRACKER_EN.md`: the same 46-run ledger in English, with the artifact index and five
+  interpretation traps. Figure 1 and Figure 2 are English-labelled SVG.
+- `docs/CHANGELOG_2026-10-26.md`: the round-by-round evidence chain (§1–§38), cited by section number.
+- `docs/PANEL_LEDGER.md`: price panel v1/v2/v3 version ledger.
 - `docs/Research_Proposal.docx`: reviewed Chinese and English research proposal.
-- `docs/EXPERIMENT_PLAN.md`: claim driven full experiment plan.
-- `docs/EXPERIMENT_TRACKER.md`: run level tracker.
+- `docs/archive/`: historical audit, decision log, cleanup ledger and the resolved decision page
+  (kept because the changelog still cites them by file name).
 
 ## Reproducibility policy
 

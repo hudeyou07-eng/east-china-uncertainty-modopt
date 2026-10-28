@@ -1,13 +1,13 @@
-﻿group_id,group_zh,unit,price_observations,price_regions,price_gate,consumption_regions,consumption_gate,nutrition_foods,nutrition_min_hard_coverage,nutrition_cell_ratio,nutrition_trace_cells,nutrition_gate,lca_metrics_count,global_env_metrics_count,environment_gate,include,reason
-G01,乳及乳制品,CNY/kg,4,2,False,7,True,4,0.75,0.9772727272727273,0,False,3,4,True,False,价格不足(4观测/2省，门槛18/3)；硬营养系数不全(10/11项达标，4种食物)
-G02,蛋类,CNY/kg,42,7,True,7,True,3,1.0,1.0,0,True,3,4,True,True,四域齐备，可进入优化
-G03,水果,CNY/kg,16,6,False,7,True,3,1.0,1.0,0,True,3,4,True,False,价格不足(16观测/6省，门槛18/3)
-G04,谷物及豆类,CNY/kg,25,7,True,7,True,4,0.75,0.9772727272727273,0,False,3,4,True,False,硬营养系数不全(10/11项达标，4种食物)
-G05,禽肉,CNY/kg,27,6,True,7,True,3,1.0,1.0,0,True,3,4,True,True,四域齐备，可进入优化
-G06,红肉（猪牛羊）,CNY/kg,106,7,True,7,True,3,0.6666666666666666,0.9696969696969697,1,False,3,4,True,False,硬营养系数不全(10/11项达标，3种食物)
-G07,水产品,CNY/kg,23,6,True,7,True,3,0.3333333333333333,0.9090909090909091,2,False,3,4,True,False,硬营养系数不全(9/11项达标，3种食物)
-G08,蔬菜,CNY/kg,35,7,True,7,True,5,1.0,1.0,0,True,3,4,True,True,四域齐备，可进入优化
-G09,糖,CNY/kg,4,2,False,7,True,1,0.0,0.45454545454545453,0,False,3,4,True,False,价格不足(4观测/2省，门槛18/3)；硬营养系数不全(5/11项达标，1种食物)
-G10,薯类,CNY/kg,8,3,False,0,False,2,1.0,1.0,0,True,2,4,False,False,价格不足(8观测/3省，门槛18/3)；消费基线缺(0/7省)；环境系数不全(LCA 2/3，全球表 4/4)
-G11,食用油,CNY/kg,23,7,True,7,True,0,0.0,0.0,0,False,3,4,True,False,硬营养系数不全(0/11项达标，0种食物)
-G12,大豆及坚果,CNY/kg,0,0,False,0,False,9,0.8888888888888888,0.9797979797979798,0,False,2,4,False,False,价格不足(0观测/0省，门槛18/3)；消费基线缺(0/7省)；硬营养系数不全(9/11项达标，9种食物)；环境系数不全(LCA 2/3，全球表 4/4)
+﻿group_id,group_zh,unit,baseline_source,price_observations,price_regions,price_gate,consumption_regions,consumption_gate,nutrition_foods,nutrition_min_hard_coverage,nutrition_cell_ratio,nutrition_trace_cells,nutrition_gate,lca_metrics_count,global_env_metrics_count,environment_gate,mapping_mapped_ratio,mapping_verdict,mapping_missing_items,mapping_gate,include,reason
+G01,乳及乳制品,CNY/kg,各省份消费量.xlsx,4,2,False,7,True,4,0.75,0.9772727272727273,0,False,3,4,True,1.0,口径一致,,True,False,价格不足(4观测/2省，门槛18/3)；硬营养系数不全(10/11项达标，4种食物)
+G02,蛋类,CNY/kg,各省份消费量.xlsx,42,7,True,7,True,3,1.0,1.0,0,True,3,4,True,1.0,口径一致,,True,True,四域齐备，可进入优化
+G03,水果,CNY/kg,各省份消费量.xlsx,16,6,False,7,True,3,1.0,1.0,0,True,3,4,True,0.1875,严重错位,梨|西瓜|香蕉,True,False,价格不足(16观测/6省，门槛18/3)
+G04,谷物及豆类,CNY/kg,各省份消费量.xlsx,25,7,True,7,True,4,0.75,0.9772727272727273,0,False,3,4,True,0.2,严重错位,东北粳米|中晚籼米|中籼米|小麦粉|早籼|早籼米|晚籼|晚粳米|标准粉|特一粉|粳米|苏北粳米|面粉,True,False,硬营养系数不全(10/11项达标，4种食物)
+G05,禽肉,CNY/kg,各省份消费量.xlsx,27,6,True,7,True,3,1.0,1.0,0,True,3,4,True,1.0,口径一致,,True,True,四域齐备，可进入优化
+G06,红肉（猪牛羊）,CNY/kg,各省份消费量.xlsx,106,7,True,7,True,3,1.0,1.0,1,True,3,4,True,0.9811,部分错位,带骨,True,True,四域齐备，可进入优化
+G07,水产品,CNY/kg,各省份消费量.xlsx,23,6,True,7,True,3,0.6666666666666666,0.9696969696969697,2,False,3,4,True,0.1739,严重错位,冻带鱼|带鱼|鲢鱼|鲫鱼|鳊鱼|黄瓜鱼,True,False,硬营养系数不全(10/11项达标，3种食物)
+G08,蔬菜,CNY/kg,各省份消费量.xlsx,35,7,True,7,True,5,1.0,1.0,0,True,3,4,True,0.9444,部分错位,青菜,True,True,四域齐备，可进入优化
+G09,糖,CNY/kg,各省份消费量.xlsx,4,2,False,7,True,1,0.0,0.45454545454545453,0,False,3,4,True,1.0,口径一致,,True,False,价格不足(4观测/2省，门槛18/3)；硬营养系数不全(5/11项达标，1种食物)
+G10,薯类,CNY/kg,none,8,3,False,0,False,2,1.0,1.0,0,True,2,4,False,1.0,口径一致,,True,False,价格不足(8观测/3省，门槛18/3)；消费基线缺(0/7省)；环境系数不全(LCA 2/3，全球表 4/4)
+G11,食用油,CNY/kg,各省份消费量.xlsx,23,7,True,7,True,0,0.0,0.0,0,False,3,4,True,0.5217,部分错位,大豆油|花生油|菜籽油|豆油,True,False,硬营养系数不全(0/11项达标，0种食物)
+G12,大豆及坚果,CNY/kg,none,0,0,False,0,False,9,0.8888888888888888,0.9797979797979798,0,False,2,4,False,0.0,无价格观测,,True,False,价格不足(0观测/0省，门槛18/3)；消费基线缺(0/7省)；硬营养系数不全(9/11项达标，9种食物)；环境系数不全(LCA 2/3，全球表 4/4)

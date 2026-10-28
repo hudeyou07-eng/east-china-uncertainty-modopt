@@ -28,127 +28,22 @@ if str(ROOT) not in sys.path:
 
 from src.data_audit import load_clean_price_panel  # noqa: E402
 from src.mapping_audit import audit_mapping  # noqa: E402
+from src.ontology import (  # noqa: E402
+    ENV_METRICS,
+    GLOBAL_ENV_METRICS,
+    HARD_NUTRIENTS,
+    MIN_CONSUMPTION_REGIONS,
+    MIN_PRICE_OBSERVATIONS,
+    MIN_PRICE_REGIONS,
+    ONTOLOGY,
+    ONTOLOGY_VERSION,
+)
 
 DATA = ROOT / "data" / "input"
 PROCESSED = ROOT / "data" / "processed"
 
 OIL_DENSITY = 0.92
-MIN_PRICE_REGIONS = 3
-MIN_PRICE_OBSERVATIONS = 18
-MIN_CONSUMPTION_REGIONS = 7
 
-HARD_NUTRIENTS = [
-    "能量", "蛋白质", "脂肪", "碳水化合物",
-    "钙", "铁", "锌", "硒",
-    "核黄素", "硫胺素", "烟酸",
-]
-ENV_METRICS = ["ghg", "freshwater", "land"]
-GLOBAL_ENV_METRICS = [
-    "ghg_kg_co2e_per_kg",
-    "freshwater_l_per_kg",
-    "land_m2_per_kg",
-    "eutrophication_g_po4e_per_kg",
-]
-
-# group_id -> every raw label that belongs to it, per domain.
-ONTOLOGY: list[dict] = [
-    {
-        "group_id": "G01", "group_en": "dairy", "group_zh": "乳及乳制品",
-        "price_categories": ["乳制品"],
-        "consumption_groups": ["dairy"],
-        "nutrition_groups": ["dairy"],
-        "lca_groups": ["Dairy"],
-        "global_env_entities": ["Milk", "Cheese"],
-    },
-    {
-        "group_id": "G02", "group_en": "eggs", "group_zh": "蛋类",
-        "price_categories": ["鸡蛋"],
-        "consumption_groups": ["eggs"],
-        "nutrition_groups": ["eggs"],
-        "lca_groups": ["Eggs"],
-        "global_env_entities": ["Eggs"],
-    },
-    {
-        "group_id": "G03", "group_en": "fruits", "group_zh": "水果",
-        "price_categories": ["水果"],
-        "consumption_groups": ["fruits"],
-        "nutrition_groups": ["fruits"],
-        "lca_groups": ["Fruit"],
-        "global_env_entities": ["Apples", "Bananas", "Berries & Grapes", "Citrus Fruit", "Other Fruit"],
-    },
-    {
-        "group_id": "G04", "group_en": "grains_legumes", "group_zh": "谷物及豆类",
-        "price_categories": ["粮食(大米/面粉)"],
-        "consumption_groups": ["grains_legumes"],
-        "nutrition_groups": ["grains_legumes"],
-        "lca_groups": ["Cereals", "Legumes"],
-        "global_env_entities": ["Barley", "Maize", "Rice", "Wheat & Rye", "Oatmeal", "Peas", "Other Pulses"],
-    },
-    {
-        "group_id": "G05", "group_en": "poultry", "group_zh": "禽肉",
-        "price_categories": ["禽类"],
-        "consumption_groups": ["poultry"],
-        "nutrition_groups": ["poultry"],
-        "lca_groups": ["Poultry"],
-        "global_env_entities": ["Poultry Meat"],
-    },
-    {
-        "group_id": "G06", "group_en": "red_meat", "group_zh": "红肉（猪牛羊）",
-        "price_categories": ["猪肉", "牛肉(后腿)", "羊肉(后腿)"],
-        "consumption_groups": ["red_meat"],
-        "nutrition_groups": ["red_meat"],
-        "lca_groups": ["Meat"],
-        "global_env_entities": ["Beef (beef herd)", "Beef (dairy herd)", "Lamb & Mutton", "Pig Meat"],
-    },
-    {
-        "group_id": "G07", "group_en": "seafood", "group_zh": "水产品",
-        "price_categories": ["水产品(不含虾蟹)"],
-        "consumption_groups": ["seafood"],
-        "nutrition_groups": ["seafood"],
-        "lca_groups": ["Aquatic products"],
-        "global_env_entities": ["Fish (farmed)", "Prawns (farmed)"],
-    },
-    {
-        "group_id": "G08", "group_en": "vegetables", "group_zh": "蔬菜",
-        "price_categories": ["蔬菜"],
-        "consumption_groups": ["vegetables"],
-        "nutrition_groups": ["vegetables"],
-        "lca_groups": ["Vegetables"],
-        "global_env_entities": ["Brassicas", "Onions & Leeks", "Other Vegetables", "Tomatoes", "Root Vegetables"],
-    },
-    {
-        "group_id": "G09", "group_en": "sugar", "group_zh": "糖",
-        "price_categories": ["糖"],
-        "consumption_groups": ["sugar"],
-        "nutrition_groups": ["sugar"],
-        "lca_groups": ["Sugars and preserves"],
-        "global_env_entities": ["Beet Sugar", "Cane Sugar"],
-    },
-    {
-        "group_id": "G10", "group_en": "tubers", "group_zh": "薯类",
-        "price_categories": ["薯类(马铃薯)"],
-        "consumption_groups": [],
-        "nutrition_groups": ["tubers"],
-        "lca_groups": ["Tubers, starches"],
-        "global_env_entities": ["Potatoes", "Cassava"],
-    },
-    {
-        "group_id": "G11", "group_en": "oils", "group_zh": "食用油",
-        "price_categories": ["食用油(升)"],
-        "consumption_groups": ["oils"],
-        "nutrition_groups": [],
-        "lca_groups": ["Fats and oils", "fats and oils"],
-        "global_env_entities": ["soybean oil"],
-    },
-    {
-        "group_id": "G12", "group_en": "soybeans_nuts", "group_zh": "大豆及坚果",
-        "price_categories": ["坚果"],
-        "consumption_groups": [],
-        "nutrition_groups": ["soybeans_nuts"],
-        "lca_groups": ["Nuts and seeds"],
-        "global_env_entities": ["Groundnuts", "Nuts", "Tofu", "Soy milk"],
-    },
-]
 
 
 def price_stats(panel: pd.DataFrame) -> pd.DataFrame:
@@ -239,12 +134,15 @@ def consumption_stats() -> pd.DataFrame:
     rows = []
     for group in ONTOLOGY:
         subset = usable[usable["food_group"].isin(group["consumption_groups"])]
+        all_rows = consumption[consumption["food_group"].isin(group["consumption_groups"])]
+        sources = sorted({str(s) for s in all_rows["source_file"].dropna().unique()})
         rows.append(
             {
                 "group_id": group["group_id"],
                 "consumption_regions": int(subset["region"].nunique()),
                 "consumption_years": int(subset["year"].nunique()),
                 "consumption_observed_cells": int(subset["value_kg_person_year"].notna().sum()),
+                "baseline_source": "|".join(sources) if sources else "none",
             }
         )
     return pd.DataFrame(rows)
@@ -311,6 +209,11 @@ def build_audit(
                 "nutrition_groups": "|".join(g["nutrition_groups"]),
                 "lca_groups": "|".join(g["lca_groups"]),
                 "global_env_entities": "|".join(g["global_env_entities"]),
+                # 环境实体的品类子结构。空串表示按实体扁平等权聚合。
+                # 必须进快照，否则「层级等权」这个决策无法从产物反查。
+                "global_env_subgroups": "; ".join(
+                    f"{k}={'+'.join(v)}" for k, v in (g.get("global_env_subgroups") or {}).items()
+                ),
             }
             for g in ONTOLOGY
         ]
@@ -395,7 +298,7 @@ def build_audit(
 
     audit = audit[
         [
-            "group_id", "group_zh", "unit",
+            "group_id", "group_zh", "unit", "baseline_source",
             "price_observations", "price_regions", "price_gate",
             "consumption_regions", "consumption_gate",
             "nutrition_foods", "nutrition_min_hard_coverage", "nutrition_cell_ratio",
@@ -408,6 +311,7 @@ def build_audit(
     ].sort_values("group_id")
 
     summary = {
+        "ontology_version": ONTOLOGY_VERSION,
         "ontology_groups": int(len(ontology)),
         "included_groups": int(audit["include"].sum()),
         "included_group_ids": audit.loc[audit["include"], "group_id"].tolist(),

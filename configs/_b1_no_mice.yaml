@@ -4,6 +4,7 @@ project:
 paths:
   price_workbook: ../data/input/price/price_category_catalog.xlsx
   clean_price_workbook: ../data/input/price/price_panel_clean.xlsx
+  clean_consumption_table: ../data/input/clean_tables/consumption.csv
   output_root: ../outputs
 audit:
   min_price_regions: 3

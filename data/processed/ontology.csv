@@ -1,13 +1,13 @@
-﻿group_id,group_en,group_zh,price_categories,consumption_groups,nutrition_groups,lca_groups,global_env_entities
-G01,dairy,乳及乳制品,乳制品,dairy,dairy,Dairy,Milk|Cheese
-G02,eggs,蛋类,鸡蛋,eggs,eggs,Eggs,Eggs
-G03,fruits,水果,水果,fruits,fruits,Fruit,Apples|Bananas|Berries & Grapes|Citrus Fruit|Other Fruit
-G04,grains_legumes,谷物及豆类,粮食(大米/面粉),grains_legumes,grains_legumes,Cereals|Legumes,Barley|Maize|Rice|Wheat & Rye|Oatmeal|Peas|Other Pulses
-G05,poultry,禽肉,禽类,poultry,poultry,Poultry,Poultry Meat
-G06,red_meat,红肉（猪牛羊）,猪肉|牛肉(后腿)|羊肉(后腿),red_meat,red_meat,Meat,Beef (beef herd)|Beef (dairy herd)|Lamb & Mutton|Pig Meat
-G07,seafood,水产品,水产品(不含虾蟹),seafood,seafood,Aquatic products,Fish (farmed)|Prawns (farmed)
-G08,vegetables,蔬菜,蔬菜,vegetables,vegetables,Vegetables,Brassicas|Onions & Leeks|Other Vegetables|Tomatoes|Root Vegetables
-G09,sugar,糖,糖,sugar,sugar,Sugars and preserves,Beet Sugar|Cane Sugar
-G10,tubers,薯类,薯类(马铃薯),,tubers,"Tubers, starches",Potatoes|Cassava
-G11,oils,食用油,食用油(升),oils,,Fats and oils|fats and oils,soybean oil
-G12,soybeans_nuts,大豆及坚果,坚果,,soybeans_nuts,Nuts and seeds,Groundnuts|Nuts|Tofu|Soy milk
+﻿group_id,group_en,group_zh,price_categories,consumption_groups,nutrition_groups,lca_groups,global_env_entities,global_env_subgroups
+G01,dairy,乳及乳制品,乳制品,dairy,dairy,Dairy,Milk|Cheese,
+G02,eggs,蛋类,鸡蛋,eggs,eggs,Eggs,Eggs,
+G03,fruits,水果,水果,fruits,fruits,Fruit,Apples|Bananas|Berries & Grapes|Citrus Fruit|Other Fruit,
+G04,grains_legumes,谷物及豆类,粮食(大米/面粉),grains_legumes,grains_legumes,Cereals|Legumes,Barley|Maize|Rice|Wheat & Rye|Oatmeal|Peas|Other Pulses,
+G05,poultry,禽肉,禽类,poultry,poultry,Poultry,Poultry Meat,
+G06,red_meat,红肉（猪牛羊）,猪肉|牛肉(后腿)|羊肉(后腿),red_meat,red_meat,Meat,Beef (beef herd)|Beef (dairy herd)|Lamb & Mutton|Pig Meat,beef=Beef (beef herd)+Beef (dairy herd); lamb=Lamb & Mutton; pork=Pig Meat
+G07,seafood,水产品,水产品(不含虾蟹),seafood,seafood,Aquatic products,Fish (farmed)|Prawns (farmed),
+G08,vegetables,蔬菜,蔬菜,vegetables,vegetables,Vegetables,Brassicas|Onions & Leeks|Other Vegetables|Tomatoes|Root Vegetables,
+G09,sugar,糖,糖,sugar,sugar,Sugars and preserves,Beet Sugar|Cane Sugar,
+G10,tubers,薯类,薯类(马铃薯),,tubers,"Tubers, starches",Potatoes|Cassava,
+G11,oils,食用油,食用油(升),oils,,Fats and oils|fats and oils,soybean oil,
+G12,soybeans_nuts,大豆及坚果,坚果,,soybeans_nuts,Nuts and seeds,Groundnuts|Nuts|Tofu|Soy milk,

@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-10-15T08:38:30.071974+00:00",
+  "generated_at_utc": "2026-10-26T09:08:27.748099+00:00",
   "scope": "minimum cleaned reproducibility bundle for the private team repository",
-  "file_count": 12,
-  "total_bytes": 2878164,
+  "file_count": 14,
+  "total_bytes": 2880572,
   "files": [
     {
       "path": "data/input/clean_tables/china_lca.csv",
@@ -48,6 +48,16 @@
       "path": "data/input/clean_tables/prices.csv",
       "bytes": 9671,
       "sha256": "cca20f85b1eb2295f9d622726272e1800ff1a402767ebdad62358d238923f9cb"
+    },
+    {
+      "path": "data/input/external/meat_consumption_structure.csv",
+      "bytes": 812,
+      "sha256": "8aaf79daa6c57eb4ca5e050651933256083b73906e829d9df78e380c2c8eb6ca"
+    },
+    {
+      "path": "data/input/external/nutrient_bounds.csv",
+      "bytes": 1596,
+      "sha256": "ce734b10ac16abd94fb4b365e378cfcdd2230c3aa10a23e9ad6d590f4113b5b4"
     },
     {
       "path": "data/input/price/price_category_catalog.xlsx",

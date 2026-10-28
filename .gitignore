@@ -36,3 +36,10 @@ docs/assets/equation_*.png
 tmp/
 *.log
 ~$*
+
+# Local assistant workspace (session memory, not project content)
+.workbuddy-ai/
+
+# R session artifacts
+.Rhistory
+.RData

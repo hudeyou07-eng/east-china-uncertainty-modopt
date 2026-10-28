@@ -5,6 +5,7 @@ project:
 paths:
   price_workbook: ../data/input/price/price_category_catalog.xlsx
   clean_price_workbook: ../data/input/price/price_panel_clean.xlsx
+  clean_consumption_table: ../data/input/clean_tables/consumption.csv
   output_root: ../outputs
 
 audit:
@@ -27,6 +28,17 @@ calibration:
   mask_types: [single_cell, consecutive_years, province_group]
 
 optimization:
+  # 决策口径（边界门）。k4_official = 原正式口径；k6_price = 2026-10-27 修订后主口径
+  # （纳入 G04 谷物豆类与 G07 水产品，理由是价格传导与山东可行性，见 CHANGELOG §20）
+  decision_scope: k6_price
+  # 营养下界口径。rni = 预注册原口径；ear = 2026-10-27 作者裁定切换（见 CHANGELOG §22.8）。
+  # 理由：RNI = EAR + 2SD 是个体覆盖率指标，拿它当人均下界是口径错位；
+  # 且 RNI 下 HEAL_base 在 K=6 上 0/6 不可行，切 EAR 后 6/6。
+  bounds_basis: ear
+  # 场景扰动对象：只扰动价格。食物成分表是固定物理常数，
+  # 对 nutrient_coeff 加 5% 噪声会让 D3 的可行性完全由它决定（K=6 下失败 11/12）。
+  cv_price: 0.05
+  cv_nutrient: 0.0
   train_scenarios_smoke: 20
   train_scenarios_formal: 200
   test_scenarios_formal: 1000

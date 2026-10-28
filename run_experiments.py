@@ -18,7 +18,12 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
-from src.data_audit import audit_price_panel, load_clean_price_panel, make_group_audit_template
+from src.data_audit import (
+    audit_price_panel,
+    load_clean_price_panel,
+    load_consumption_panel,
+    make_group_audit_template,
+)
 from src.imputation import predict
 from src.io_utils import create_run_dir, fail_run, finalize_run, sha256_file, source_tree_hash, write_json
 from src.masking import apply_mask, make_mask
@@ -32,6 +37,27 @@ def load_config(path: Path) -> dict:
 
 def resolve_path(config_path: Path, raw: str) -> Path:
     return (config_path.parent / raw).resolve()
+
+
+def load_panel(config: dict, config_path: Path, panel: str) -> tuple[pd.DataFrame, Path]:
+    """按 ``panel`` 选择被插补对象，返回 (长表面板, 源文件路径)。
+
+    ``price`` 是含真实缺口的省×品类×年面板；``consumption`` 是
+    7 省 × 10 组 × 9 年的**全观测**面板，因此后者只做人造遮蔽的可恢复性测试。
+    """
+    if panel == "price":
+        source = resolve_path(config_path, config["paths"]["clean_price_workbook"])
+        raw_catalog = resolve_path(config_path, config["paths"]["price_workbook"])
+        return (
+            load_clean_price_panel(
+                source, float(config["audit"]["oil_density_kg_per_litre"]), raw_catalog
+            ),
+            source,
+        )
+    if panel == "consumption":
+        source = resolve_path(config_path, config["paths"]["clean_consumption_table"])
+        return load_consumption_panel(source), source
+    raise ValueError(f"Unknown panel: {panel!r} (expected 'price' or 'consumption')")
 
 
 def run_audit(config: dict, config_path: Path, run_dir: Path) -> dict:
@@ -82,12 +108,9 @@ def run_calibration(
     profile: str,
     fold_subset: list[int] | None = None,
     repeat_subset: list[int] | None = None,
+    panel_kind: str = "price",
 ) -> dict:
-    source = resolve_path(config_path, config["paths"]["clean_price_workbook"])
-    raw_catalog = resolve_path(config_path, config["paths"]["price_workbook"])
-    panel = load_clean_price_panel(
-        source, float(config["audit"]["oil_density_kg_per_litre"]), raw_catalog
-    )
+    panel, source = load_panel(config, config_path, panel_kind)
     section = config["calibration"]
     allowed_natures = set(section["training_data_natures"])
     excluded = panel["observed"] & ~panel["data_nature"].isin(allowed_natures)
@@ -186,13 +209,42 @@ def run_calibration(
             n_eval=("n", "sum"),
             scaled_mae=("scaled_mae", "mean"),
             log_rmse=("log_rmse", "mean"),
+            coverage50=("coverage50", "mean"),
             coverage80=("coverage80", "mean"),
+            coverage90=("coverage90", "mean"),
             coverage95=("coverage95", "mean"),
+            width50=("width50", "mean"),
+            width80=("width80", "mean"),
+            width90=("width90", "mean"),
             width95=("width95", "mean"),
+            asymmetry95=("asymmetry95", "mean"),
             runtime_seconds=("runtime_seconds", "sum"),
         )
     )
+    # 注意：这里**故意不汇总** calibration_error。
+    # 它是 |经验覆盖率 − 名义水平| 的均值，而每个 fold-repeat 块的样本很小
+    # （consecutive_years 每块仅 8 格），小样本噪声会把 |cov − nominal| 系统性抬高，
+    # 再跨块平均会得到一个虚高的数（实测 0.242，而池化后只有 0.066）。
+    # 权威口径请用 scripts/coverage_curve.py 在池化样本上重算。
     summary.to_csv(run_dir / "calibration_summary.csv", index=False)
+
+    # R106：coverage–width 曲线（长表，一行 = 一个 方法×遮蔽类型×名义水平）
+    curve_rows = []
+    for (mask_type, method), block in summary.groupby(["mask_type", "method"]):
+        for level in (50, 80, 90, 95):
+            curve_rows.append(
+                {
+                    "panel": panel_kind,
+                    "mask_type": mask_type,
+                    "method": method,
+                    "nominal": level / 100.0,
+                    "empirical_coverage": float(block[f"coverage{level}"].iloc[0]),
+                    "mean_width": float(block[f"width{level}"].iloc[0]),
+                    "gap": float(block[f"coverage{level}"].iloc[0]) - level / 100.0,
+                }
+            )
+    curve = pd.DataFrame(curve_rows)
+    curve.to_csv(run_dir / "coverage_curve.csv", index=False, encoding="utf-8-sig")
     return {
         "profile": profile,
         "folds": folds,
@@ -204,6 +256,7 @@ def run_calibration(
         "source": str(source),
         "source_sha256": sha256_file(source),
         "source_tree_sha256": source_tree_hash(ROOT),
+        "panel": panel_kind,
         "training_data_natures": sorted(allowed_natures),
         "training_observations": int(panel["observed"].sum()),
         "summary": summary.to_dict("records"),
@@ -245,6 +298,12 @@ def main() -> int:
     parser.add_argument("--profile", choices=["smoke", "formal"], default="smoke")
     parser.add_argument("--run-id", default=None)
     parser.add_argument(
+        "--panel",
+        choices=["price", "consumption"],
+        default="price",
+        help="被插补对象：price=零售价面板（含真实缺口）；consumption=消费面板（全观测，只测可恢复性）",
+    )
+    parser.add_argument(
         "--folds",
         default=None,
         help='Optional fold subset for sharded runs, e.g. "0,2" or "0-1". Default: all folds.',
@@ -259,7 +318,10 @@ def main() -> int:
     config = load_config(config_path)
     output_root = resolve_path(config_path, config["paths"]["output_root"])
     output_root.mkdir(parents=True, exist_ok=True)
-    run_id = args.run_id or args.command.replace("-", "_")
+    default_id = args.command.replace("-", "_")
+    if args.panel != "price":
+        default_id = f"{default_id}_{args.panel}"
+    run_id = args.run_id or default_id
     run_dir = create_run_dir(output_root, run_id)
     section = config["calibration"]
     fold_subset = (
@@ -278,7 +340,13 @@ def main() -> int:
             metrics["audit"] = run_audit(config, config_path, run_dir)
         if args.command in {"calibration", "all-smoke"}:
             metrics["calibration"] = run_calibration(
-                config, config_path, run_dir, args.profile, fold_subset, repeat_subset
+                config,
+                config_path,
+                run_dir,
+                args.profile,
+                fold_subset,
+                repeat_subset,
+                panel_kind=args.panel,
             )
         if args.command in {"optimization-smoke", "all-smoke"}:
             metrics["optimization_smoke"] = run_optimization_smoke(config, run_dir)

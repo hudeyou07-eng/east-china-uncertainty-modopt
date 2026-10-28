@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import os
 import platform
 import subprocess
@@ -10,6 +11,8 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+import numpy as np
 
 
 def sha256_file(path: Path) -> str:
@@ -30,8 +33,35 @@ def create_run_dir(output_root: Path, run_id: str) -> Path:
     return path
 
 
+def json_safe(obj: Any) -> Any:
+    """把 NaN / ±Inf 递归换成 ``None``。
+
+    **只在写 JSON 元数据时用，不要用于校验。** 输入侧的 NaN 应当显式报错
+    （如 ``solve_chance_modopt`` 对非有限系数的 ``ValueError``）；
+    而输出侧遇到 NaN 通常只意味着「这个指标没算出来」，为此让整个 run 崩掉
+    得不偿失——结果 CSV 仍保留原始 NaN，元数据里记为 null。
+    """
+    if isinstance(obj, dict):
+        return {k: json_safe(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [json_safe(v) for v in obj]
+    if isinstance(obj, float):
+        return obj if math.isfinite(obj) else None
+    if isinstance(obj, np.floating):
+        value = float(obj)
+        return value if math.isfinite(value) else None
+    if isinstance(obj, np.integer):
+        return int(obj)
+    if isinstance(obj, np.bool_):
+        return bool(obj)
+    return obj
+
+
 def write_json(path: Path, payload: Any) -> None:
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
+    path.write_text(
+        json.dumps(json_safe(payload), ensure_ascii=False, indent=2, allow_nan=False),
+        encoding="utf-8",
+    )
 
 
 def source_tree_hash(root: Path) -> str:

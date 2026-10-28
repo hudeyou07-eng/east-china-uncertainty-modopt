@@ -6,34 +6,24 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from src.ontology import HARD_NUTRIENTS, ONTOLOGY  # noqa: E402
+
 DATA = ROOT / "data" / "input" / "clean_tables"
 PROCESSED = ROOT / "data" / "processed"
 OUT = ROOT / "outputs" / "decision_space_20261023_134000"
 OUT.mkdir(parents=True, exist_ok=True)
 
-HARD_ALL = ["能量", "蛋白质", "脂肪", "碳水化合物", "钙", "铁", "锌", "硒",
-            "核黄素", "硫胺素", "烟酸"]
+HARD_ALL = list(HARD_NUTRIENTS)
 HARD_CORE = ["能量", "蛋白质", "脂肪", "碳水化合物"]
-
-ONTOLOGY = [
-    ("G01", "乳及乳制品", ["乳制品"], ["dairy"]),
-    ("G02", "蛋类", ["鸡蛋"], ["eggs"]),
-    ("G03", "水果", ["水果"], ["fruits"]),
-    ("G04", "谷物及豆类", ["粮食(大米/面粉)"], ["grains_legumes"]),
-    ("G05", "禽肉", ["禽类"], ["poultry"]),
-    ("G06", "红肉（猪牛羊）", ["猪肉", "牛肉(后腿)", "羊肉(后腿)"], ["red_meat"]),
-    ("G07", "水产品", ["水产品"], ["seafood"]),
-    ("G08", "蔬菜", ["蔬菜"], ["vegetables"]),
-    ("G09", "糖", ["食糖"], ["sugar"]),
-    ("G10", "薯类", ["薯类"], ["tubers"]),
-    ("G11", "食用油", ["食用油"], ["oils"]),
-    ("G12", "大豆及坚果", ["大豆", "坚果"], ["soybeans_nuts"]),
-]
 
 nutrition = pd.read_csv(DATA / "nutrition.csv")
 crosswalk = pd.read_csv(DATA / "food_crosswalk.csv")
@@ -66,8 +56,12 @@ def nutrition_cells(group_nutrition: str, treat_trace_as_zero: bool):
 
 def evaluate(scenario: dict) -> pd.DataFrame:
     rows = []
-    for gid, zh, price_cats, nut_groups in ONTOLOGY:
-        foods, usable = nutrition_cells(nut_groups[0], scenario["trace_as_zero"])
+    for group in ONTOLOGY:
+        gid = group["group_id"]
+        zh = group["group_zh"]
+        price_cats = group["price_categories"]
+        nut_label = group["nutrition_groups"][0] if group["nutrition_groups"] else ""
+        foods, usable = nutrition_cells(nut_label, scenario["trace_as_zero"])
         a = audit.loc[gid]
         price_ok = (a["price_observations"] >= scenario["min_obs"]
                     and a["price_regions"] >= scenario["min_regions"])

@@ -204,3 +204,65 @@ def make_group_audit_template(group_support: pd.DataFrame) -> pd.DataFrame:
             "reason",
         ]
     ]
+
+
+# ---------------------------------------------------------------------------
+# 消费面板（B1 的第二个被插补对象）
+# ---------------------------------------------------------------------------
+
+# 消费源表用「上海市 / 安徽省」这类全称，价格面板用「上海 / 安徽」。
+# 两套命名必须在入口统一，否则 B1 与 B2 的 province 键对不上。
+_PROVINCE_SUFFIXES = ("维吾尔自治区", "壮族自治区", "回族自治区", "自治区", "省", "市")
+
+
+def normalise_province(name: object) -> str:
+    """把「上海市」→「上海」、「内蒙古自治区」→「内蒙古」。"""
+    text = str(name).strip()
+    for suffix in _PROVINCE_SUFFIXES:
+        if text.endswith(suffix) and len(text) > len(suffix):
+            return text[: -len(suffix)]
+    return text
+
+
+def load_consumption_panel(path: Path) -> pd.DataFrame:
+    """把 ``clean_tables/consumption.csv`` 转成 B1 需要的长表口径。
+
+    输出列与 :func:`load_clean_price_panel` 对齐，使 ``masking`` / ``imputation``
+    无需任何改动即可复用：``province`` / ``group_raw`` / ``year`` / ``value`` /
+    ``observed`` / ``data_nature`` / ``truth_eligible``。
+
+    ``quality_flag != "ok"`` 的行（当前只有 2025 年的 ``incomplete_2025``）
+    保留在面板里但标为未观测——2025 年尚未走完完整统计周期，不能当真值。
+
+    注意：消费面板当前是 **7 省 × 10 组 × 9 年 = 630 格全观测**，本身零缺失。
+    因此 B1 在消费上做的是「人造遮蔽 → 恢复」的可恢复性测试，
+    不能用来推断真实缺失机制（价格面板才含真实缺口）。
+    """
+    if not path.exists():
+        raise FileNotFoundError(f"Consumption table not found: {path}")
+    raw = pd.read_csv(path, encoding="utf-8-sig")
+    required = {"region", "year", "food_group", "g_person_day", "quality_flag"}
+    missing = required - set(raw.columns)
+    if missing:
+        raise ValueError(f"Consumption table is missing columns: {sorted(missing)}")
+
+    panel = pd.DataFrame(
+        {
+            "province": raw["region"].map(normalise_province),
+            "group_raw": raw["food_group"].astype(str).str.strip(),
+            "year": pd.to_numeric(raw["year"], errors="raise").astype(int),
+            "value": pd.to_numeric(raw["g_person_day"], errors="coerce"),
+            "quality_flag": raw["quality_flag"].astype(str),
+        }
+    )
+    # 与价格面板统一：可用观测一律记为「实测」，使 config 里的
+    # training_data_natures: [实测] 对两个面板语义一致；原始标记保留在 quality_flag。
+    panel["data_nature"] = np.where(panel["quality_flag"].eq("ok"), "实测", panel["quality_flag"])
+    panel["observed"] = panel["value"].notna() & panel["data_nature"].eq("实测")
+    panel["truth_eligible"] = panel["observed"]
+    panel.loc[~panel["observed"], "value"] = np.nan
+
+    dup = panel.duplicated(["province", "group_raw", "year"])
+    if dup.any():
+        raise ValueError(f"Consumption panel has {int(dup.sum())} duplicate keys")
+    return panel.sort_values(["province", "group_raw", "year"]).reset_index(drop=True)
